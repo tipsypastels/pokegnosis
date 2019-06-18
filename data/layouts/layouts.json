@@ -103,12 +103,12 @@
         {
             "blockdata_filepath": "data/layouts/OldaleTown/map.bin",
             "border_filepath": "data/layouts/OldaleTown/border.bin",
-            "height": 20,
+            "height": 28,
             "id": "LAYOUT_OLDALE_TOWN",
             "name": "OldaleTown_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Petalburg",
-            "width": 20
+            "secondary_tileset": "gTileset_Rustboro",
+            "width": 28
         },
         {
             "blockdata_filepath": "data/layouts/DewfordTown/map.bin",
@@ -173,21 +173,21 @@
         {
             "blockdata_filepath": "data/layouts/Route102/map.bin",
             "border_filepath": "data/layouts/Route102/border.bin",
-            "height": 20,
+            "height": 22,
             "id": "LAYOUT_ROUTE102",
             "name": "Route102_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Petalburg",
-            "width": 50
+            "secondary_tileset": "gTileset_Rustboro",
+            "width": 44
         },
         {
             "blockdata_filepath": "data/layouts/Route103/map.bin",
             "border_filepath": "data/layouts/Route103/border.bin",
-            "height": 22,
+            "height": 24,
             "id": "LAYOUT_ROUTE103",
             "name": "Route103_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Petalburg",
+            "secondary_tileset": "gTileset_Rustboro",
             "width": 80
         },
         {

@@ -836,25 +836,25 @@ void InitTilesetAnim_BattleDome(void)
 
 static void TilesetAnim_Rustboro(u16 timer)
 {
-    if (timer % 8 == 0)
-    {
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 0);
-        QueueAnimTiles_Rustboro_Fountain(timer >> 3);
-    }
-    if (timer % 8 == 1)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 1);
-    if (timer % 8 == 2)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 2);
-    if (timer % 8 == 3)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 3);
-    if (timer % 8 == 4)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 4);
-    if (timer % 8 == 5)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 5);
-    if (timer % 8 == 6)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 6);
-    if (timer % 8 == 7)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 7);
+//     if (timer % 8 == 0)
+//     {
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 0);
+//         QueueAnimTiles_Rustboro_Fountain(timer >> 3);
+//     }
+//     if (timer % 8 == 1)
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 1);
+//     if (timer % 8 == 2)
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 2);
+// if (timer % 8 == 3)
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 3);
+//     if (timer % 8 == 4)
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 4);
+//     if (timer % 8 == 5)
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 5);
+//     if (timer % 8 == 6)
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 6);
+//     if (timer % 8 == 7)
+//         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 7);
 }
 
 static void TilesetAnim_Dewford(u16 timer)
