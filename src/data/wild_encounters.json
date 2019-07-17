@@ -379,6 +379,26 @@
                 "species": "SPECIES_WAILMER"
               }
             ]
+          },
+          "lily_pad_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 35,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_LUDICOLO"
+              }
+            ]
           }
         },
         {

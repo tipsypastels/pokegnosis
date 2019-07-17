@@ -81,6 +81,7 @@ u8 MetatileBehavior_GetBridgeType(u8);
 u8 MetatileBehavior_8089510(u8);
 bool8 MetatileBehavior_IsLandWildEncounter(u8);
 bool8 MetatileBehavior_IsWaterWildEncounter(u8);
+bool8 MetatileBehavior_IsLilyPadWildEncounter(u8);
 bool8 MetatileBehavior_IsIndoorEncounter(u8);
 bool8 MetatileBehavior_IsMountain(u8);
 bool8 MetatileBehavior_IsDiveable(u8);
