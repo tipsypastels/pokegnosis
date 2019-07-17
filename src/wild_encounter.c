@@ -198,6 +198,18 @@ static u8 ChooseWildMonIndex_LilyPad(void)
         return 2;
 }
 
+static u8 ChooseWildMonIndex_Burrow(void)
+{
+    // TODO decide percentages based on pokedex
+    u8 rand = Random() % 100;
+    if (rand < 70)
+        return 0;
+    else if (rand >= 70 && rand < 95)
+        return 1;
+    else
+        return 2;
+}
+
 enum
 {
     OLD_ROD,
@@ -401,6 +413,7 @@ enum
     WILD_AREA_ROCKS,
     WILD_AREA_FISHING,
     WILD_AREA_LILY_PAD,
+    WILD_AREA_BURROW,
 };
 
 #define WILD_CHECK_REPEL    0x1
@@ -432,6 +445,9 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
         break;
     case WILD_AREA_LILY_PAD:
         wildMonIndex = ChooseWildMonIndex_LilyPad();
+        break;
+    case WILD_AREA_BURROW:
+        wildMonIndex = ChooseWildMonIndex_Burrow();
         break;
     }
 
@@ -615,7 +631,69 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
                 return FALSE;
             }
         }
+        else if (MetatileBehavior_IsBurrowWildEncounter(currMetaTileBehavior) == TRUE)
+        {
+            if (AreLegendariesInSootopolisPreventingEncounters() == TRUE)
+                return FALSE;
+            else if (gWildMonHeaders[headerId].burrowMonsInfo == NULL)
+                return FALSE;
+            else if (previousMetaTileBehavior != currMetaTileBehavior && !DoGlobalWildEncounterDiceRoll())
+                return FALSE;
+            else if (DoWildEncounterRateTest(gWildMonHeaders[headerId].burrowMonsInfo->encounterRate, FALSE) != TRUE)
+                return FALSE;
+
+            if (TryStartRoamerEncounter() == TRUE)
+            {
+                roamer = &gSaveBlock1Ptr->roamer;
+                if (!IsWildLevelAllowedByRepel(roamer->level))
+                    return FALSE;
+
+                BattleSetup_StartRoamerBattle();
+                return TRUE;
+            }
+            else
+            {
+                if (TryGenerateWildMon(gWildMonHeaders[headerId].burrowMonsInfo, WILD_AREA_BURROW, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
+                {
+                    BattleSetup_StartWildBattle();
+                    return TRUE;
+                }
+
+                return FALSE;
+            }
+        }
         else if (MetatileBehavior_IsLilyPadWildEncounter(currMetaTileBehavior) == TRUE)
+        {
+            if (AreLegendariesInSootopolisPreventingEncounters() == TRUE)
+                return FALSE;
+            else if (gWildMonHeaders[headerId].lilyPadMonsInfo == NULL)
+                return FALSE;
+            else if (previousMetaTileBehavior != currMetaTileBehavior && !DoGlobalWildEncounterDiceRoll())
+                return FALSE;
+            else if (DoWildEncounterRateTest(gWildMonHeaders[headerId].lilyPadMonsInfo->encounterRate, FALSE) != TRUE)
+                return FALSE;
+
+            if (TryStartRoamerEncounter() == TRUE)
+            {
+                roamer = &gSaveBlock1Ptr->roamer;
+                if (!IsWildLevelAllowedByRepel(roamer->level))
+                    return FALSE;
+
+                BattleSetup_StartRoamerBattle();
+                return TRUE;
+            }
+            else
+            {
+                if (TryGenerateWildMon(gWildMonHeaders[headerId].lilyPadMonsInfo, WILD_AREA_LILY_PAD, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
+                {
+                    BattleSetup_StartWildBattle();
+                    return TRUE;
+                }
+
+                return FALSE;
+            }
+        }
+                else if (MetatileBehavior_IsLilyPadWildEncounter(currMetaTileBehavior) == TRUE)
         {
             if (AreLegendariesInSootopolisPreventingEncounters() == TRUE)
                 return FALSE;

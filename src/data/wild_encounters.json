@@ -399,6 +399,26 @@
                 "species": "SPECIES_LUDICOLO"
               }
             ]
+          },
+          "burrow_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 35,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_SANDSLASH"
+              }
+            ]
           }
         },
         {
