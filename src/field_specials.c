@@ -3,7 +3,6 @@
 #include "battle.h"
 #include "battle_tower.h"
 #include "book.h"
-#include "book_texts.h"
 #include "cable_club.h"
 #include "data.h"
 #include "decoration.h"
