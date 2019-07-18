@@ -21,6 +21,7 @@
 #include "constants/trainer_hill.h"
 #include "constants/battle.h"
 #include "constants/metatile_labels.h"
+#include "constants/books.h"
 	.include "asm/macros.inc"
 	.include "asm/macros/event.inc"
 	.include "constants/constants.inc"

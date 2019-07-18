@@ -2,6 +2,8 @@
 #include "alloc.h"
 #include "battle.h"
 #include "battle_tower.h"
+#include "book.h"
+#include "book_texts.h"
 #include "cable_club.h"
 #include "data.h"
 #include "decoration.h"
@@ -60,6 +62,7 @@
 
 EWRAM_DATA bool8 gBikeCyclingChallenge = FALSE;
 EWRAM_DATA u8 gBikeCollisions = 0;
+
 static EWRAM_DATA u32 gBikeCyclingTimer = 0;
 static EWRAM_DATA u8 gUnknown_0203AB5C = 0;
 static EWRAM_DATA u8 sPetalburgGymSlidingDoorFrameCounter = 0;
@@ -130,6 +133,12 @@ static void sub_813BE30(struct LinkBattleRecords *linkRecords, u8 a, u8 b);
 void Special_ShowDiploma(void)
 {
     SetMainCallback2(CB2_ShowDiploma);
+    ScriptContext2_Enable();
+}
+
+void Special_ShowBook(void)
+{
+    SetMainCallback2(CB2_ShowBook);
     ScriptContext2_Enable();
 }
 

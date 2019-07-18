@@ -256,6 +256,8 @@ SECTIONS {
         src/credits.o(.text);
         src/lottery_corner.o(.text);
         src/diploma.o(.text);
+        src/book.o(.text);
+        src/book_texts.o(.text);
         src/berry_tag_screen.o(.text);
         src/mystery_event_menu.o(.text);
         src/save_failed_screen.o(.text);
@@ -591,7 +593,9 @@ SECTIONS {
         src/credits.o(.rodata);
         src/lottery_corner.o(.rodata);
         src/diploma.o(.rodata);
+        src/book.o(.rodata);
         src/strings.o(.rodata);
+        src/book_texts.o(.rodata);
         src/berry_tag_screen.o(.rodata);
         src/mystery_event_menu.o(.rodata);
         src/save_failed_screen.o(.rodata);
