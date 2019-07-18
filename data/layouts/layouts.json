@@ -188,7 +188,7 @@
             "name": "Route103_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Rustboro",
-            "width": 80
+            "width": 70
         },
         {
             "blockdata_filepath": "data/layouts/Route104/map.bin",

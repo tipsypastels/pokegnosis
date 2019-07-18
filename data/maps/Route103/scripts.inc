@@ -291,6 +291,16 @@ Route103_EventScript_1EC78F:: @ 81EC78F
 	msgbox Route103_Text_29514D, MSGBOX_AUTOCLOSE
 	end
 
+Route3_Trainer_Tips::
+	msgbox Route3_Trainer_Tips_Text, MSGBOX_SIGN
+
+Route3_Trainer_Tips_Text:
+	.string "TRAINER TIPS\p"
+	.string "Many POKéMON take shelter in BURROWS\n"
+	.string "in the side of hills.\p"
+	.string "Some will pop out to battle passing\n"
+	.string "POKéMON trainers!$"
+
 Route103_Text_1EC7A6: @ 81EC7A6
 	.string "MAY: Let's see… The POKéMON found\n"
 	.string "on ROUTE 103 include…$"
