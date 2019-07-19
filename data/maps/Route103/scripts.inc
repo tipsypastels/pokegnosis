@@ -366,3 +366,6 @@ Route103_Text_1ECC1A: @ 81ECC1A
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
 
+Test_Book::
+	setvar VAR_CURRENT_BOOK, BOOK_SUN_XIA_END
+	special Special_ShowBook
