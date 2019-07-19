@@ -37,10 +37,11 @@ static void VBlankCB(void)
   TransferPlttBuffer();
 }
 
+// TODO investigate this
 static const u16 sBookPalettes[][16] =
     {
-        INCBIN_U16("graphics/misc/diploma_national.gbapal"),
-        INCBIN_U16("graphics/misc/diploma_hoenn.gbapal"),
+        INCBIN_U16("graphics/misc/book.gbapal"),
+        INCBIN_U16("graphics/misc/book.gbapal"),
 };
 
 static const u32 sBookTilemap[] = INCBIN_U32("graphics/misc/diploma_map.bin.lz");
@@ -173,9 +174,9 @@ static const struct WindowTemplate sBookWinTemplates[2] =
     {
         {
             .bg = 0,
-            .tilemapLeft = 5,
+            .tilemapLeft = 3,
             .tilemapTop = 2,
-            .width = 20,
+            .width = 30,
             .height = 16,
             .paletteNum = 15,
             .baseBlock = 1,
