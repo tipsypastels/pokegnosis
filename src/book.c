@@ -44,8 +44,8 @@ static const u16 sBookPalettes[][16] =
         INCBIN_U16("graphics/misc/book.gbapal"),
 };
 
-static const u32 sBookTilemap[] = INCBIN_U32("graphics/misc/diploma_map.bin.lz");
-static const u32 sBookTiles[] = INCBIN_U32("graphics/misc/diploma.4bpp.lz");
+static const u32 sBookTilemap[] = INCBIN_U32("graphics/misc/book_map.bin.lz");
+static const u32 sBookTiles[] = INCBIN_U32("graphics/misc/book.4bpp.lz");
 
 void CB2_ShowBook(void)
 {
