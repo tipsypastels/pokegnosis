@@ -167,7 +167,7 @@
             "id": "LAYOUT_ROUTE101",
             "name": "Route101_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Petalburg",
+            "secondary_tileset": "gTileset_Rustboro",
             "width": 20
         },
         {
