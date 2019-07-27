@@ -174,7 +174,11 @@ const struct Item gItems[] =
 
     [ITEM_POTION] =
     {
+#if NO_HERBS
         .name = _("POTION"),
+#else
+        .name = _("HEALING HERB"),
+#endif
         .itemId = ITEM_POTION,
         .price = 300,
         .holdEffectParam = 20,
@@ -189,7 +193,11 @@ const struct Item gItems[] =
 
     [ITEM_ANTIDOTE] =
     {
+#if NO_HERBS
         .name = _("ANTIDOTE"),
+#else
+        .name = _("CLEANSE HERB"),
+#endif
         .itemId = ITEM_ANTIDOTE,
         .price = 100,
         .description = sAntidoteDesc,
@@ -203,7 +211,11 @@ const struct Item gItems[] =
 
     [ITEM_BURN_HEAL] =
     {
+#if NO_HERBS
         .name = _("BURN HEAL"),
+#else
+        .name = _("SOOTHING HERB"),
+#endif
         .itemId = ITEM_BURN_HEAL,
         .price = 250,
         .description = sBurnHealDesc,
@@ -217,7 +229,11 @@ const struct Item gItems[] =
 
     [ITEM_ICE_HEAL] =
     {
+#if NO_HERBS
         .name = _("ICE HEAL"),
+#else
+        .name = _("WARMING HERB"),
+#endif
         .itemId = ITEM_ICE_HEAL,
         .price = 250,
         .description = sIceHealDesc,
@@ -231,7 +247,11 @@ const struct Item gItems[] =
 
     [ITEM_AWAKENING] =
     {
+#if NO_HERBS
         .name = _("AWAKENING"),
+#else
+        .name = _("INSOMNIA HERB"),
+#endif
         .itemId = ITEM_AWAKENING,
         .price = 250,
         .description = sAwakeningDesc,
@@ -245,7 +265,11 @@ const struct Item gItems[] =
 
     [ITEM_PARALYZE_HEAL] =
     {
+#if NO_HERBS
         .name = _("PARLYZ HEAL"),
+#else
+        .name = _("ENERGY HERB"),
+#endif
         .itemId = ITEM_PARALYZE_HEAL,
         .price = 200,
         .description = sParalyzeHealDesc,
@@ -259,7 +283,11 @@ const struct Item gItems[] =
 
     [ITEM_FULL_RESTORE] =
     {
+#if NO_HERBS
         .name = _("FULL RESTORE"),
+#else
+        .name = _("MAGICAL HERB"),
+#endif
         .itemId = ITEM_FULL_RESTORE,
         .price = 3000,
         .holdEffectParam = 255,
@@ -274,7 +302,11 @@ const struct Item gItems[] =
 
     [ITEM_MAX_POTION] =
     {
+#if NO_HERBS
         .name = _("MAX POTION"),
+#else
+        .name = _("RECOVERY HERB"),
+#endif
         .itemId = ITEM_MAX_POTION,
         .price = 2500,
         .holdEffectParam = 255,
@@ -289,7 +321,11 @@ const struct Item gItems[] =
 
     [ITEM_HYPER_POTION] =
     {
+#if NO_HERBS
         .name = _("HYPER POTION"),
+#else
+        .name = _("THRIVING HERB"),
+#endif
         .itemId = ITEM_HYPER_POTION,
         .price = 1200,
         .holdEffectParam = 200,
@@ -304,7 +340,11 @@ const struct Item gItems[] =
 
     [ITEM_SUPER_POTION] =
     {
+#if NO_HERBS
         .name = _("SUPER POTION"),
+#else
+        .name = _("WELFARE HERB"),
+#endif
         .itemId = ITEM_SUPER_POTION,
         .price = 700,
         .holdEffectParam = 50,
@@ -319,7 +359,11 @@ const struct Item gItems[] =
 
     [ITEM_FULL_HEAL] =
     {
+#if NO_HERBS
         .name = _("FULL HEAL"),
+#else
+        .name = _("STATUS HERB"),
+#endif
         .itemId = ITEM_FULL_HEAL,
         .price = 600,
         .description = sFullHealDesc,
