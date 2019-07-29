@@ -162,6 +162,12 @@ override ASFLAGS += --defsym NO_HERBS=1
 override CPPFLAGS += -D NO_HERBS=1
 endif
 
+# building with this option will randomize pokemon
+ifeq ($(RANDOMIZE_MONS),1)
+override ASFLAGS += --defsym RANDOMIZE_MONS=1
+override CPPFLAGS += -D RANDOMIZE_MONS=1
+endif
+
 $(C_BUILDDIR)/%.o : $(C_SUBDIR)/%.c $$(c_dep)
 	@$(CPP) $(CPPFLAGS) $< -o $(C_BUILDDIR)/$*.i
 	@$(PREPROC) $(C_BUILDDIR)/$*.i charmap.txt | $(CC1) $(CFLAGS) -o $(C_BUILDDIR)/$*.s

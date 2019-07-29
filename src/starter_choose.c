@@ -20,6 +20,7 @@
 #include "trainer_pokemon_sprites.h"
 #include "trig.h"
 #include "window.h"
+#include "randomizer.h"
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/rgb.h"
@@ -50,6 +51,10 @@ static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y);
 void sub_81346DC(struct Sprite *sprite);
 void sub_813473C(struct Sprite *sprite);
 void StarterPokemonSpriteCallback(struct Sprite *sprite);
+
+#if RANDOMIZE_MONS
+static void RandomizeStarterArray(void);
+#endif
 
 static IWRAM_DATA u16 sStarterChooseWindowId;
 
@@ -130,6 +135,10 @@ static const u16 sStarterMon[STARTER_MON_COUNT] =
     SPECIES_TORCHIC,
     SPECIES_MUDKIP,
 };
+
+#if RANDOMIZE_MONS
+static u16 sRandomStarterMon[STARTER_MON_COUNT];
+#endif
 
 static const struct BgTemplate gUnknown_085B1E00[3] =
 {
@@ -366,7 +375,12 @@ u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
+    
+#if RANDOMIZE_MONS
+    return sRandomStarterMon[chosenStarterId];
+#else
     return sStarterMon[chosenStarterId];
+#endif
 }
 
 static void VblankCB_StarterChoose(void)
@@ -385,6 +399,10 @@ void CB2_ChooseStarter(void)
     u16 savedIme;
     u8 taskId;
     u8 spriteId;
+
+#if RANDOMIZE_MONS
+    RandomizeStarterArray();
+#endif
 
     SetVBlankCallback(NULL);
 
@@ -471,6 +489,17 @@ void CB2_ChooseStarter(void)
 
     sStarterChooseWindowId = 0xFF;
 }
+
+#if RANDOMIZE_MONS
+static void RandomizeStarterArray(void)
+{
+    int i;
+    for (i = 0; i < STARTER_MON_COUNT; i++)
+    {
+        sRandomStarterMon[i] = GetRandomizedPokemon();
+    }
+}
+#endif
 
 static void MainCallback2_StarterChoose(void)
 {

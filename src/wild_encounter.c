@@ -16,6 +16,7 @@
 #include "script.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
+#include "randomizer.h"
 #include "constants/abilities.h"
 #include "constants/game_stat.h"
 #include "constants/items.h"
@@ -371,6 +372,8 @@ static u8 PickWildMonNature(void)
 static void CreateWildMon(u16 species, u8 level)
 {
     bool32 checkCuteCharm;
+
+    species = AccountForPokemonRandomizer(species);
 
     ZeroEnemyPartyMons();
     checkCuteCharm = TRUE;
