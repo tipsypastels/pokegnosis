@@ -447,7 +447,6 @@ extern const u8 gText_CryOf[];
 extern const u8 gText_SizeComparedTo[];
 extern const u8 gText_PokedexRegistration[];
 extern const u8 gText_UnkCtrlF908Clear01[];
-extern const u8 sText_TenDashes2[];
 extern const u8 gText_5MarksPokemon[];
 extern const u8 gText_UnkHeight[];
 extern const u8 gText_UnkWeight[];
@@ -985,6 +984,7 @@ extern const u8 gText_PokenavMatchCall_CheckTrainerButtons[];
 extern const u8 gText_PokenavRibbons_MonListButtons[];
 extern const u8 gText_PokenavRibbons_RibbonListButtons[];
 extern const u8 gText_PokenavRibbons_RibbonCheckButtons[];
+extern const u8 gText_Number2[];
 
 extern const u8 gUnknown_085EAD37[];
 extern const u8 gUnknown_085EAD41[];
@@ -2670,11 +2670,40 @@ extern const u8 gText_Symbols[];
 extern const u8 gText_Register2[];
 extern const u8 gText_Exit2[];
 
+// Pokemon jump
+extern const u8 gText_WantToPlayAgain2[];
+extern const u8 gText_SomeoneDroppedOut2[];
+extern const u8 gText_CommunicationStandby4[];
+extern const u8 gText_AwesomeWonF701F700[];
+extern const u8 gText_FilledStorageSpace2[];
+extern const u8 gText_CantHoldMore[];
+
 // Pokenav Match Call
 extern const u8 gText_CallCantBeMadeHere[];
 extern const u8 gText_NumberRegistered[];
 extern const u8 gText_NumberOfBattles[];
 extern const u8 gText_Unknown[];
 extern const u8 gText_TrainerCloseBy[];
+
+// pokenav_unk_2
+extern const u8 gUnknown_085EBCC5[];
+extern const u8 gUnknown_085EBCE8[];
+extern const u8 gUnknown_085EBD01[];
+extern const u8 gUnknown_085EBD1C[];
+extern const u8 gUnknown_085EBD34[];
+extern const u8 gUnknown_085EBD83[];
+extern const u8 gUnknown_085EBDA2[];
+extern const u8 gUnknown_085EBDBF[];
+extern const u8 gUnknown_085EBDDB[];
+extern const u8 gUnknown_085EBDEE[];
+extern const u8 gUnknown_085EBE06[];
+extern const u8 gUnknown_085EBE19[];
+extern const u8 gUnknown_085EBE2D[];
+extern const u8 gUnknown_085EBE41[];
+
+// pokenav_unk_4
+extern const u8 gUnknown_085EC017[];
+extern const u8 gUnknown_085EC01C[];
+extern const u8 gUnknown_085EC022[];
 
 #endif // GUARD_STRINGS_H
