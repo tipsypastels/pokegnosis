@@ -369,3 +369,10 @@ Route103_Text_1ECC1A: @ 81ECC1A
 Test_Book::
 	setvar VAR_CURRENT_BOOK, BOOK_SUN_XIA_END
 	special Special_ShowBook
+	waitstate
+	release
+	msgbox Test_Book_After, MSGBOX_DEFAULT
+	end
+
+Test_Book_After:
+	.string "You read it!$"

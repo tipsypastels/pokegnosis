@@ -4164,6 +4164,7 @@ gMauvilleManText_SecretBasesAreSoWonderful:: @ 82944D5
 	.string "Can't you feel the excitement?$"
 
 	.include "data/text/trainers.inc"
+	.include "data/text/book_events.inc"
 
 EventScript_RepelWoreOff:: @ 82A4B2A
 	msgbox Text_RepelWoreOff, MSGBOX_SIGN
