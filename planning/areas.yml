@@ -86,12 +86,12 @@ Axel Chasm:
   type: route
   connections:
     north: Route 4
-    south: Snowswood
+    south: Polar Forest
 
-Snowswood:
+Polar Forest:
   about: A snowy forest with a winding river through it.
   province: Arcea
-  type: route
+  type: forest
   connections:
     north: Axel Chasm
     south: Shiaxia City
@@ -101,4 +101,4 @@ Shiaxia City:
   province: Arcea
   type: city
   connections:
-    north: Snowswood
+    north: Polar Forest

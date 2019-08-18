@@ -15,10 +15,10 @@ class Area
   COLORS = {
     town: { color: :white, background: :light_red },
     city: { color: :black, background: :yellow },
-    route: :default,
     waypoint: :light_cyan,
     cave: :magenta,
     trial: :cyan,
+    forest: :green,
   }
 
   class << self
@@ -87,7 +87,7 @@ class Area
         '╋'
       else
         '.'
-      end.colorize(COLORS[:route])
+      end
     else
       Legend.number(type, self).colorize(COLORS[type])
     end
