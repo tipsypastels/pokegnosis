@@ -1,0 +1,104 @@
+Yamaki Town:
+  about: "The player's starter town. A modest village bordering a lake to the north."
+  province: Axel
+  type: town
+  connections:
+    north: Route 1
+    east: Route 3
+
+Route 1:
+  about: A northern route leading across Yamaki Lake.
+  province: Axel
+  type: route
+  requires: Surf
+  connections:
+    south: Yamaki Town
+    east: Dense Jungle # TODO NE?
+    west: Cave of Nothing
+
+Cave of Nothing:
+  about: "A cave with a mysterious secret. The site of Kyran's trial."
+  province: Axel
+  type: cave
+  requires: Rock Smash
+  connections:
+    east: Route 1
+
+Dense Jungle:
+  about: A valley of overgrown wildlife.
+  province: Axel
+  type: route
+  connections:
+    west: Route 1
+    north: Duck Temple
+    east: Yugasa Mine
+
+Yugasa Mine:
+  about: A tunnel cutting through a mountain.
+  province: Axel
+  type: cave
+  requies: Strength
+  connections:
+    west: Dense Jungle
+    east: Yugasa Town
+
+Yugasa Town:
+  about: A mining town on the edge of a cliff face.
+  province: Axel
+  type: town
+  connections:
+    west: Yugasa Mine
+
+Duck Temple:
+  about: A joke.
+  province: Axel
+  type: waypoint
+  connections:
+    south: Dense Jungle
+
+Route 3:
+  about: A range where Mareep and Wooloo are sheared.
+  province: Axel
+  type: route
+  connections:
+    west: Yamaki Town
+    east: Kuribi Town
+
+Kuribi Town:
+  about: A small market town in central Axel.
+  province: Axel
+  type: town
+  connections:
+    west: Route 3
+    east: Route 4
+
+Route 4:
+  about: A riverside route where water wheels produce mechanical energy.
+  province: Axel
+  type: route
+  connections:
+    west: Kuribi Town
+    south: Axel Chasm
+
+Axel Chasm:
+  about: A massive waterfall dotted with caves.
+  province: Axel
+  type: route
+  connections:
+    north: Route 4
+    south: Snowswood
+
+Snowswood:
+  about: A snowy forest with a winding river through it.
+  province: Arcea
+  type: route
+  connections:
+    north: Axel Chasm
+    south: Shiaxia City
+
+Shiaxia City:
+  about: A large city in the snow.
+  province: Arcea
+  type: city
+  connections:
+    north: Snowswood
