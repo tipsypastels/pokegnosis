@@ -1,6 +1,13 @@
 require 'yaml'
 require 'active_support/all'
 require 'colorize'
+require 'optparse'
+
+OptionParser.new do |opts|
+  opts.on('-s', '--skip-legend') { $skip_legend = true }
+  opts.on('-p', '--province PROVINCE') { |province| $province_filter = province.titlecase }
+  opts.on('-P', '--only-paths') { $only_paths = true; $skip_legend = true }
+end.parse!
 
 module Array2D
   def self.new(x, y, fill)
@@ -17,7 +24,6 @@ class Area
     city: { color: :black, background: :yellow },
     waypoint: :light_cyan,
     cave: :magenta,
-    trial: :cyan,
     forest: :green,
   }
 
@@ -55,17 +61,23 @@ class Area
     @data[:type].to_sym
   end
 
+  def trial
+    @data[:trial]
+  end
+
   def connections
     @connections ||= Connections.new(@data[:connections], self)
   end
 
   def icon
-    if type == :route
+    return Map::EMPTY_SQUARE if $province_filter && $province_filter != province
+
+    if type == :route || $only_paths
       sign = connections.sign
       case
-      when sign.ns?
+      when sign.ns? || sign.n? || sign.s?
         '┃'
-      when sign.ew?
+      when sign.ew? || sign.e? || sign.w?
         '━'
       when sign.se?
         '┏'
@@ -73,7 +85,7 @@ class Area
         '┓'
       when sign.ne?
         '┗'
-      when sign.ne?
+      when sign.nw?
         '┛'
       when sign.nse?
         '┣'
@@ -89,7 +101,7 @@ class Area
         '.'
       end
     else
-      Legend.number(type, self).colorize(COLORS[type])
+      Legend.number(self).colorize(COLORS[type])
     end
   end
   alias render icon
@@ -107,10 +119,10 @@ class Area
     STORE = {}
 
     class << self
-      def number(type, area)
-        STORE[type] ||= []
-        STORE[type] << area
-        STORE[type].length.to_s
+      def number(area)
+        STORE[area.type] ||= []
+        STORE[area.type] << area
+        STORE[area.type].length.to_s
       end
 
       def inspect
@@ -140,10 +152,18 @@ class Area
 
       <<~LEGEND
         #{name.colorize(color)}
-        #{list.each_with_index.map { |item, i| "#{(i + 1).to_s.colorize(color)} #{item}" }.join("\t")}
+        #{list.each_with_index.map { |item, i| "#{(i + 1).to_s.colorize(color)} #{render_item(item)}" }.join("\t")}
       LEGEND
     end
     alias to_s inspect
+
+    def render_item(item)
+      if item.trial
+        "#{item} (#{item.trial} Trial)"
+      else
+        item
+      end
+    end
   end
 
   class Connections
@@ -276,7 +296,6 @@ class Map
     @array[pos[1]][pos[0]] = area.render
 
     area.rendered = true
-
     area.connections.each_for_render(pos) do |area, offset|
       populate_area(area, offset)
     end
@@ -287,4 +306,4 @@ STARTING_AREA = Area.get('Yamaki Town')
 STARTING_POINT = [1, 5]
 
 puts Map.new
-puts Area::Legend
+puts Area::Legend unless $skip_legend

@@ -1,35 +1,39 @@
+################
+# AXEL
+################
+
 Yamaki Town:
-  about: "The player's starter town. A modest village bordering a lake to the north."
+  about: The player's starter town. A modest village bordering a lake to the north.
   province: Axel
   type: town
   connections:
-    north: Route 1
-    east: Route 3
+    north: Yamaki Lake
+    east: Downy Ranch
 
-Route 1:
-  about: A northern route leading across Yamaki Lake.
+Yamaki Lake:
+  about: A northern route leading across a lake.
   province: Axel
   type: route
   requires: Surf
   connections:
     south: Yamaki Town
-    east: Dense Jungle # TODO NE?
+    east: Jungle Highway # TODO NE?
     west: Cave of Nothing
 
 Cave of Nothing:
-  about: "A cave with a mysterious secret. The site of Kyran's trial."
+  about: A cave with a mysterious secret. The site of Kyran's trial.
   province: Axel
   type: cave
   requires: Rock Smash
   connections:
-    east: Route 1
+    east: Yamaki Lake
 
-Dense Jungle:
-  about: A valley of overgrown wildlife.
+Jungle Highway:
+  about: A well travelled path where the jungle has been cut down. Home to many trainers.
   province: Axel
   type: route
   connections:
-    west: Route 1
+    west: Yamaki Lake
     north: Duck Temple
     east: Yugasa Mine
 
@@ -39,24 +43,34 @@ Yugasa Mine:
   type: cave
   requies: Strength
   connections:
-    west: Dense Jungle
+    west: Jungle Highway
     east: Yugasa Town
 
 Yugasa Town:
   about: A mining town on the edge of a cliff face.
   province: Axel
   type: town
+  trial: Qian
   connections:
     west: Yugasa Mine
+    east: Old Mine Road
+
+Old Mine Road: # maybe swap this out the player's had enough mine stuff
+  about: A rocky terrain.
+  province: Axel
+  type: route
+  connections:
+    west: Yugasa Town
+    south: Route 5
 
 Duck Temple:
   about: A joke.
   province: Axel
   type: waypoint
   connections:
-    south: Dense Jungle
+    south: Jungle Highway
 
-Route 3:
+Downy Ranch:
   about: A range where Mareep and Wooloo are sheared.
   province: Axel
   type: route
@@ -69,7 +83,7 @@ Kuribi Town:
   province: Axel
   type: town
   connections:
-    west: Route 3
+    west: Downy Ranch
     east: Route 4
 
 Route 4:
@@ -78,22 +92,46 @@ Route 4:
   type: route
   connections:
     west: Kuribi Town
+    east: Route 5
     south: Axel Chasm
 
 Axel Chasm:
   about: A massive waterfall dotted with caves.
   province: Axel
   type: route
+  requires: Surf
   connections:
     north: Route 4
-    south: Polar Forest
+    south: Polar Forest # To Arcea
+
+Route 5:
+  about: idk yet # TODO
+  province: Axel
+  type: route
+  connections:
+    west: Route 4
+    east: Dense Jungle
+    north: Old Mine Road
+
+Dense Jungle:
+  about: A valley of overgrown wildlife.
+  province: Axel
+  type: forest
+  connections:
+    west: Route 5
+    east: Festival Grounds # To Xinya
+
+################
+# ARCEA
+################
 
 Polar Forest:
   about: A snowy forest with a winding river through it.
   province: Arcea
   type: forest
   connections:
-    north: Axel Chasm
+    north: Axel Chasm # To Axel
+    east: Jinxhou Snowdown
     south: Shiaxia City
 
 Shiaxia City:
@@ -102,3 +140,206 @@ Shiaxia City:
   type: city
   connections:
     north: Polar Forest
+
+Jinxhou Snowdown:
+  about: A snowy route leading to a massive mountain. 
+  province: Arcea
+  type: route
+  connections:
+    west: Polar Forest
+    east: Arceus Mons
+
+Arceus Mons:
+  about: The highest mountain in Tenso. Lyon's trial, and the location of Arceus in the postgame. Includes a resort with a ski hill (cycling road).
+  province: Arcea
+  type: waypoint
+  trial: Lyon
+  connections:
+    west: Jinxhou Snowdown
+    east: Winter's Ascent
+
+Winter's Ascent:
+  about: A snowy route leading to a massive mountain. Contains a campfire and snowmen.
+  province: Arcea
+  type: route
+  connections:
+    west: Arceus Mons
+    east: Winter's Wake
+
+Winter's Wake:
+  about: A town where the snow begins to melt.
+  province: Arcea
+  type: town
+  connections:
+    west: Winter's Ascent
+    north: Spoiled Plains # To Xinya
+
+################
+# XINYA
+################
+
+Festival Grounds:
+  about: The site of an Elite Dynasty rally. Where the player encounters Kumiho.
+  province: Xinya
+  type: route
+  connections:
+    west: Dense Jungle # To Axel
+    east: Coriyan City
+
+Coriyan City:
+  about: A desert city around an oasis.
+  province: Xinya
+  type: city
+  connections:
+    west: Festival Grounds
+    south: Spoiled Plains
+    north: Fields of Ra
+
+Spoiled Plains:
+  about: An overfarmed badlands, long abandoned.
+  province: Xinya
+  type: route
+  connections:
+    north: Coriyan City
+    east: Desert Highway
+    south: Winter's Wake # To Arcea
+
+Desert Highway:
+  about: A paved road full of trainers.
+  province: Xinya
+  type: route
+  connections:
+    west: Spoiled Plains
+    east: Fort Quibi
+
+Fort Quibi:
+  about: A walled administrative town and a popular location for Ace Trainers.
+  province: Xinya
+  type: town
+  connections:
+    west: Desert Highway
+    east: Solitude Wellsprings
+
+Solitude Wellsprings:
+  about: An oasis in the desert where many trainers gather. Water flows from Suicune's lament.
+  province: Xinya
+  type: route
+  connections:
+    west: Fort Quibi
+    north: Suicune's Lament # To Mongui
+
+Fields of Ra:
+  about: A deep desert with booby traps and ancient ruins.
+  province: Xinya
+  type: route
+  connections:
+    east: Desert Shelter
+    south: Coriyan City
+    north: Valley of the Dead
+
+Desert Shelter:
+  about: A town of teepees and tents where nomads and trainers gather.
+  province: Xinya
+  type: town
+  connections:
+    west: Fields of Ra
+    east: Prism Mesa
+
+Prism Mesa:
+  about: A mesa of rainbow hues.
+  province: Xinya
+  type: route
+  connections:
+    west: Desert Shelter
+    east: Dancing Mountains # To Mongui
+
+Valley of the Dead:
+  about: A blazing hot valley filled with mystery.
+  province: Xinya
+  type: route
+  connections:
+    south: Fields of Ra
+    north: Temple of Entei
+
+Temple of Entei:
+  about: An abandoned ziggurat built to worship Entei. The site of the Yana's trial.
+  province: Xinya
+  type: waypoint
+  trial: Yana
+  connections:
+    south: Valley of the Dead
+
+################
+# SERWA
+################
+
+Coven of One:
+  about: An ancient coven of witches.
+  province: Serwa
+  type: town
+  requires: Defog
+
+################
+# MONGUI
+################
+
+Dancing Mountains:
+  about: An ancient mountain range that protected Mongui during the ancient War.
+  province: Mongui
+  type: cave
+  requires: Rock Smash
+  connections:
+    west: Prism Mesa # To Xinya
+    east: Saikhet City
+    south: Suicune's Lament
+
+Saikhet City:
+  about: A seperatist city at the edge of the mountains.
+  province: Mongui
+  type: city
+  connections:
+    west: Dancing Mountains
+    north: Old War Path
+    south: Septic Shrublands
+
+Old War Path:
+  about: An ancient way that the Mongui army marched down during the long ago War.
+  province: Mongui
+  type: route
+  connections:
+    south: Saikhet City
+    east: Camp of War
+
+Camp of War:
+  about: A barbarian camp.
+  province: Mongui
+  type: town
+  connections:
+    west: Old War Path
+
+Suicune's Lament:
+  about: A lake said to be made by the tears of Suicune as it watched humans and Pokemon war before the era of the first trainers.
+  province: Mongui
+  type: route
+  requires: Surf
+  connections:
+    north: Dancing Mountains
+    south: Solitude Wellsprings
+    east: Septic Shrublands
+
+Septic Shrublands:
+  about: A stinking forest where poisonous Pokemon are common.
+  province: Mongui
+  type: forest
+  connections:
+    north: Saikhet City
+    east: Serpent's Knoll
+    west: Suicune's Lament
+
+Serpent's Knoll:
+  about: A place of power where a great beast sleeps, waiting for one truly worthy...
+  province: Mongui
+  type: waypoint
+  requires: Defog
+  connections:
+    west: Septic Shrublands
