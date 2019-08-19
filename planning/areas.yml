@@ -24,7 +24,7 @@ Cave of Nothing:
   about: A cave with a mysterious secret. The site of Kyran's trial.
   province: Axel
   type: cave
-  requires: Rock Smash
+  requires: Cut
   connections:
     east: Yamaki Lake
 
@@ -41,7 +41,7 @@ Yugasa Mine:
   about: A tunnel cutting through a mountain.
   province: Axel
   type: cave
-  requies: Strength
+  requies: Rock Smash
   connections:
     west: Jungle Highway
     east: Yugasa Town
@@ -67,6 +67,7 @@ Duck Temple:
   about: A joke.
   province: Axel
   type: waypoint
+  requires: Cut
   connections:
     south: Jungle Highway
 
@@ -221,7 +222,7 @@ Fort Quibi:
     east: Solitude Wellsprings
 
 Solitude Wellsprings:
-  about: An oasis in the desert where many trainers gather. Water flows from Suicune's lament.
+  about: An oasis in the desert where many trainers gather. Water flows from Suicune's lament. Contains an underwater area accessible with Dive.
   province: Xinya
   type: route
   connections:
@@ -260,6 +261,7 @@ Valley of the Dead:
   connections:
     south: Fields of Ra
     north: Temple of Entei
+    west: Beijia City
 
 Temple of Entei:
   about: An abandoned ziggurat built to worship Entei. The site of the Yana's trial.
@@ -268,6 +270,14 @@ Temple of Entei:
   trial: Yana
   connections:
     south: Valley of the Dead
+
+Beijia City:
+  about: A city swept by powerful sandstorms.
+  province: Xinya
+  type: city
+  requires: Rock Smash
+  connections:
+    east: Valley of the Dead
 
 ################
 # SERWA
@@ -318,10 +328,10 @@ Camp of War:
     west: Old War Path
 
 Suicune's Lament:
-  about: A lake said to be made by the tears of Suicune as it watched humans and Pokemon war before the era of the first trainers.
+  about: A lake said to be made by the tears of Suicune as it watched humans and Pokemon war before the era of the first trainers. Contains and underwater area accessible with Dive.
   province: Mongui
   type: route
-  requires: Surf
+  requires: Surf, Waterfall if coming from north
   connections:
     north: Dancing Mountains
     south: Solitude Wellsprings
@@ -340,6 +350,7 @@ Serpent's Knoll:
   about: A place of power where a great beast sleeps, waiting for one truly worthy...
   province: Mongui
   type: waypoint
-  requires: Defog
+  requires: Defog (inside)
   connections:
     west: Septic Shrublands
+
