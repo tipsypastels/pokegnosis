@@ -2670,6 +2670,28 @@ extern const u8 gText_Symbols[];
 extern const u8 gText_Register2[];
 extern const u8 gText_Exit2[];
 
+// Dodrio Berry Picking
+extern const u8 gText_BerryPickingRecords[];
+extern const u8 gText_BerriesPicked[];
+extern const u8 gText_BerriesInRowFivePlayers[];
+extern const u8 gText_BestScore[];
+extern const u8 gText_1Colon[];
+extern const u8 gText_2Colon[];
+extern const u8 gText_3Colon[];
+extern const u8 gText_4Colon[];
+extern const u8 gText_5Colon[];
+extern const u8 gText_SpacePoints[];
+extern const u8 gText_10P30P50P50P[];
+extern const u8 gText_AnnouncingPrizes[];
+extern const u8 gText_AnnouncingRankings[];
+extern const u8 gText_FirstPlacePrize[];
+extern const u8 gText_CantHoldAnyMore[];
+extern const u8 gText_FilledStorageSpace[];
+extern const u8 gText_BerryPickingResults[];
+extern const u8 gText_WantToPlayAgain[];
+extern const u8 gText_CommunicationStandby3[];
+extern const u8 gText_SomeoneDroppedOut[];
+
 // Pokemon jump
 extern const u8 gText_WantToPlayAgain2[];
 extern const u8 gText_SomeoneDroppedOut2[];
@@ -2677,6 +2699,37 @@ extern const u8 gText_CommunicationStandby4[];
 extern const u8 gText_AwesomeWonF701F700[];
 extern const u8 gText_FilledStorageSpace2[];
 extern const u8 gText_CantHoldMore[];
+extern const u8 gText_SpacePoints2[];
+extern const u8 gText_SpaceTimes3[];
+extern const u8 gText_PkmnJumpRecords[];
+extern const u8 gText_JumpsInARow[];
+extern const u8 gText_BestScore2[];
+extern const u8 gText_ExcellentsInARow[];
+
+// Lilycove Lady
+extern const u8 gText_ContestLady_Handsome[];
+extern const u8 gText_ContestLady_Vinny[];
+extern const u8 gText_ContestLady_Moreme[];
+extern const u8 gText_ContestLady_Ironhard[];
+extern const u8 gText_ContestLady_Muscle[];
+extern const u8 gText_ContestLady_Coolness[];
+extern const u8 gText_ContestLady_Beauty[];
+extern const u8 gText_ContestLady_Cuteness[];
+extern const u8 gText_ContestLady_Smartness[];
+extern const u8 gText_ContestLady_Toughness[];
+extern const u8 gText_QuizLady_Lady[];
+extern const u8 gText_FavorLady_Slippery[];
+extern const u8 gText_FavorLady_Roundish[];
+extern const u8 gText_FavorLady_Whamish[];
+extern const u8 gText_FavorLady_Shiny[];
+extern const u8 gText_FavorLady_Sticky[];
+extern const u8 gText_FavorLady_Pointy[];
+
+extern const u8 gText_CoolnessContest[];
+extern const u8 gText_BeautyContest[];
+extern const u8 gText_CutenessContest[];
+extern const u8 gText_SmartnessContest[];
+extern const u8 gText_ToughnessContest[];
 
 // Pokenav Match Call
 extern const u8 gText_CallCantBeMadeHere[];
@@ -2700,10 +2753,24 @@ extern const u8 gUnknown_085EBE06[];
 extern const u8 gUnknown_085EBE19[];
 extern const u8 gUnknown_085EBE2D[];
 extern const u8 gUnknown_085EBE41[];
+extern const u8 gText_NoRibbonWinners[];
 
 // pokenav_unk_4
 extern const u8 gUnknown_085EC017[];
 extern const u8 gUnknown_085EC01C[];
 extern const u8 gUnknown_085EC022[];
+
+// pokenav_unk_8
+extern const u8 gText_NumberF700[];
+
+// pokenav_unk_10
+extern const u8 gText_RibbonsF700[];
+
+// use_pokeblock
+extern const u8 gText_Coolness[];
+extern const u8 gText_Toughness[];
+extern const u8 gText_Smartness[];
+extern const u8 gText_Cuteness[];
+extern const u8 gText_Beauty3[];
 
 #endif // GUARD_STRINGS_H

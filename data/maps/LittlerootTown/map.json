@@ -49,7 +49,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E8091",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "0",
             "x": 10,
             "y": 1
@@ -58,7 +58,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E80EF",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "0",
             "x": 11,
             "y": 1
@@ -67,7 +67,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E811F",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "1",
             "x": 11,
             "y": 1
@@ -76,7 +76,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E81F9",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
             "x": 8,
             "y": 9
@@ -85,7 +85,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E8205",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
             "x": 9,
             "y": 9
@@ -94,7 +94,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E81E1",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
             "x": 10,
             "y": 9
@@ -103,7 +103,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E81ED",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
             "x": 11,
             "y": 9
@@ -112,7 +112,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E81BB",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
             "x": 10,
             "y": 2
@@ -121,7 +121,7 @@
             "elevation": 3,
             "script": "LittlerootTown_EventScript_1E81CE",
             "type": "trigger",
-            "var": "VAR_0x4050",
+            "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
             "x": 11,
             "y": 2

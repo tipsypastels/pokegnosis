@@ -261,7 +261,7 @@ Valley of the Dead:
   connections:
     south: Fields of Ra
     north: Temple of Entei
-    west: Beijia City
+    west: Karuzhai City
 
 Temple of Entei:
   about: An abandoned ziggurat built to worship Entei. The site of the Yana's trial.
@@ -271,7 +271,7 @@ Temple of Entei:
   connections:
     south: Valley of the Dead
 
-Beijia City:
+Karuzhai City:
   about: A city swept by powerful sandstorms.
   province: Xinya
   type: city

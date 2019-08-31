@@ -62,7 +62,7 @@
             "elevation": 3,
             "script": "OldaleTown_EventScript_1E903F",
             "type": "trigger",
-            "var": "VAR_ROUTE102_ACCESSIBLE",
+            "var": "VAR_OLDALE_TOWN_STATE",
             "var_value": "0",
             "x": 0,
             "y": 10
@@ -71,7 +71,7 @@
             "elevation": 3,
             "script": "OldaleTown_EventScript_1E9086",
             "type": "trigger",
-            "var": "VAR_OLDALE_STATE",
+            "var": "VAR_OLDALE_RIVAL_STATE",
             "var_value": "1",
             "x": 8,
             "y": 19
@@ -80,7 +80,7 @@
             "elevation": 3,
             "script": "OldaleTown_EventScript_1E90A6",
             "type": "trigger",
-            "var": "VAR_OLDALE_STATE",
+            "var": "VAR_OLDALE_RIVAL_STATE",
             "var_value": "1",
             "x": 9,
             "y": 19
@@ -89,7 +89,7 @@
             "elevation": 3,
             "script": "OldaleTown_EventScript_1E90C6",
             "type": "trigger",
-            "var": "VAR_OLDALE_STATE",
+            "var": "VAR_OLDALE_RIVAL_STATE",
             "var_value": "1",
             "x": 10,
             "y": 19
