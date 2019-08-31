@@ -112,15 +112,15 @@
         {
             "elevation": 3,
             "flag": "0",
-            "graphics_id": "EVENT_OBJ_GFX_YOUNGSTER",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
+            "graphics_id": "EVENT_OBJ_GFX_CUTTABLE_TREE",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-            "script": "Route101_EventScript_1EBDFB",
+            "script": "EventScript_CutTree",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 16,
-            "y": 8
+            "x": 27,
+            "y": 7
         },
         {
             "elevation": 0,
