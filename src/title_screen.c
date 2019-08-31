@@ -384,12 +384,7 @@ static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite)
 {
     if (sprite->data[0] == 1)
     {
-        sprite->data[1]++;
-        // Alternate between hidden and shown every 16th frame
-        if (sprite->data[1] & 0x10)
-            sprite->invisible = FALSE;
-        else
-            sprite->invisible = TRUE;
+        sprite->invisible = TRUE;
     }
     else
     {
@@ -700,7 +695,7 @@ static void Task_TitleScreenPhase2(u8 taskId)
                                     | DISPCNT_BG2_ON
                                     | DISPCNT_OBJ_ON);
         CreatePressStartBanner(START_BANNER_X, 108);
-        CreateCopyrightBanner(START_BANNER_X, 148);
+        CreateCopyrightBanner(START_BANNER_X, 154);
         gTasks[taskId].data[4] = 0;
         gTasks[taskId].func = Task_TitleScreenPhase3;
     }
@@ -803,9 +798,9 @@ static void UpdateLegendaryMarkingColor(u8 frameNum)
     if ((frameNum % 4) == 0) // Change color every 4th frame
     {
         s32 intensity = Cos(frameNum, 128) + 128;
-        s32 r = 31 - ((intensity * 32 - intensity) / 256);
-        s32 g = 31 - (intensity * 22 / 256);
-        s32 b = 12;
+        s32 r = 31 - (intensity * 2 / 256);
+        s32 g = 31 - (intensity * 19 / 256);
+        s32 b = 12 + (intensity * 6 / 256);
 
         u16 color = RGB(r, g, b);
         LoadPalette(&color, 0xEF, sizeof(color));
