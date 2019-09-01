@@ -213,12 +213,12 @@
         {
             "blockdata_filepath": "data/layouts/Route106/map.bin",
             "border_filepath": "data/layouts/Route106/border.bin",
-            "height": 20,
+            "height": 26,
             "id": "LAYOUT_ROUTE106",
             "name": "Route106_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Dewford",
-            "width": 80
+            "secondary_tileset": "gTileset_Rustboro",
+            "width": 44
         },
         {
             "blockdata_filepath": "data/layouts/Route107/map.bin",
