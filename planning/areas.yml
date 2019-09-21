@@ -53,10 +53,10 @@ Yugasa Town:
   trial: Qian
   connections:
     west: Yugasa Mine
-    east: Old Mine Road
+    east: Woodland Estate
 
-Old Mine Road: # maybe swap this out the player's had enough mine stuff
-  about: A rocky terrain.
+Woodland Estate:
+  about: A small farm.
   province: Axel
   type: route
   connections:
@@ -112,7 +112,7 @@ Route 5:
   connections:
     west: Route 4
     east: Dense Jungle
-    north: Old Mine Road
+    north: Woodland Estate
 
 Dense Jungle:
   about: A valley of overgrown wildlife.

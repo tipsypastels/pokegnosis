@@ -69,6 +69,7 @@
 	.include "src/script_menu.o"
 	.include "src/naming_screen.o"
 	.include "src/money.o"
+	.include "src/portrait.o"
 	.include "src/record_mixing.o"
 	.include "src/secret_base.o"
 	.include "src/tv.o"

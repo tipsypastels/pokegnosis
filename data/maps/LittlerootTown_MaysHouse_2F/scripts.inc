@@ -416,3 +416,27 @@ LittlerootTown_BrendansHouse_2F_Text_1F9BE7: @ 81F9BE7
 	.string "Hey, {PLAYER}, if I see you while I'm out\n"
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
+
+Camera_Test::
+	special SpawnCameraObject
+	applymovement EVENT_OBJ_ID_CAMERA, Camera_Test_Movement
+	waitmovement 0
+	special RemoveCameraObject
+	end
+
+Camera_Test_Movement:
+	walk_up
+	walk_up
+	step_end
+
+	Camera_Test2::
+	special SpawnCameraObject
+	applymovement EVENT_OBJ_ID_CAMERA, Camera_Test_Movement2
+	waitmovement 0
+	special RemoveCameraObject
+	end
+
+Camera_Test_Movement2:
+	walk_down
+	walk_down
+	step_end

@@ -293,6 +293,10 @@ class Map
 
   def populate_area(area, pos)
     #puts "Populating #{area}... at #{pos}"
+    if @array[pos[1]][pos[0]].present?
+      raise "Tried to put area #{area.name} at #{pos}, #{@array[pos[1]][pos[0]].name} is already there"
+    end
+
     @array[pos[1]][pos[0]] = area.render
 
     area.rendered = true

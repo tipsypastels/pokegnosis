@@ -113,12 +113,12 @@
         {
             "blockdata_filepath": "data/layouts/DewfordTown/map.bin",
             "border_filepath": "data/layouts/DewfordTown/border.bin",
-            "height": 20,
+            "height": 40,
             "id": "LAYOUT_DEWFORD_TOWN",
             "name": "DewfordTown_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Dewford",
-            "width": 20
+            "secondary_tileset": "gTileset_Rustboro",
+            "width": 40
         },
         {
             "blockdata_filepath": "data/layouts/LavaridgeTown/map.bin",
@@ -173,7 +173,7 @@
         {
             "blockdata_filepath": "data/layouts/Route102/map.bin",
             "border_filepath": "data/layouts/Route102/border.bin",
-            "height": 22,
+            "height": 24,
             "id": "LAYOUT_ROUTE102",
             "name": "Route102_Layout",
             "primary_tileset": "gTileset_General",
@@ -183,7 +183,7 @@
         {
             "blockdata_filepath": "data/layouts/Route103/map.bin",
             "border_filepath": "data/layouts/Route103/border.bin",
-            "height": 24,
+            "height": 30,
             "id": "LAYOUT_ROUTE103",
             "name": "Route103_Layout",
             "primary_tileset": "gTileset_General",
@@ -193,12 +193,12 @@
         {
             "blockdata_filepath": "data/layouts/Route104/map.bin",
             "border_filepath": "data/layouts/Route104/border.bin",
-            "height": 80,
+            "height": 20,
             "id": "LAYOUT_ROUTE104",
             "name": "Route104_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Rustboro",
-            "width": 40
+            "width": 50
         },
         {
             "blockdata_filepath": "data/layouts/Route105/map.bin",
@@ -223,22 +223,22 @@
         {
             "blockdata_filepath": "data/layouts/Route107/map.bin",
             "border_filepath": "data/layouts/Route107/border.bin",
-            "height": 20,
+            "height": 40,
             "id": "LAYOUT_ROUTE107",
             "name": "Route107_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Dewford",
-            "width": 60
+            "secondary_tileset": "gTileset_Rustboro",
+            "width": 66
         },
         {
             "blockdata_filepath": "data/layouts/Route108/map.bin",
             "border_filepath": "data/layouts/Route108/border.bin",
-            "height": 20,
+            "height": 50,
             "id": "LAYOUT_ROUTE108",
             "name": "Route108_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Slateport",
-            "width": 60
+            "secondary_tileset": "gTileset_Rustboro",
+            "width": 20
         },
         {
             "blockdata_filepath": "data/layouts/Route109/map.bin",

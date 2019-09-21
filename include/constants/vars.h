@@ -268,7 +268,7 @@
 #define VAR_UNUSED_0x40FB                    0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                    0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                    0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                    0x40FE // Unused Var
+#define VAR_CURRENT_PORTRAIT                 0x40FE // Unused Var
 #define VAR_CURRENT_BOOK                     0x40FF // Unused Var
 
 #define SPECIAL_VARS_START 0x8000

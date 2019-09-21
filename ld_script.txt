@@ -261,6 +261,7 @@ SECTIONS {
         src/lottery_corner.o(.text);
         src/diploma.o(.text);
         src/book.o(.text);
+        src/portrait.o(.text);
         src/book_texts.o(.text);
         src/berry_tag_screen.o(.text);
         src/mystery_event_menu.o(.text);
@@ -605,6 +606,7 @@ SECTIONS {
         src/lottery_corner.o(.rodata);
         src/diploma.o(.rodata);
         src/book.o(.rodata);
+        src/portrait.o(.rodata);
         src/strings.o(.rodata);
         src/book_texts.o(.rodata);
         src/berry_tag_screen.o(.rodata);

@@ -30,6 +30,7 @@
 #include "pokeblock.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
+#include "portrait.h"
 #include "random.h"
 #include "rayquaza_scene.h"
 #include "region_map.h"
@@ -139,6 +140,17 @@ void Special_ShowBook(void)
 {
     SetMainCallback2(CB2_ShowBook);
     ScriptContext2_Enable();
+}
+
+void Special_ShowPortrait(void)
+{
+    // don't pass it as a callback because unlike book, you're not trying to interupt execution of the main script
+    ShowPortrait();
+}
+
+void Special_HidePortrait(void)
+{
+    HidePortrait();
 }
 
 void Special_ViewWallClock(void)
