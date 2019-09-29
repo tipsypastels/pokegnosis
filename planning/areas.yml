@@ -29,7 +29,7 @@ Cave of Nothing:
     east: Yamaki Lake
 
 Jungle Highway:
-  about: A well travelled path where the jungle has been cut down. Home to many trainers.
+  about: A short area full of trainers with a mine crossing the map.
   province: Axel
   type: route
   connections:
@@ -61,7 +61,7 @@ Woodland Estate:
   type: route
   connections:
     west: Yugasa Town
-    south: Route 5
+    south: Twisted Grove
 
 Duck Temple:
   about: A joke.
@@ -85,32 +85,32 @@ Kuribi Town:
   type: town
   connections:
     west: Downy Ranch
-    east: Route 4
+    east: River Highway
 
-Route 4:
+River Highway:
   about: A riverside route where water wheels produce mechanical energy.
   province: Axel
   type: route
   connections:
     west: Kuribi Town
-    east: Route 5
-    south: Axel Chasm
+    east: Twisted Grove
+    south: Swaying River
 
-Axel Chasm:
+Swaying River:
   about: A massive waterfall dotted with caves.
   province: Axel
   type: route
   requires: Surf
   connections:
-    north: Route 4
+    north: River Highway
     south: Polar Forest # To Arcea
 
-Route 5:
-  about: idk yet # TODO
+Twisted Grove:
+  about: A maze of bushes.
   province: Axel
   type: route
   connections:
-    west: Route 4
+    west: River Highway
     east: Dense Jungle
     north: Woodland Estate
 
@@ -119,7 +119,7 @@ Dense Jungle:
   province: Axel
   type: forest
   connections:
-    west: Route 5
+    west: Twisted Grove
     east: Festival Grounds # To Xinya
 
 ################
@@ -131,7 +131,7 @@ Polar Forest:
   province: Arcea
   type: forest
   connections:
-    north: Axel Chasm # To Axel
+    north: Swaying River # To Axel
     east: Jinxhou Snowdown
     south: Shiaxia City
 
