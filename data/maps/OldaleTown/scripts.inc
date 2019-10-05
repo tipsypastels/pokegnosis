@@ -400,3 +400,26 @@ OldaleTown_Text_1E94DA: @ 81E94DA
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
+
+@ Beginning Dragonsbreath scripts
+
+DragonsbreathTestScript::
+  lock
+  faceplayer
+  checkplayergender
+  compare VAR_RESULT, FEMALE
+  goto_if_eq _DragonsbreathTestScript_Subscript_Code_1
+  msgbox _DragonsbreathTestScript_Subscript_Text_2, MSGBOX_DEFAULT
+  release
+  end
+
+_DragonsbreathTestScript_Subscript_Text_0:
+  .string "Hey sis!$"
+
+_DragonsbreathTestScript_Subscript_Code_1::
+  msgbox _DragonsbreathTestScript_Subscript_Text_0, MSGBOX_DEFAULT
+  release
+  end
+
+_DragonsbreathTestScript_Subscript_Text_2:
+  .string "Ugh, what do you want?$"

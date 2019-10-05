@@ -1,0 +1,8 @@
+script DragonsbreathTestScript
+  lock
+    faceplayer
+    checkplayergender
+    if it is FEMALE
+      say "Hey sis!$"
+    else
+      say "Ugh, what do you want?$"
