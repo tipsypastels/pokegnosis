@@ -1,5 +1,9 @@
 #include "global.h"
 
+// Misc
+
+static const u8 gBook_FishingJoke_1[] = _("\nThere be rare Pokémon in these waters.");
+
 // Player Diaries
 
 static const u8 gBook_PlayerDiary_1[] = _("\nZheng said he had something cool to show\nme today! I can't wait to see what it is!\nGotta get out of the house, Rui's been\nsuch an annoying brat lately :V");
@@ -16,6 +20,7 @@ static const u8 *const gBookList[] = {
     gBook_PlayerDiary_1,
     gBook_SunXia_End,
     gBook_BOTME_11,
+    gBook_FishingJoke_1,
 };
 
 const u8 *const getBook(u8 index)
