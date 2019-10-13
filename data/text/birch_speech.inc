@@ -1,13 +1,13 @@
 gText_Birch_Welcome:: @ 82C897B
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
-	.string "PROFESSOR.\p"
+	.string "Hi! You're finally here!\p"
+	.string "Welcome to the world of {COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR}!\p"
+	.string "My name is {COLOR CHARACTER_COLOR}Yinxing{COLOR NO_COLOR}.\p"
+	.string "Around these parts I'm the local\n"
+	.string "{COLOR CHARACTER_COLOR}Pokémon Professor{COLOR NO_COLOR}.\p"
 	.string "$"
 
 gText_Birch_Pokemon:: @ 82C89FB
-	.string "This is what we call a “POKéMON.”\p"
+	.string "This is what we call a “{COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR}.”\p"
 	.string "\n"
 	.string "$"
 
