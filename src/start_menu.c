@@ -441,8 +441,9 @@ static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
 static bool32 InitStartMenuStep(void)
 {
     s8 value = sUnknown_02037619[0];
+    u8 windowId;
 
-    switch (value)
+        switch (value)
     {
     case 0:
         sUnknown_02037619[0]++;
@@ -453,7 +454,10 @@ static bool32 InitStartMenuStep(void)
         break;
     case 2:
         sub_81973A4();
-        DrawStdWindowFrame(sub_81979C4(sNumStartMenuActions), FALSE);
+        windowId = sub_81979C4(sNumStartMenuActions);
+        FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+        PutWindowTilemap(windowId);
+        // DrawStdWindowFrame(sub_81979C4(sNumStartMenuActions), FALSE);
         sUnknown_02037619[1] = 0;
         sUnknown_02037619[0]++;
         break;
@@ -469,7 +473,8 @@ static bool32 InitStartMenuStep(void)
             sUnknown_02037619[0]++;
         break;
     case 5:
-        sStartMenuCursorPos = sub_81983AC(GetStartMenuWindowId(), 1, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
+        BeginNormalPaletteFade(~(1 << (gWindows[GetStartMenuWindowId()].window.paletteNum)), 4, 0, 8, RGB_RED);
+        sStartMenuCursorPos = sub_81983AC(GetStartMenuWindowId(), 9, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
         CopyWindowToVram(GetStartMenuWindowId(), TRUE);
         return TRUE;
     }
@@ -568,6 +573,7 @@ static bool8 HandleStartMenuInput(void)
     if (gMain.newKeys & A_BUTTON)
     {
         PlaySE(SE_SELECT);
+        BeginNormalPaletteFade(~0, 4, 8, 0, RGB_BLACK);
         if (sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void == StartMenuPokedexCallback)
         {
             if (GetNationalPokedexCount(0) == 0)
@@ -1228,7 +1234,7 @@ static void sub_80A0550(u8 taskId)
         case 0:
             FillWindowPixelBuffer(0, PIXEL_FILL(1));
             AddTextPrinterParameterized2(0,
-                                        1,
+                                        9,
                                         gText_SavingDontTurnOffPower,
                                         255,
                                         NULL,
@@ -1238,7 +1244,7 @@ static void sub_80A0550(u8 taskId)
             DrawTextBorderOuter(0, 8, 14);
             PutWindowTilemap(0);
             CopyWindowToVram(0, 3);
-            BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
+            // BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
 
             if (gWirelessCommType != 0 && InUnionRoom())
             {
@@ -1384,6 +1390,7 @@ static void HideStartMenuWindow(void)
     RemoveStartMenuWindow();
     ScriptUnfreezeEventObjects();
     ScriptContext2_Disable();
+    BeginNormalPaletteFade(~0, 4, 8, 0, RGB_BLACK);
 }
 
 void HideStartMenu(void) // Called from map_name_popup.s

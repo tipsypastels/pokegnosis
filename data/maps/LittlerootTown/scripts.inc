@@ -1130,3 +1130,10 @@ _YamakiTown_FatMan_Subscript_Code_12::
   msgbox _YamakiTown_FatMan_Subscript_Text_11, MSGBOX_DEFAULT
   release
   end
+
+YamakiTown_TestWeather::
+  lock
+  setflag FLAG_SYS_POKEMON_GET
+  givemon SPECIES_BULBASAUR, 25, ITEM_NONE
+  release
+  end

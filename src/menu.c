@@ -486,7 +486,7 @@ u8 GetPlayerTextSpeedDelay(void)
 u8 sub_81979C4(u8 a1)
 {
     if (sStartMenuWindowId == 0xFF)
-        sStartMenuWindowId = sub_8198AA4(0, 0x16, 1, 7, (a1 * 2) + 2, 0xF, 0x139);
+        sStartMenuWindowId = sub_8198AA4(0, 1, 3, 7, (a1 * 2) + 2, 0xF, 0x139);
     return sStartMenuWindowId;
 }
 
@@ -930,10 +930,16 @@ u8 sub_81983EC(u8 windowId, u8 fontId, u8 left, u8 top, u8 numChoices, u8 initia
 void RedrawMenuCursor(u8 oldPos, u8 newPos)
 {
     u8 width, height;
+    u8 fillValue = PIXEL_FILL(1);
+
+    // gnosis start menu font
+    if (sMenu.fontId == 9) {
+        fillValue = PIXEL_FILL(0);
+    }
 
     width = GetMenuCursorDimensionByFont(sMenu.fontId, 0);
     height = GetMenuCursorDimensionByFont(sMenu.fontId, 1);
-    FillWindowPixelRect(sMenu.windowId, PIXEL_FILL(1), sMenu.left, sMenu.optionHeight * oldPos + sMenu.top, width, height);
+    FillWindowPixelRect(sMenu.windowId, fillValue, sMenu.left, sMenu.optionHeight * oldPos + sMenu.top, width, height);
     AddTextPrinterParameterized(sMenu.windowId, sMenu.fontId, gText_SelectorArrow3, sMenu.left, sMenu.optionHeight * newPos + sMenu.top, 0, 0);
 }
 
