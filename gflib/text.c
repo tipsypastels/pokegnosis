@@ -95,6 +95,7 @@ const struct FontInfo gFontInfos[] =
     { Font6Func, 0x8, 0x10, 0x0, 0x8, 0x0, 0x2, 0x1, 0x3 },
     { Font7Func, 0x5, 0x10, 0x0, 0x0, 0x0, 0x2, 0x1, 0x3 },
     { Font8Func, 0x5,  0x8, 0x0, 0x0, 0x0, 0x2, 0x1, 0x3 },
+    { FontGnosStartMenuFunc, 0x5,  0xC, 0x0, 0x0, 0x0, 0x2, 0x0, 0x3 },
     { NULL,      0x8,  0x8, 0x0, 0x0, 0x0, 0x1, 0x2, 0xF }
 };
 
@@ -1391,6 +1392,18 @@ u16 Font8Func(struct TextPrinter *textPrinter)
     return RenderText(textPrinter);
 }
 
+u16 FontGnosStartMenuFunc(struct TextPrinter *textPrinter)
+{
+    struct TextPrinterSubStruct *subStruct = &textPrinter->subUnion.sub;
+
+    if (subStruct->hasGlyphIdBeenSet == FALSE)
+    {
+        textPrinter->subUnion.sub.glyphId = 9;
+        subStruct->hasGlyphIdBeenSet = TRUE;
+    }
+    return RenderText(textPrinter);
+}
+
 void TextPrinterInitDownArrowCounters(struct TextPrinter *textPrinter)
 {
     struct TextPrinterSubStruct *subStruct = &textPrinter->subUnion.sub;
@@ -1756,6 +1769,7 @@ u16 RenderText(struct TextPrinter *textPrinter)
             DecompressGlyphFont0(currChar, textPrinter->japanese);
             break;
         case 1:
+        case 9: // gnosis start menu font
             DecompressGlyphFont1(currChar, textPrinter->japanese);
             break;
         case 2:
@@ -2311,6 +2325,9 @@ u8 GetFontAttribute(u8 fontId, u8 attributeId)
 
 u8 GetMenuCursorDimensionByFont(u8 fontId, u8 whichDimension)
 {
+    if (fontId == 9) {
+        return gMenuCursorDimensions[1][whichDimension];
+    }
     return gMenuCursorDimensions[fontId][whichDimension];
 }
 

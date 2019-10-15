@@ -36,3 +36,8 @@ script YamakiTown_FatMan
           say "streets of {COLOR LOCATION_COLOR}Saikhet City{COLOR NO_COLOR}!$"
         option
           say "Me neither!$"
+
+script YamakiTown_TestWeather
+  lock
+    setflag FLAG_SYS_POKEMON_GET
+    givemon SPECIES_BULBASAUR, 25, ITEM_NONE
