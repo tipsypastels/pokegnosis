@@ -1,5 +1,6 @@
 #include "global.h"
 #include "portrait.h"
+#include "constants/portraits.h"
 #include "graphics.h"
 #include "event_data.h"
 #include "string_util.h"
@@ -10,16 +11,42 @@
 #include "strings.h"
 #include "decompress.h"
 
-static const u32 gPortraitMeiliPal[] = INCBIN_U32("graphics/portraits/meili.gbapal.lz");
-static const u32 gPortraitMeiliSmileGfx[] = INCBIN_U32("graphics/portraits/meili_smile.4bpp.lz");
-static const u32 gPortraitMeiliTestGfx[] = INCBIN_U32("graphics/portraits/meili_test.4bpp.lz");
+/* Meili Portraits */
+
 static const u8 gPortraitMeiliName[] = _("Meili");
-static const u8 gPortraitMeiliName2[] = _("Xeili");
+static const u32 gPortraitMeiliPal[] = INCBIN_U32("graphics/portraits/meili/_palette.gbapal.lz");
+static const u32 gPortraitMeiliSmileGfx[] = INCBIN_U32("graphics/portraits/meili/smile.4bpp.lz");
+static const u32 gPortraitMeiliSmirkGfx[] = INCBIN_U32("graphics/portraits/meili/smirk.4bpp.lz");
+static const u32 gPortraitMeiliAngryGfx[] = INCBIN_U32("graphics/portraits/meili/angry.4bpp.lz");
+static const u32 gPortraitMeiliFrownGfx[] = INCBIN_U32("graphics/portraits/meili/frown.4bpp.lz");
+static const u32 gPortraitMeiliEyesClosedGfx[] = INCBIN_U32("graphics/portraits/meili/eyesclosed.4bpp.lz");
+static const u32 gPortraitMeiliEyesClosedGrinGfx[] = INCBIN_U32("graphics/portraits/meili/eyesclosedgrin.4bpp.lz");
+static const u32 gPortraitMeiliRantGfx[] = INCBIN_U32("graphics/portraits/meili/rant.4bpp.lz");
+static const u32 gPortraitMeiliSlightSmileGfx[] = INCBIN_U32("graphics/portraits/meili/slightsmile.4bpp.lz");
+static const u32 gPortraitMeiliSneakyGfx[] = INCBIN_U32("graphics/portraits/meili/sneaky.4bpp.lz");
+static const u32 gPortraitMeiliDevilishGfx[] = INCBIN_U32("graphics/portraits/meili/devilish.4bpp.lz");
+static const u32 gPortraitMeiliQuestionGfx[] = INCBIN_U32("graphics/portraits/meili/question.4bpp.lz");
+static const u32 gPortraitMeiliCryingGfx[] = INCBIN_U32("graphics/portraits/meili/crying.4bpp.lz");
+static const u32 gPortraitMeiliSleepingGfx[] = INCBIN_U32("graphics/portraits/meili/sleeping.4bpp.lz");
+static const u32 gPortraitMeiliSmileClosedMouthGfx[] = INCBIN_U32("graphics/portraits/meili/smileclosedmouth.4bpp.lz");
+static const u32 gPortraitMeiliDrunkGrinGfx[] = INCBIN_U32("graphics/portraits/meili/drunkgrin.4bpp.lz");
+static const u32 gPortraitMeiliWipedOutGrinGfx[] = INCBIN_U32("graphics/portraits/meili/wipedoutgrin.4bpp.lz");
+static const u32 gPortraitMeiliAlarmedGfx[] = INCBIN_U32("graphics/portraits/meili/alarmed.4bpp.lz");
+static const u32 gPortraitMeiliWinkGfx[] = INCBIN_U32("graphics/portraits/meili/wink.4bpp.lz");
+static const u32 gPortraitMeiliUnamusedGfx[] = INCBIN_U32("graphics/portraits/meili/unamused.4bpp.lz");
+static const u32 gPortraitMeiliBlushGfx[] = INCBIN_U32("graphics/portraits/meili/blush.4bpp.lz");
+static const u32 gPortraitMeiliRageGfx[] = INCBIN_U32("graphics/portraits/meili/rage.4bpp.lz");
+static const u32 gPortraitMeiliDazedGfx[] = INCBIN_U32("graphics/portraits/meili/dazed.4bpp.lz");
+static const u32 gPortraitMeiliSweatGfx[] = INCBIN_U32("graphics/portraits/meili/sweat.4bpp.lz");
+static const u32 gPortraitMeiliAnnoyedGfx[] = INCBIN_U32("graphics/portraits/meili/annoyed.4bpp.lz");
+
+/* Portraits List */
 
 static const struct Portrait gPortraitList[] = {
-    {.name = gPortraitMeiliName, .pal = gPortraitMeiliPal, .gfx = gPortraitMeiliSmileGfx},
-    {.name = gPortraitMeiliName2, .pal = gPortraitMeiliPal, .gfx = gPortraitMeiliTestGfx},
+    PORTRAIT_ENTRY(Meili)
 };
+
+/* End Portraits */
 
 #define PORTRAIT_TAG 0x2722
 
@@ -68,10 +95,10 @@ EWRAM_DATA static u8 sPortraitSpriteId = 0;
 static void HidePortraitSpeakerName(void);
 static void HidePortraitGraphic(void);
 
-void ShowPortrait(void) {
+void ShowPortrait(u8 character, u8 emotion) {
   struct WindowTemplate template;
-
-  u8 currentPortraitIndex = (u8) VarGet(VAR_CURRENT_PORTRAIT);
+  u8 currentPortraitIndex = (character * PORTRAIT_EMOTIONS_COUNT) + emotion;
+  // u8 currentPortraitIndex = (u8) VarGet(VAR_CURRENT_PORTRAIT);
   const struct Portrait portrait = gPortraitList[currentPortraitIndex];
 
   const struct CompressedSpritePalette palette = {

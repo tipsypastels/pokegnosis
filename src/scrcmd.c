@@ -32,6 +32,7 @@
 #include "palette.h"
 #include "party_menu.h"
 #include "pokemon_storage_system.h"
+#include "portrait.h"
 #include "random.h"
 #include "overworld.h"
 #include "rtc.h"
@@ -2296,4 +2297,16 @@ bool8 ScrCmd_warpE0(struct ScriptContext *ctx)
     sub_80AF79C();
     ResetInitialPlayerAvatarState();
     return TRUE;
+}
+
+bool8 ScrCmd_showportrait(struct ScriptContext *ctx)
+{
+    u8 character = ScriptReadByte(ctx);
+    u8 emotion = ScriptReadByte(ctx);
+    ShowPortrait(character, emotion);
+}
+
+bool8 ScrCmd_hideportrait(struct ScriptContext *ctx)
+{
+    HidePortrait();
 }

@@ -147,16 +147,16 @@ void Special_ShowBook(void)
     ScriptContext2_Enable();
 }
 
-void Special_ShowPortrait(void)
-{
-    // don't pass it as a callback because unlike book, you're not trying to interupt execution of the main script
-    ShowPortrait();
-}
+// void Special_ShowPortrait(void)
+// {
+//     // don't pass it as a callback because unlike book, you're not trying to interupt execution of the main script
+//     ShowPortrait();
+// }
 
-void Special_HidePortrait(void)
-{
-    HidePortrait();
-}
+// void Special_HidePortrait(void)
+// {
+//     HidePortrait();
+// }
 
 void Special_ViewWallClock(void)
 {

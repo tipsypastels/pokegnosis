@@ -277,8 +277,6 @@ gSpecials:: @ 81DBA64
 	def_special AccessHallOfFamePC
 	def_special Special_ShowDiploma
 	def_special Special_ShowBook
-	def_special Special_ShowPortrait
-	def_special Special_HidePortrait
 	def_special CheckLeadMonCool
 	def_special CheckLeadMonBeauty
 	def_special CheckLeadMonCute
