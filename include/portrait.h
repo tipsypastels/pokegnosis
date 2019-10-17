@@ -1,31 +1,6 @@
 #ifndef GUARD_PORTRAIT_H
 #define GUARD_PORTAIT_H
 
-#define PORTRAIT_SMILE 0
-#define PORTRAIT_SMIRK 1
-#define PORTRAIT_ANGRY 2
-#define PORTRAIT_FROWN 3
-#define PORTRAIT_EYESCLOSED 4
-#define PORTRAIT_EYESCLOSEDGRIN 5
-#define PORTRAIT_RANT 6
-#define PORTRAIT_SLIGHTSMILE 7
-#define PORTRAIT_SNEAKY 8
-#define PORTRAIT_DEVILISH 9
-#define PORTRAIT_QUESTION 10
-#define PORTRAIT_CRYING 11
-#define PORTRAIT_SLEEPING 12
-#define PORTRAIT_SMILECLOSEDMOUTH 13
-#define PORTRAIT_DRUNKGRIN 14
-#define PORTRAIT_WIPEDOUTGRIN 15
-#define PORTRAIT_ALARMED 16
-#define PORTRAIT_WINK 17
-#define PORTRAIT_UNAMUSED 18
-#define PORTRAIT_BLUSH 19
-#define PORTRAIT_RAGE 20
-#define PORTRAIT_DAZED 21
-#define PORTRAIT_SWEAT 22
-#define PORTRAIT_ANNOYED 23
-
 #define PORTRAIT_ENTRY_EMOTION(character, emotion) \
   {.name = gPortrait##character##Name, .pal = gPortrait##character##Pal, .gfx = gPortrait##character##emotion##Gfx},
 
