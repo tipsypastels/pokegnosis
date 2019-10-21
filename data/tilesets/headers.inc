@@ -10,6 +10,17 @@ gTileset_General:: @ 83DF704
 	.4byte InitTilesetAnim_General
 
 	.align 2
+gTileset_Snowy:: @ 83DF704
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary tileset
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_Snowy
+	.4byte gTilesetPalettes_Snowy
+	.4byte gMetatiles_Snowy
+	.4byte gMetatileAttributes_Snowy
+	.4byte NULL @ GNOSIS TODO put animation here
+
+	.align 2
 gTileset_Petalburg:: @ 83DF71C
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset

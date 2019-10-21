@@ -1,0 +1,5 @@
+script PolarForest_Snowman1
+  lock
+    showportrait PORTRAIT_MEILI, PORTRAIT_EYES_CLOSED_GRIN
+    say "(Cute!)$"
+    hideportrait

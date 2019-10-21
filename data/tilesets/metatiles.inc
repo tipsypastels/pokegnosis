@@ -7,6 +7,14 @@ gMetatileAttributes_General:: @ 83980F0
 	.incbin "data/tilesets/primary/general/metatile_attributes.bin"
 
 	.align 1
+gMetatiles_Snowy:: @ 83960F0
+	.incbin "data/tilesets/primary/snowy/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Snowy:: @ 83980F0
+	.incbin "data/tilesets/primary/snowy/metatile_attributes.bin"
+
+	.align 1
 gMetatiles_Petalburg:: @ 83984F0
 	.incbin "data/tilesets/secondary/petalburg/metatiles.bin"
 

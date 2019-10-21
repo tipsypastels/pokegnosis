@@ -475,3 +475,13 @@ PetalburgWoods_Text_TrainerTipsPP: @ 822ED07
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
 
+PolarForest_Snowman1:: @ Dbr-output
+  lock
+  showportrait PORTRAIT_MEILI, PORTRAIT_EYES_CLOSED_GRIN
+  msgbox _PolarForest_Snowman1_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_PolarForest_Snowman1_Subscript_Text_0: @ Dbr-output
+  .string "(Cute!)$"
