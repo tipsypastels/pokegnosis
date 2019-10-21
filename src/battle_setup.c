@@ -72,8 +72,8 @@ static void CB2_EndWildBattle(void);
 static void CB2_EndScriptedWildBattle(void);
 static u8 GetWildBattleTransition(void);
 static u8 GetTrainerBattleTransition(void);
-static void sub_80B1218(void);
-static void sub_80B1234(void);
+static void TryUpdateGymLeaderRematchFromWild(void);
+static void TryUpdateGymLeaderRematchFromTrainer(void);
 static void CB2_GiveStarter(void);
 static void CB2_StartFirstBattle(void);
 static void CB2_EndFirstBattle(void);
@@ -395,8 +395,8 @@ static void DoStandardWildBattle(void)
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 void BattleSetup_StartRoamerBattle(void)
@@ -409,8 +409,8 @@ void BattleSetup_StartRoamerBattle(void)
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 static void DoSafariBattle(void)
@@ -433,8 +433,8 @@ static void DoBattlePikeWildBattle(void)
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 static void DoTrainerBattle(void)
@@ -442,7 +442,7 @@ static void DoTrainerBattle(void)
     CreateBattleStartTask(GetTrainerBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
-    sub_80B1234();
+    TryUpdateGymLeaderRematchFromTrainer();
 }
 
 static void sub_80B0828(void)
@@ -454,7 +454,7 @@ static void sub_80B0828(void)
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
-    sub_80B1234();
+    TryUpdateGymLeaderRematchFromTrainer();
 }
 
 // Initiates battle where Wally catches Ralts
@@ -475,8 +475,8 @@ void BattleSetup_StartScriptedWildBattle(void)
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 void BattleSetup_StartLatiBattle(void)
@@ -487,8 +487,8 @@ void BattleSetup_StartLatiBattle(void)
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 void BattleSetup_StartLegendaryBattle(void)
@@ -526,8 +526,8 @@ void BattleSetup_StartLegendaryBattle(void)
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 void StartGroudonKyogreBattle(void)
@@ -543,8 +543,8 @@ void StartGroudonKyogreBattle(void)
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 void StartRegiBattle(void)
@@ -576,8 +576,8 @@ void StartRegiBattle(void)
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    sub_80EECC8();
-    sub_80B1218();
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
 }
 
 static void CB2_EndWildBattle(void)
@@ -919,8 +919,8 @@ static void CB2_StartFirstBattle(void)
         ClearPoisonStepCounter();
         IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
         IncrementGameStat(GAME_STAT_WILD_BATTLES);
-        sub_80EECC8();
-        sub_80B1218();
+        IncrementDailyWildBattles();
+        TryUpdateGymLeaderRematchFromWild();
     }
 }
 
@@ -930,13 +930,13 @@ static void CB2_EndFirstBattle(void)
     SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
 
-static void sub_80B1218(void)
+static void TryUpdateGymLeaderRematchFromWild(void)
 {
     if (GetGameStat(GAME_STAT_WILD_BATTLES) % 60 == 0)
         UpdateGymLeaderRematch();
 }
 
-static void sub_80B1234(void)
+static void TryUpdateGymLeaderRematchFromTrainer(void)
 {
     if (GetGameStat(GAME_STAT_TRAINER_BATTLES) % 20 == 0)
         UpdateGymLeaderRematch();
@@ -1273,7 +1273,7 @@ void BattleSetup_StartTrainerBattle(void)
 
         MarkApproachingPyramidTrainersAsBattled();
     }
-    else if (sub_81D5C18())
+    else if (InTrainerHillChallenge())
     {
         gBattleTypeFlags |= BATTLE_TYPE_TRAINER_HILL;
 
@@ -1291,7 +1291,7 @@ void BattleSetup_StartTrainerBattle(void)
     gUnknown_03006080 = 0;
     gMain.savedCallback = CB2_EndTrainerBattle;
 
-    if (InBattlePyramid() || sub_81D5C18())
+    if (InBattlePyramid() || InTrainerHillChallenge())
         sub_80B0828();
     else
         DoTrainerBattle();
@@ -1307,7 +1307,7 @@ static void CB2_EndTrainerBattle(void)
     }
     else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
-        if (InBattlePyramid() || sub_81D5C18())
+        if (InBattlePyramid() || InTrainerHillChallenge())
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         else
             SetMainCallback2(CB2_WhiteOut);
@@ -1315,7 +1315,7 @@ static void CB2_EndTrainerBattle(void)
     else
     {
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-        if (!InBattlePyramid() && !sub_81D5C18())
+        if (!InBattlePyramid() && !InTrainerHillChallenge())
         {
             RegisterTrainerInMatchCall();
             SetBattledTrainersFlags();
@@ -1361,7 +1361,7 @@ void ShowTrainerIntroSpeech(void)
 
         sub_80982B8();
     }
-    else if (sub_81D5C18())
+    else if (InTrainerHillChallenge())
     {
         if (gNoOfApproachingTrainers == 0 || gNoOfApproachingTrainers == 1)
             CopyTrainerHillTrainerText(2, LocalIdToHillTrainerId(gSpecialVar_LastTalked));

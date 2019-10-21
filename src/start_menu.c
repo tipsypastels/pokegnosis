@@ -576,7 +576,7 @@ static bool8 HandleStartMenuInput(void)
         BeginNormalPaletteFade(~0, 4, 8, 0, RGB_BLACK);
         if (sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void == StartMenuPokedexCallback)
         {
-            if (GetNationalPokedexCount(0) == 0)
+            if (GetNationalPokedexCount(FLAG_GET_SEEN) == 0)
                 return FALSE;
         }
 

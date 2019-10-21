@@ -42,6 +42,7 @@
 #include "constants/layouts.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/script_menu.h"
+#include "constants/tv.h"
 
 // Static type declarations
 
@@ -1595,7 +1596,7 @@ void SaveRecordedItemPurchasesForTVShow(void)
                     show->smartshopperShow.itemIds[i] = gMartPurchaseHistory[i].itemId;
                     show->smartshopperShow.itemAmounts[i] = gMartPurchaseHistory[i].quantity;
                 }
-                show->smartshopperShow.priceReduced = GetPriceReduction(1);
+                show->smartshopperShow.priceReduced = GetPriceReduction(POKENEWS_SLATEPORT);
                 StringCopy(show->smartshopperShow.playerName, gSaveBlock2Ptr->playerName);
                 tv_store_id_3x(show);
                 show->smartshopperShow.language = gGameLanguage;
@@ -1955,11 +1956,11 @@ void sub_80EDB44(void)
         show->rivalTrainer.badgeCount = nBadges;
         if (IsNationalPokedexEnabled())
         {
-            show->rivalTrainer.dexCount = GetNationalPokedexCount(0x01);
+            show->rivalTrainer.dexCount = GetNationalPokedexCount(FLAG_GET_CAUGHT);
         }
         else
         {
-            show->rivalTrainer.dexCount = GetHoennPokedexCount(0x01);
+            show->rivalTrainer.dexCount = GetHoennPokedexCount(FLAG_GET_CAUGHT);
         }
         show->rivalTrainer.location = gMapHeader.regionMapSectionId;
         show->rivalTrainer.mapLayoutId = gMapHeader.mapLayoutId;
@@ -2625,37 +2626,37 @@ static void sub_80EEBF4(u8 actionIdx)
     }
 }
 
-void sub_80EEC80(void)
+void IncrementDailySlotsUses(void)
 {
     VarSet(VAR_DAILY_SLOTS, VarGet(VAR_DAILY_SLOTS) + 1);
 }
 
-void sub_80EECA4(void)
+void IncrementDailyRouletteUses(void)
 {
     VarSet(VAR_DAILY_ROULETTE, VarGet(VAR_DAILY_ROULETTE) + 1);
 }
 
-void sub_80EECC8(void)
+void IncrementDailyWildBattles(void)
 {
     VarSet(VAR_DAILY_WILDS, VarGet(VAR_DAILY_WILDS) + 1);
 }
 
-void sub_80EECEC(void)
+void IncrementDailyBerryBlender(void)
 {
     VarSet(VAR_DAILY_BLENDER, VarGet(VAR_DAILY_BLENDER) + 1);
 }
 
-void sub_80EED10(void)
+void IncrementDailyPlantedBerries(void)
 {
     VarSet(VAR_DAILY_PLANTED_BERRIES, VarGet(VAR_DAILY_PLANTED_BERRIES) + 1);
 }
 
-void sub_80EED34(void)
+void IncrementDailyPickedBerries(void)
 {
     VarSet(VAR_DAILY_PICKED_BERRIES, VarGet(VAR_DAILY_PICKED_BERRIES) + gSpecialVar_0x8006);
 }
 
-void sub_80EED60(u16 delta)
+void IncrementDailyBattlePoints(u16 delta)
 {
     VarSet(VAR_DAILY_BP, VarGet(VAR_DAILY_BP) + delta);
 }
