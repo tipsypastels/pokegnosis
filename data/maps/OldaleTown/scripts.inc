@@ -403,7 +403,7 @@ OldaleTown_Text_1E94DA: @ 81E94DA
 
 @ Beginning Dragonsbreath scripts
 
-DragonsbreathTestScript::
+DragonsbreathTestScript:: @ Dbr-output
   lock
   faceplayer
   checkplayergender
@@ -413,13 +413,13 @@ DragonsbreathTestScript::
   release
   end
 
-_DragonsbreathTestScript_Subscript_Text_0:
+_DragonsbreathTestScript_Subscript_Text_0: @ Dbr-output
   .string "Hey sis!$"
 
-_DragonsbreathTestScript_Subscript_Code_1::
+_DragonsbreathTestScript_Subscript_Code_1:: @ Dbr-output
   msgbox _DragonsbreathTestScript_Subscript_Text_0, MSGBOX_DEFAULT
   release
   end
 
-_DragonsbreathTestScript_Subscript_Text_2:
+_DragonsbreathTestScript_Subscript_Text_2: @ Dbr-output
   .string "Ugh, what do you want?$"

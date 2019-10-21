@@ -17,13 +17,13 @@ BookLabel_BOTME_11:
   .string "It's an excerpt from the story “Ballad\n"
   .string "of the Mad Emperor”, Chapter 11...$"
 
-Book_FishingJoke_1::
+Book_FishingJoke_1:: @ Dbr-output
   msgbox _Book_FishingJoke_1_Subscript_Text_0, MSGBOX_DEFAULT
   setvar VAR_CURRENT_BOOK, BOOK_FISHING_JOKE_1
   special Special_ShowBook
   end
 
-_Book_FishingJoke_1_Subscript_Text_0:
+_Book_FishingJoke_1_Subscript_Text_0: @ Dbr-output
   .string "It's a fishing almanac!\n"
   .string "Wonder what it could say?$"
 _Book_FishingJoke_1_Subscript_Text_1:

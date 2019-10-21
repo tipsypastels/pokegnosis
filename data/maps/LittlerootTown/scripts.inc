@@ -1035,27 +1035,27 @@ LittlerootTown_Text_1E8DA2: @ 81E8DA2
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
-YamakiTown_Sign::
+YamakiTown_Sign:: @ Dbr-output
   msgbox _YamakiTown_Sign_Subscript_Text_0, MSGBOX_SIGN
   end
 
-_YamakiTown_Sign_Subscript_Text_0:
+_YamakiTown_Sign_Subscript_Text_0: @ Dbr-output
   .string "Yamaki Town$"
 
-YamakiTown_Fisherman::
+YamakiTown_Fisherman:: @ Dbr-output
   lock
   faceplayer
   msgbox _YamakiTown_Fisherman_Subscript_Text_0, MSGBOX_DEFAULT
   release
   end
 
-_YamakiTown_Fisherman_Subscript_Text_0:
+_YamakiTown_Fisherman_Subscript_Text_0: @ Dbr-output
   .string "Ugh! Been here all day and not a\n"
   .string "single bite!\p"
   .string "The book said there were rare\n"
   .string "Pokémon in these waters! :($"
 
-YamakiTown_FatMan::
+YamakiTown_FatMan:: @ Dbr-output
   lock
   faceplayer
   msgbox _YamakiTown_FatMan_Subscript_Text_0, MSGBOX_YESNO
@@ -1071,67 +1071,67 @@ YamakiTown_FatMan::
   release
   end
 
-_YamakiTown_FatMan_Subscript_Text_0:
+_YamakiTown_FatMan_Subscript_Text_0: @ Dbr-output
   .string "Did you know?$"
 
-_YamakiTown_FatMan_Subscript_Text_1:
+_YamakiTown_FatMan_Subscript_Text_1: @ Dbr-output
   .string "What? I hadn't even told you yet!$"
 
-_YamakiTown_FatMan_Subscript_Code_2::
+_YamakiTown_FatMan_Subscript_Code_2:: @ Dbr-output
   msgbox _YamakiTown_FatMan_Subscript_Text_1, MSGBOX_DEFAULT
   release
   end
 
-_YamakiTown_FatMan_Subscript_Text_3:
+_YamakiTown_FatMan_Subscript_Text_3: @ Dbr-output
   .string "I heard {COLOR CHARACTER_COLOR}Lord Jinhai{COLOR NO_COLOR} of the {COLOR CHARACTER_COLOR}Elite\n"
   .string "Dynasty{COLOR NO_COLOR} built a {COLOR POKEMON_COLOR}robotic Pokémon{COLOR NO_COLOR}!\p"
   .string "How insane is that?! I love science!$"
 
-_YamakiTown_FatMan_Subscript_Code_4::
+_YamakiTown_FatMan_Subscript_Code_4:: @ Dbr-output
   msgbox _YamakiTown_FatMan_Subscript_Text_3, MSGBOX_DEFAULT
   release
   end
 
-_YamakiTown_FatMan_Subscript_Text_5:
+_YamakiTown_FatMan_Subscript_Text_5: @ Dbr-output
   .string "I heard {COLOR CHARACTER_COLOR}Professor Yinxing{COLOR NO_COLOR} is in Axel!\p"
   .string "Probably studying all the {COLOR POKEMON_COLOR}rare Pokémon{COLOR NO_COLOR}\n"
   .string "you find in the jungle.$"
 
-_YamakiTown_FatMan_Subscript_Code_6::
+_YamakiTown_FatMan_Subscript_Code_6:: @ Dbr-output
   msgbox _YamakiTown_FatMan_Subscript_Text_5, MSGBOX_DEFAULT
   release
   end
 
-_YamakiTown_FatMan_Subscript_Text_7:
+_YamakiTown_FatMan_Subscript_Text_7: @ Dbr-output
   .string "I heard some rumour about a bunch of\n"
   .string "people dressed as ducks holed up in\l"
   .string "a temple nearby. What the heck, right?$"
 
-_YamakiTown_FatMan_Subscript_Code_8::
+_YamakiTown_FatMan_Subscript_Code_8:: @ Dbr-output
   msgbox _YamakiTown_FatMan_Subscript_Text_7, MSGBOX_DEFAULT
   release
   end
 
-_YamakiTown_FatMan_Subscript_Text_9:
+_YamakiTown_FatMan_Subscript_Text_9: @ Dbr-output
   .string "One of my friends told me their friend\n"
   .string "told them that he saw a {COLOR CHARACTER_COLOR}mysterious\l"
   .string "trainer{COLOR NO_COLOR} with a golden mask in the\l"
   .string "streets of {COLOR LOCATION_COLOR}Saikhet City{COLOR NO_COLOR}!$"
 
-_YamakiTown_FatMan_Subscript_Code_10::
+_YamakiTown_FatMan_Subscript_Code_10:: @ Dbr-output
   msgbox _YamakiTown_FatMan_Subscript_Text_9, MSGBOX_DEFAULT
   release
   end
 
-_YamakiTown_FatMan_Subscript_Text_11:
+_YamakiTown_FatMan_Subscript_Text_11: @ Dbr-output
   .string "Me neither!$"
 
-_YamakiTown_FatMan_Subscript_Code_12::
+_YamakiTown_FatMan_Subscript_Code_12:: @ Dbr-output
   msgbox _YamakiTown_FatMan_Subscript_Text_11, MSGBOX_DEFAULT
   release
   end
 
-YamakiTown_TestWeather::
+YamakiTown_TestWeather:: @ Dbr-output
   lock
   setflag FLAG_SYS_POKEMON_GET
   givemon SPECIES_BULBASAUR, 25, ITEM_NONE

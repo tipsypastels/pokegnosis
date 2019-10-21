@@ -44,6 +44,9 @@ static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
 static void QueueAnimTiles_General_Flower(u16);
+static void QueueAnimTiles_General_CeladonFlower(u16);
+static void QueueAnimTiles_General_Shrub(u16);
+static void QueueAnimTiles_General_Buds(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
@@ -84,6 +87,53 @@ const u16 *const gTilesetAnims_General_Flower[] = {
     gTilesetAnims_General_Flower_Frame1,
     gTilesetAnims_General_Flower_Frame0,
     gTilesetAnims_General_Flower_Frame2
+};
+
+const u16 gTilesetAnims_General_CeladonFlower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/celadon_flower/0.4bpp");
+const u16 gTilesetAnims_General_CeladonFlower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/celadon_flower/1.4bpp");
+const u16 gTilesetAnims_General_CeladonFlower_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/celadon_flower/2.4bpp");
+
+const u16 *const gTilesetAnims_General_CeladonFlower[] = {
+    gTilesetAnims_General_CeladonFlower_Frame0,
+    gTilesetAnims_General_CeladonFlower_Frame0,
+    gTilesetAnims_General_CeladonFlower_Frame1,
+    gTilesetAnims_General_CeladonFlower_Frame2,
+    gTilesetAnims_General_CeladonFlower_Frame2,
+    gTilesetAnims_General_CeladonFlower_Frame1,
+};
+
+const u16 gTilesetAnims_General_Shrub_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/shrub/0.4bpp");
+const u16 gTilesetAnims_General_Shrub_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/shrub/1.4bpp");
+const u16 gTilesetAnims_General_Shrub_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/shrub/2.4bpp");
+
+const u16 *const gTilesetAnims_General_Shrub[] = {
+    gTilesetAnims_General_Shrub_Frame0,
+    gTilesetAnims_General_Shrub_Frame1,
+    gTilesetAnims_General_Shrub_Frame1,
+    gTilesetAnims_General_Shrub_Frame2,
+    gTilesetAnims_General_Shrub_Frame2,
+    gTilesetAnims_General_Shrub_Frame2,
+    gTilesetAnims_General_Shrub_Frame1,
+    gTilesetAnims_General_Shrub_Frame1,
+    gTilesetAnims_General_Shrub_Frame1,
+    gTilesetAnims_General_Shrub_Frame0,
+};
+
+const u16 gTilesetAnims_General_Buds_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/buds/0.4bpp");
+const u16 gTilesetAnims_General_Buds_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/buds/1.4bpp");
+const u16 gTilesetAnims_General_Buds_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/buds/2.4bpp");
+
+const u16 *const gTilesetAnims_General_Buds[] = {
+    gTilesetAnims_General_Buds_Frame0,
+    gTilesetAnims_General_Buds_Frame1,
+    gTilesetAnims_General_Buds_Frame1,
+    gTilesetAnims_General_Buds_Frame0,
+    gTilesetAnims_General_Buds_Frame0,
+    gTilesetAnims_General_Buds_Frame0,
+    gTilesetAnims_General_Buds_Frame2,
+    gTilesetAnims_General_Buds_Frame2,
+    gTilesetAnims_General_Buds_Frame2,
+    gTilesetAnims_General_Buds_Frame0,
 };
 
 const u16 gTilesetAnims_General_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/water/0.4bpp");
@@ -641,6 +691,12 @@ static void TilesetAnim_General(u16 timer)
         QueueAnimTiles_General_Waterfall(timer >> 4);
     if (timer % 16 == 4)
         QueueAnimTiles_General_LandWaterEdge(timer >> 4);
+    if (timer % 16 == 5)
+        QueueAnimTiles_General_CeladonFlower(timer >> 4);
+    if (timer % 16 == 6)
+        QueueAnimTiles_General_Shrub(timer >> 4);
+    if (timer % 16 == 7)
+        QueueAnimTiles_General_Buds(timer >> 4);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -653,6 +709,24 @@ static void QueueAnimTiles_General_Flower(u16 timer)
 {
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 0x80);
+}
+
+static void QueueAnimTiles_General_CeladonFlower(u16 timer)
+{
+    u16 i = timer % 6;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_CeladonFlower[i], (u16 *) (BG_VRAM + TILE_OFFSET_4BPP(492)), 0x80);
+}
+
+static void QueueAnimTiles_General_Shrub(u16 timer)
+{
+    u16 i = timer % 10;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Shrub[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(504)), 0x80);
+}
+
+static void QueueAnimTiles_General_Buds(u16 timer)
+{
+    u16 i = timer % 10;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Buds[i], (u16 *) (BG_VRAM + TILE_OFFSET_4BPP(7)), 0x20);
 }
 
 static void QueueAnimTiles_General_Water(u16 timer)
