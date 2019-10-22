@@ -841,3 +841,14 @@ gTileset_UnionRoom:: @ 83DFDFC
 	.4byte gMetatiles_UnionRoom
 	.4byte gMetatileAttributes_UnionRoom
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_SnowyForest::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SnowyForest
+	.4byte gTilesetPalettes_SnowyForest
+	.4byte gMetatiles_SnowyForest
+	.4byte gMetatileAttributes_SnowyForest
+	.4byte NULL

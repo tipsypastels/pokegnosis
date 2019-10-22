@@ -485,3 +485,74 @@ PolarForest_Snowman1:: @ Dbr-output
 
 _PolarForest_Snowman1_Subscript_Text_0: @ Dbr-output
   .string "(Cute!)$"
+
+PolarForest_Sign:: @ Dbr-output
+  msgbox _PolarForest_Sign_Subscript_Text_0, MSGBOX_SIGN
+  end
+
+_PolarForest_Sign_Subscript_Text_0: @ Dbr-output
+  .string "{COLOR LOCATION_COLOR}POLAR FOREST{COLOR NO_COLOR}\n"
+  .string "{UP_ARROW} {COLOR LOCATION_COLOR}Swaying River{COLOR NO_COLOR} {RIGHT_ARROW} {COLOR LOCATION_COLOR}Jinxhou Snowdown{COLOR NO_COLOR}\l"
+  .string "{DOWN_ARROW} {COLOR LOCATION_COLOR}Shiaxia City{COLOR NO_COLOR}$"
+
+PolarForest_OddishEncounter1:: @ Dbr-output
+  lock
+  applymovement EVENT_OBJ_ID_CAMERA, _PolarForest_OddishEncounter1_Subscript_Movement_0
+  waitmovement EVENT_OBJ_ID_CAMERA
+  msgbox _PolarForest_OddishEncounter1_Subscript_Text_1, MSGBOX_DEFAULT
+  waitbuttonpress
+  applymovement 1, _PolarForest_OddishEncounter1_Subscript_Movement_2
+  waitmovement 1
+  msgbox _PolarForest_OddishEncounter1_Subscript_Text_3, MSGBOX_DEFAULT
+  waitbuttonpress
+  applymovement 1, _PolarForest_OddishEncounter1_Subscript_Movement_4
+  waitmovement 1
+  applymovement EVENT_OBJ_ID_CAMERA, _PolarForest_OddishEncounter1_Subscript_Movement_5
+  waitmovement EVENT_OBJ_ID_CAMERA
+  applymovement EVENT_OBJ_ID_PLAYER, _PolarForest_OddishEncounter1_Subscript_Movement_6
+  showportrait PORTRAIT_MEILI, PORTRAIT_QUESTION
+  msgbox _PolarForest_OddishEncounter1_Subscript_Text_7, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_PolarForest_OddishEncounter1_Subscript_Movement_0: @ Dbr-output
+  walk_left
+  walk_left
+  step_end
+
+_PolarForest_OddishEncounter1_Subscript_Text_1: @ Dbr-output
+  .string "Oddi...$"
+
+_PolarForest_OddishEncounter1_Subscript_Movement_2: @ Dbr-output
+  walk_slow_left
+  walk_slow_left
+  walk_slow_left
+  walk_slow_left
+  delay_16
+  step_end
+
+_PolarForest_OddishEncounter1_Subscript_Movement_4: @ Dbr-output
+  delay_16
+  walk_slow_down
+  walk_slow_down
+  walk_slow_down
+  walk_slow_down
+  walk_slow_down
+  walk_slow_down
+  step_end
+
+_PolarForest_OddishEncounter1_Subscript_Text_3: @ Dbr-output
+  .string "Od..!$"
+
+_PolarForest_OddishEncounter1_Subscript_Movement_5: @ Dbr-output
+  walk_right
+  walk_right
+  step_end
+
+_PolarForest_OddishEncounter1_Subscript_Movement_6: @ Dbr-output
+  emote_question_mark
+  step_end
+
+_PolarForest_OddishEncounter1_Subscript_Text_7: @ Dbr-output
+  .string "(...)$"

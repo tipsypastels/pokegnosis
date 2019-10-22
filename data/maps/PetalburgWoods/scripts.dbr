@@ -3,3 +3,36 @@ script PolarForest_Snowman1
     showportrait PORTRAIT_MEILI, PORTRAIT_EYES_CLOSED_GRIN
     say "(Cute!)$"
     hideportrait
+
+script PolarForest_Sign
+  using_msgbox MSGBOX_SIGN
+    say "LOCATION_COLOR(POLAR FOREST)\n"
+    say "{UP_ARROW} LOCATION_COLOR(Swaying River) {RIGHT_ARROW} LOCATION_COLOR(Jinxhou Snowdown)\l"
+    say "{DOWN_ARROW} LOCATION_COLOR(Shiaxia City)$"
+
+script PolarForest_OddishEncounter1
+  lock
+    move_and_wait EVENT_OBJ_ID_CAMERA
+      walk_left
+      walk_left
+    say "Oddi...$"
+    waitbuttonpress
+    move_and_wait oddish: 1
+      walk_slow_left
+      walk_slow_left
+      walk_slow_left
+      walk_slow_left
+      delay_16
+    say "Od..!$"
+    waitbuttonpress
+    move_and_wait oddish: 1
+      delay_16
+      walk_slow_left
+    move_and_wait EVENT_OBJ_ID_CAMERA
+      walk_right
+      walk_right
+    move player
+      emote_question_mark
+    showportrait PORTRAIT_MEILI, PORTRAIT_QUESTION
+    say "(...)$"
+    hideportrait

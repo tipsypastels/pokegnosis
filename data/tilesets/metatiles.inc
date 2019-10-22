@@ -565,3 +565,11 @@ gMetatiles_UnionRoom:: @ 83DF392
 	.align 1
 gMetatileAttributes_UnionRoom:: @ 83DF6A2
 	.incbin "data/tilesets/secondary/union_room/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_SnowyForest::
+	.incbin "data/tilesets/secondary/snowyforest/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SnowyForest::
+	.incbin "data/tilesets/secondary/snowyforest/metatile_attributes.bin"

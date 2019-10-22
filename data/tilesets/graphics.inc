@@ -1729,3 +1729,23 @@ gTilesetPalettes_UnionRoom:: @ 8395678
 	.align 2
 gTilesetTiles_UnionRoom:: @ 8395878
 	.incbin "data/tilesets/secondary/union_room/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SnowyForest::
+	.incbin "data/tilesets/secondary/snowyforest/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/snowyforest/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SnowyForest::
+	.incbin "data/tilesets/secondary/snowyforest/tiles.4bpp.lz"

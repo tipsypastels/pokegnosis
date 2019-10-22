@@ -1347,7 +1347,7 @@
             "id": "LAYOUT_PETALBURG_WOODS",
             "name": "PetalburgWoods_Layout",
             "primary_tileset": "gTileset_Snowy",
-            "secondary_tileset": "gTileset_Rustboro",
+            "secondary_tileset": "gTileset_SnowyForest",
             "width": 48
         },
         {
