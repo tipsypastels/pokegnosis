@@ -38,6 +38,7 @@ struct Portrait
 };
 
 void ShowPortrait(u8 character, u8 emotion);
+void ShowPlayerPortrait(u8 emotion);
 void HidePortrait(void);
 
 #endif

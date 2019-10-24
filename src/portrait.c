@@ -127,6 +127,15 @@ void ShowPortrait(u8 character, u8 emotion) {
   sPortraitSpriteId = CreateSprite(&sSpriteTemplate_TestPortrait, 22, 94, 0);
 }
 
+void ShowPlayerPortrait(u8 emotion) {
+  ShowPortrait(PORTRAIT_MEILI, emotion);
+  // if (gSaveBlock2Ptr->playerGender == MALE) {
+  //   // TODO kai portrait
+  // } else {
+  //   ShowPortrait(PORTRAIT_MEILI, emotion);
+  // }
+}
+
 void HidePortrait(void) {
   HidePortraitGraphic();
   HidePortraitSpeakerName();

@@ -111,6 +111,7 @@ LittlerootTown_MaysHouse_1F_Movement_1F89EC: @ 81F89EC
 	step_end
 
 LittlerootTown_BrendansHouse_1F_EventScript_1F89F3:: @ 81F89F3
+
 LittlerootTown_MaysHouse_1F_EventScript_1F89F3:: @ 81F89F3
 	lock
 	faceplayer
@@ -139,6 +140,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_1F8A33:: @ 81F8A33
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_1F8A3D:: @ 81F8A3D
+
 LittlerootTown_MaysHouse_1F_EventScript_1F8A3D:: @ 81F8A3D
 	lock
 	faceplayer
@@ -328,6 +330,7 @@ LittlerootTown_MaysHouse_1F_Movement_1F8BBF: @ 81F8BBF
 	step_end
 
 LittlerootTown_BrendansHouse_1F_Text_1F8BC5: @ 81F8BC5
+
 LittlerootTown_MaysHouse_1F_Text_1F8BC5: @ 81F8BC5
 	.string "Oh, hello. And you are?\p"
 	.string "… … … … … … … … …\n"
@@ -415,3 +418,7 @@ LittlerootTown_BrendansHouse_1F_Text_1F9262: @ 81F9262
 	.string "Hi, neighbor!\p"
 	.string "Do you already have your\n"
 	.string "own POKéMON?$"
+
+MeilisHouse_1F_Poster:: @ Dbr-output
+  
+  end

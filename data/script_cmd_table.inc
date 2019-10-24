@@ -229,6 +229,7 @@ gScriptCmdTable:: @ 81DB67C
 	.4byte ScrCmd_bufferitemnameplural
 	.4byte ScrCmd_showportrait
 	.4byte ScrCmd_hideportrait
+	.4byte ScrCmd_showplayerportrait
 
 gScriptCmdTableEnd:: @ 81DBA08
 	.4byte ScrCmd_nop

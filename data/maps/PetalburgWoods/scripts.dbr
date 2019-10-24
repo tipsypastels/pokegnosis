@@ -1,6 +1,6 @@
 script PolarForest_Snowman1
   lock
-    showportrait PORTRAIT_MEILI, PORTRAIT_EYES_CLOSED_GRIN
+    showplayerportrait PORTRAIT_EYES_CLOSED_GRIN
     say "(Cute!)$"
     hideportrait
 
@@ -36,7 +36,7 @@ script PolarForest_OddishEncounter1
       walk_right
     move player
       emote_question_mark
-    showportrait PORTRAIT_MEILI, PORTRAIT_QUESTION
+    showplayerportrait PORTRAIT_QUESTION
     say "(...)$"
     hideportrait
     special RemoveCameraObject

@@ -476,7 +476,7 @@ PetalburgWoods_Text_TrainerTipsPP: @ 822ED07
 
 PolarForest_Snowman1:: @ Dbr-output
   lock
-  showportrait PORTRAIT_MEILI, PORTRAIT_EYES_CLOSED_GRIN
+  showplayerportrait PORTRAIT_EYES_CLOSED_GRIN
   msgbox _PolarForest_Snowman1_Subscript_Text_0, MSGBOX_DEFAULT
   hideportrait
   release
@@ -508,7 +508,7 @@ PolarForest_OddishEncounter1:: @ Dbr-output
   waitmovement 1
   applymovement EVENT_OBJ_ID_CAMERA, _PolarForest_OddishEncounter1_Subscript_Movement_5
   applymovement EVENT_OBJ_ID_PLAYER, _PolarForest_OddishEncounter1_Subscript_Movement_6
-  showportrait PORTRAIT_MEILI, PORTRAIT_QUESTION
+  showplayerportrait PORTRAIT_QUESTION
   msgbox _PolarForest_OddishEncounter1_Subscript_Text_7, MSGBOX_DEFAULT
   hideportrait
   special RemoveCameraObject
