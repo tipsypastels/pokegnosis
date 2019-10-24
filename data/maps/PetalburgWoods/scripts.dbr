@@ -12,23 +12,26 @@ script PolarForest_Sign
 
 script PolarForest_OddishEncounter1
   lock
-    move_and_wait EVENT_OBJ_ID_CAMERA
+    special SpawnCameraObject
+    move EVENT_OBJ_ID_CAMERA
       walk_left
       walk_left
     say "Oddi...$"
-    waitbuttonpress
+    closemessage
     move_and_wait oddish: 1
-      walk_slow_left
-      walk_slow_left
-      walk_slow_left
-      walk_slow_left
       delay_16
+      walk_slow_left
+      walk_slow_left
+      walk_slow_left
+      walk_slow_left
     say "Od..!$"
-    waitbuttonpress
+    closemessage
     move_and_wait oddish: 1
       delay_16
-      walk_slow_left
-    move_and_wait EVENT_OBJ_ID_CAMERA
+      walk_left
+      walk_left
+      walk_left
+    move EVENT_OBJ_ID_CAMERA
       walk_right
       walk_right
     move player
@@ -36,3 +39,6 @@ script PolarForest_OddishEncounter1
     showportrait PORTRAIT_MEILI, PORTRAIT_QUESTION
     say "(...)$"
     hideportrait
+    special RemoveCameraObject
+    setvar VAR_POLAR_FOREST_STATE, 1
+    removeobject oddish: 1

@@ -125,7 +125,7 @@
 #define VAR_LILYCOVE_FAN_CLUB_STATE  0x4095
 #define VAR_BRINEY_LOCATION          0x4096
 #define VAR_0x4097                   0x4097 // TODO: related to creating new secret base
-#define VAR_PETALBURG_WOODS_STATE    0x4098
+#define VAR_POLAR_FOREST_STATE       0x4098
 #define VAR_LILYCOVE_CONTEST_LOBBY_STATE 0x4099
 #define VAR_RUSTURF_TUNNEL_STATE     0x409a
 #define VAR_CAVE_OF_ORIGIN_B4F_STATE 0x409B

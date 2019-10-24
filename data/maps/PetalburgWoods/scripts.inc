@@ -109,7 +109,6 @@ PetalburgWoods_EventScript_DevonResearcherFinish:: @ 822E18B
 
 PetalburgWoods_EventScript_RemoveDevonResearcher:: @ 822E1A7
 	removeobject 4
-	setvar VAR_PETALBURG_WOODS_STATE, 1
 	releaseall
 	end
 
@@ -497,22 +496,24 @@ _PolarForest_Sign_Subscript_Text_0: @ Dbr-output
 
 PolarForest_OddishEncounter1:: @ Dbr-output
   lock
+  special SpawnCameraObject
   applymovement EVENT_OBJ_ID_CAMERA, _PolarForest_OddishEncounter1_Subscript_Movement_0
-  waitmovement EVENT_OBJ_ID_CAMERA
   msgbox _PolarForest_OddishEncounter1_Subscript_Text_1, MSGBOX_DEFAULT
-  waitbuttonpress
+  closemessage
   applymovement 1, _PolarForest_OddishEncounter1_Subscript_Movement_2
   waitmovement 1
   msgbox _PolarForest_OddishEncounter1_Subscript_Text_3, MSGBOX_DEFAULT
-  waitbuttonpress
+  closemessage
   applymovement 1, _PolarForest_OddishEncounter1_Subscript_Movement_4
   waitmovement 1
   applymovement EVENT_OBJ_ID_CAMERA, _PolarForest_OddishEncounter1_Subscript_Movement_5
-  waitmovement EVENT_OBJ_ID_CAMERA
   applymovement EVENT_OBJ_ID_PLAYER, _PolarForest_OddishEncounter1_Subscript_Movement_6
   showportrait PORTRAIT_MEILI, PORTRAIT_QUESTION
   msgbox _PolarForest_OddishEncounter1_Subscript_Text_7, MSGBOX_DEFAULT
   hideportrait
+  special RemoveCameraObject
+  setvar VAR_POLAR_FOREST_STATE, 1
+  removeobject 1
   release
   end
 
@@ -525,21 +526,18 @@ _PolarForest_OddishEncounter1_Subscript_Text_1: @ Dbr-output
   .string "Oddi...$"
 
 _PolarForest_OddishEncounter1_Subscript_Movement_2: @ Dbr-output
-  walk_slow_left
-  walk_slow_left
-  walk_slow_left
-  walk_slow_left
   delay_16
+  walk_slow_left
+  walk_slow_left
+  walk_slow_left
+  walk_slow_left
   step_end
 
 _PolarForest_OddishEncounter1_Subscript_Movement_4: @ Dbr-output
   delay_16
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
+  walk_left
+  walk_left
+  walk_left
   step_end
 
 _PolarForest_OddishEncounter1_Subscript_Text_3: @ Dbr-output

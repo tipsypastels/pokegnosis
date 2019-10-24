@@ -413,7 +413,7 @@ $(EVENTOBJGFXDIR)/pokemon/azurill.4bpp: %.4bpp: %.png
 $(EVENTOBJGFXDIR)/pokemon/deoxys.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(EVENTOBJGFXDIR)/pokemon/dusclops.4bpp: %.4bpp: %.png
+$(EVENTOBJGFXDIR)/pokemon/oddish.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(EVENTOBJGFXDIR)/pokemon/enemy_zigzagoon.4bpp: %.4bpp: %.png

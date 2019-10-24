@@ -24,6 +24,7 @@ static void (*sSecondaryTilesetAnimCallback)(u16);
 static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
+static void TilesetAnim_Snowy(u16);
 static void TilesetAnim_Building(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
@@ -51,6 +52,7 @@ static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
 static void QueueAnimTiles_General_LandWaterEdge(u16);
+static void QueueAnimTiles_Snowy_Buds(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
@@ -197,6 +199,23 @@ const u16 *const gTilesetAnims_General_LandWaterEdge[] = {
     gTilesetAnims_General_LandWaterEdge_Frame1,
     gTilesetAnims_General_LandWaterEdge_Frame2,
     gTilesetAnims_General_LandWaterEdge_Frame3
+};
+
+const u16 gTilesetAnims_Snowy_Buds_Frame0[] = INCBIN_U16("data/tilesets/primary/snowy/anim/buds/0.4bpp");
+const u16 gTilesetAnims_Snowy_Buds_Frame1[] = INCBIN_U16("data/tilesets/primary/snowy/anim/buds/1.4bpp");
+const u16 gTilesetAnims_Snowy_Buds_Frame2[] = INCBIN_U16("data/tilesets/primary/snowy/anim/buds/2.4bpp");
+
+const u16 *const gTilesetAnims_Snowy_Buds[] = {
+    gTilesetAnims_Snowy_Buds_Frame0,
+    gTilesetAnims_Snowy_Buds_Frame1,
+    gTilesetAnims_Snowy_Buds_Frame1,
+    gTilesetAnims_Snowy_Buds_Frame0,
+    gTilesetAnims_Snowy_Buds_Frame0,
+    gTilesetAnims_Snowy_Buds_Frame0,
+    gTilesetAnims_Snowy_Buds_Frame2,
+    gTilesetAnims_Snowy_Buds_Frame2,
+    gTilesetAnims_Snowy_Buds_Frame2,
+    gTilesetAnims_Snowy_Buds_Frame0,
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -672,6 +691,13 @@ void InitTilesetAnim_General(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_General;
 }
 
+void InitTilesetAnim_Snowy(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_Snowy;
+}
+
 void InitTilesetAnim_Building(void)
 {
     // sPrimaryTilesetAnimCounter = 0;
@@ -697,6 +723,12 @@ static void TilesetAnim_General(u16 timer)
         QueueAnimTiles_General_Shrub(timer >> 4);
     if (timer % 16 == 7)
         QueueAnimTiles_General_Buds(timer >> 4);
+}
+
+static void TilesetAnim_Snowy(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_Snowy_Buds(timer >> 4);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -745,6 +777,12 @@ static void QueueAnimTiles_General_Waterfall(u16 timer)
 {
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 0xc0);
+}
+
+static void QueueAnimTiles_Snowy_Buds(u16 timer)
+{
+    u16 i = timer % 10;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Snowy_Buds[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(7)), 0x20);
 }
 
 void InitTilesetAnim_Petalburg(void)

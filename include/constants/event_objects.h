@@ -227,7 +227,7 @@
 #define EVENT_OBJ_GFX_MYSTERY_GIFT_MAN           223
 #define EVENT_OBJ_GFX_TRICK_HOUSE_STATUE         224
 #define EVENT_OBJ_GFX_KIRLIA                     225
-#define EVENT_OBJ_GFX_DUSCLOPS                   226
+#define EVENT_OBJ_GFX_ODDISH                     226
 #define EVENT_OBJ_GFX_UNION_ROOM_NURSE           227
 #define EVENT_OBJ_GFX_SUDOWOODO                  228
 #define EVENT_OBJ_GFX_MEW                        229
