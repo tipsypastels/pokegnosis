@@ -529,8 +529,6 @@ _PolarForest_OddishEncounter1_Subscript_Movement_2: @ Dbr-output
   delay_16
   walk_slow_left
   walk_slow_left
-  walk_slow_left
-  walk_slow_left
   step_end
 
 _PolarForest_OddishEncounter1_Subscript_Movement_4: @ Dbr-output

@@ -1,5 +1,10 @@
 LittlerootTown_MaysHouse_1F_MapScripts:: @ 81F88A5
+	map_script MAP_SCRIPT_ON_TRANSITION, MeilisHouse_1F_MapScript1
 	.byte 0
+
+MeilisHouse_1F_MapScript1:
+  call MeilisHouse_1F_WhereIsEveryone
+	end
 
 LittlerootTown_MaysHouse_1F_MapScript1_1F88B5: @ 81F88B5
 	compare VAR_LITTLEROOT_INTRO_STATE, 6
@@ -419,6 +424,37 @@ LittlerootTown_BrendansHouse_1F_Text_1F9262: @ 81F9262
 	.string "Do you already have your\n"
 	.string "own POKéMON?$"
 
-MeilisHouse_1F_Poster:: @ Dbr-output
-  
+MeilisHouse_1F_WhereIsEveryone:: @ Dbr-output
+  special SpawnCameraObject
+  applymovement EVENT_OBJ_ID_CAMERA, _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_0
+  waitmovement EVENT_OBJ_ID_CAMERA
+  applymovement EVENT_OBJ_ID_PLAYER, _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_1
+  showplayerportrait PORTRAIT_QUESTION
+  msgbox _MeilisHouse_1F_WhereIsEveryone_Subscript_Text_2, MSGBOX_DEFAULT
+  closemessage
+  hideportrait
+  applymovement EVENT_OBJ_ID_PLAYER, _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_3
+  applymovement EVENT_OBJ_ID_CAMERA, _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_4
+  waitmovement EVENT_OBJ_ID_CAMERA
+  special RemoveCameraObject
   end
+
+_MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_0: @ Dbr-output
+  walk_slow_diag_southwest
+  step_end
+
+_MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_1: @ Dbr-output
+  face_down
+  emote_question_mark
+  step_end
+
+_MeilisHouse_1F_WhereIsEveryone_Subscript_Text_2: @ Dbr-output
+  .string "(Where is everyone?)$"
+
+_MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_3: @ Dbr-output
+  face_left
+  step_end
+
+_MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_4: @ Dbr-output
+  walk_slow_diag_northeast
+  step_end

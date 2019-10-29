@@ -22,8 +22,6 @@ script PolarForest_OddishEncounter1
       delay_16
       walk_slow_left
       walk_slow_left
-      walk_slow_left
-      walk_slow_left
     say "Od..!$"
     closemessage
     move_and_wait oddish: 1

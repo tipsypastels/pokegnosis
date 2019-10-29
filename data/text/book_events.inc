@@ -26,5 +26,15 @@ Book_FishingJoke_1:: @ Dbr-output
 _Book_FishingJoke_1_Subscript_Text_0: @ Dbr-output
   .string "It's a fishing almanac!\n"
   .string "Wonder what it could say?$"
+
 _Book_FishingJoke_1_Subscript_Text_1:
   .string "It's certainly to the point...$"
+
+Book_Poster_MeilisHouse:: @ Dbr-output
+  msgbox _Book_Poster_MeilisHouse_Subscript_Text_0, MSGBOX_DEFAULT
+  setvar VAR_CURRENT_BOOK, BOOK_POSTER_MEILISHOUSE
+  special Special_ShowBook
+  end
+
+_Book_Poster_MeilisHouse_Subscript_Text_0: @ Dbr-output
+  .string "It's an ancient saying...$"

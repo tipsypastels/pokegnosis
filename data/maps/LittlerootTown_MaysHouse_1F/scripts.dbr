@@ -1,2 +1,14 @@
-script MeilisHouse_1F_Poster
-  
+script MeilisHouse_1F_WhereIsEveryone
+  spawncamera
+    move_and_wait camera
+      walk_slow_diag_southwest
+    move player
+      face_down
+      emote_question_mark
+    showplayerportrait PORTRAIT_QUESTION
+      say "(Where is everyone?)$"
+      closemessage
+    move player
+      face_left
+    move_and_wait camera
+      walk_slow_diag_northeast
