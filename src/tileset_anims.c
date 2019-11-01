@@ -56,6 +56,11 @@ static void QueueAnimTiles_Snowy_Buds(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
+static void QueueAnimTiles_Rustboro_WaterWheel_Row0(u16);
+static void QueueAnimTiles_Rustboro_WaterWheel_Row1(u16);
+static void QueueAnimTiles_Rustboro_WaterWheel_Row2(u16);
+static void QueueAnimTiles_Rustboro_WaterWheel_Row3(u16);
+static void QueueAnimTiles_Rustboro_WaterWheel_Water(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
@@ -389,6 +394,80 @@ const u16 tileset_anims_space_2[16] = {};
 const u16 *const gTilesetAnims_Rustboro_Fountain[] = {
     gTilesetAnims_Rustboro_Fountain_Frame0,
     gTilesetAnims_Rustboro_Fountain_Frame1
+};
+
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row0_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_0/0.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row0_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_0/1.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row0_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_0/2.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row0_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_0/3.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row0_Frame4[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_0/4.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row0_Frame5[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_0/5.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_WaterWheel_Row0[] = {
+    gTilesetAnims_Rustboro_WaterWheel_Row0_Frame0,
+    gTilesetAnims_Rustboro_WaterWheel_Row0_Frame1,
+    gTilesetAnims_Rustboro_WaterWheel_Row0_Frame2,
+    gTilesetAnims_Rustboro_WaterWheel_Row0_Frame3,
+    gTilesetAnims_Rustboro_WaterWheel_Row0_Frame4,
+    gTilesetAnims_Rustboro_WaterWheel_Row0_Frame5,
+};
+
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row1_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_1/0.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row1_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_1/1.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row1_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_1/2.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row1_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_1/3.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row1_Frame4[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_1/4.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row1_Frame5[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_1/5.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_WaterWheel_Row1[] = {
+    gTilesetAnims_Rustboro_WaterWheel_Row1_Frame0,
+    gTilesetAnims_Rustboro_WaterWheel_Row1_Frame1,
+    gTilesetAnims_Rustboro_WaterWheel_Row1_Frame2,
+    gTilesetAnims_Rustboro_WaterWheel_Row1_Frame3,
+    gTilesetAnims_Rustboro_WaterWheel_Row1_Frame4,
+    gTilesetAnims_Rustboro_WaterWheel_Row1_Frame5,
+};
+
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row2_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_2/0.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row2_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_2/1.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row2_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_2/2.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row2_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_2/3.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row2_Frame4[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_2/4.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row2_Frame5[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_2/5.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_WaterWheel_Row2[] = {
+    gTilesetAnims_Rustboro_WaterWheel_Row2_Frame0,
+    gTilesetAnims_Rustboro_WaterWheel_Row2_Frame1,
+    gTilesetAnims_Rustboro_WaterWheel_Row2_Frame2,
+    gTilesetAnims_Rustboro_WaterWheel_Row2_Frame3,
+    gTilesetAnims_Rustboro_WaterWheel_Row2_Frame4,
+    gTilesetAnims_Rustboro_WaterWheel_Row2_Frame5,
+};
+
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row3_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_3/0.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row3_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_3/1.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row3_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_3/2.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row3_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_3/3.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row3_Frame4[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_3/4.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Row3_Frame5[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/row_3/5.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_WaterWheel_Row3[] = {
+    gTilesetAnims_Rustboro_WaterWheel_Row3_Frame0,
+    gTilesetAnims_Rustboro_WaterWheel_Row3_Frame1,
+    gTilesetAnims_Rustboro_WaterWheel_Row3_Frame2,
+    gTilesetAnims_Rustboro_WaterWheel_Row3_Frame3,
+    gTilesetAnims_Rustboro_WaterWheel_Row3_Frame4,
+    gTilesetAnims_Rustboro_WaterWheel_Row3_Frame5,
+};
+
+const u16 gTilesetAnims_Rustboro_WaterWheel_Water_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/water/0.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Water_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/water/1.4bpp");
+const u16 gTilesetAnims_Rustboro_WaterWheel_Water_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/water_wheel/water/2.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_WaterWheel_Water[] = {
+    gTilesetAnims_Rustboro_WaterWheel_Water_Frame0,
+    gTilesetAnims_Rustboro_WaterWheel_Water_Frame1,
+    gTilesetAnims_Rustboro_WaterWheel_Water_Frame2,
 };
 
 const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame0[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/0.4bpp");
@@ -948,6 +1027,16 @@ void InitTilesetAnim_BattleDome(void)
 
 static void TilesetAnim_Rustboro(u16 timer)
 {
+    if (timer % 8 == 0)
+        QueueAnimTiles_Rustboro_WaterWheel_Water(timer >> 4);
+    if (timer % 8 == 1)
+        QueueAnimTiles_Rustboro_WaterWheel_Row0(timer >> 4);
+        QueueAnimTiles_Rustboro_WaterWheel_Row1(timer >> 4);
+        QueueAnimTiles_Rustboro_WaterWheel_Row2(timer >> 4);
+        QueueAnimTiles_Rustboro_WaterWheel_Row3(timer >> 4);
+    // if (timer % 8 == 2)
+    // if (timer % 8 == 3)
+    // if (timer % 8 == 4)
 //     if (timer % 8 == 0)
 //     {
 //         QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 0);
@@ -1129,6 +1218,36 @@ static void QueueAnimTiles_Rustboro_Fountain(u16 timer)
 {
     u16 i = timer % 2;
     AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_Fountain[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 448)), 0x80);
+}
+
+static void QueueAnimTiles_Rustboro_WaterWheel_Row0(u16 timer)
+{
+    u16 i = timer % 6;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Row0[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(896)), 0x1C0);
+}
+
+static void QueueAnimTiles_Rustboro_WaterWheel_Row1(u16 timer)
+{
+    u16 i = timer % 6;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Row1[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(912)), 0x200);
+}
+
+static void QueueAnimTiles_Rustboro_WaterWheel_Row2(u16 timer)
+{
+    u16 i = timer % 6;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Row2[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(928)), 0x200);
+}
+
+static void QueueAnimTiles_Rustboro_WaterWheel_Row3(u16 timer)
+{
+    u16 i = timer % 6;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Row3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(944)), 0x1C0);
+}
+
+static void QueueAnimTiles_Rustboro_WaterWheel_Water(u16 timer)
+{
+    u16 i = timer % 3;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(825)), 0x80);
 }
 
 static void QueueAnimTiles_Lavaridge_Lava(u16 timer)
