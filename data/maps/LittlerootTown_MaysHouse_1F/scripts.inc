@@ -1,5 +1,4 @@
 LittlerootTown_MaysHouse_1F_MapScripts:: @ 81F88A5
-	map_script MAP_SCRIPT_ON_TRANSITION, MeilisHouse_1F_MapScript1
 	.byte 0
 
 MeilisHouse_1F_MapScript1:

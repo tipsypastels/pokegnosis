@@ -1040,7 +1040,8 @@ YamakiTown_Sign:: @ Dbr-output
   end
 
 _YamakiTown_Sign_Subscript_Text_0: @ Dbr-output
-  .string "Yamaki Town$"
+  .string "{COLOR LOCATION_COLOR}YAMAKI TOWN{COLOR NO_COLOR}\n"
+  .string "{UP_ARROW} {COLOR LOCATION_COLOR}Yamaki Lake{COLOR NO_COLOR} {RIGHT_ARROW} {COLOR LOCATION_COLOR}Downey Ranch{COLOR NO_COLOR}$"
 
 YamakiTown_Fisherman:: @ Dbr-output
   lock
@@ -1131,9 +1132,127 @@ _YamakiTown_FatMan_Subscript_Code_12:: @ Dbr-output
   release
   end
 
-YamakiTown_TestWeather:: @ Dbr-output
+YamakiTown_RivalIntro:: @ Dbr-output
   lock
-  setflag FLAG_SYS_POKEMON_GET
-  givemon SPECIES_BULBASAUR, 25, ITEM_NONE
+  special SpawnCameraObject
+  applymovement EVENT_OBJ_ID_CAMERA, _YamakiTown_RivalIntro_Subscript_Movement_0
+  applymovement 5, _YamakiTown_RivalIntro_Subscript_Movement_1
+  waitmovement 5
+  applymovement EVENT_OBJ_ID_PLAYER, _YamakiTown_RivalIntro_Subscript_Movement_2
+  waitmovement EVENT_OBJ_ID_PLAYER
+  showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+  msgbox _YamakiTown_RivalIntro_Subscript_Text_3, MSGBOX_DEFAULT
+  hideportrait
+  showplayerportrait PORTRAIT_QUESTION
+  msgbox _YamakiTown_RivalIntro_Subscript_Text_4, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+  msgbox _YamakiTown_RivalIntro_Subscript_Text_5, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 5, _YamakiTown_RivalIntro_Subscript_Movement_6
+  waitmovement 5
+  applymovement EVENT_OBJ_ID_CAMERA, _YamakiTown_RivalIntro_Subscript_Movement_7
+  waitmovement EVENT_OBJ_ID_CAMERA
+  applymovement EVENT_OBJ_ID_PLAYER, _YamakiTown_RivalIntro_Subscript_Movement_8
+  showplayerportrait PORTRAIT_QUESTION
+  msgbox _YamakiTown_RivalIntro_Subscript_Text_9, MSGBOX_DEFAULT
+  hideportrait
+  addvar VAR_LITTLEROOT_TOWN_STATE, 1
+  special RemoveCameraObject
+  release
+  end
+
+_YamakiTown_RivalIntro_Subscript_Movement_0: @ Dbr-output
+  walk_down
+  walk_down
+  step_end
+
+_YamakiTown_RivalIntro_Subscript_Movement_1: @ Dbr-output
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  step_end
+
+_YamakiTown_RivalIntro_Subscript_Movement_2: @ Dbr-output
+  walk_down
+  face_right
+  emote_exclamation_mark
+  step_end
+
+_YamakiTown_RivalIntro_Subscript_Text_3: @ Dbr-output
+  .string "{COLOR CHARACTER_COLOR}{PLAYER}{COLOR NO_COLOR}! Hey!\l"
+  .string "What are you looking like that for?\n"
+  .string "Don't you know what's going on?$"
+
+_YamakiTown_RivalIntro_Subscript_Text_4: @ Dbr-output
+  .string "(...)$"
+
+_YamakiTown_RivalIntro_Subscript_Text_5: @ Dbr-output
+  .string "You really don't!\l"
+  .string "Come on! I'll explain on the way!\n"
+  .string "We're going to {COLOR LOCATION_COLOR}Downy Ranch{COLOR NO_COLOR}! I'm sure\l"
+  .string "we'll find it there!$"
+
+_YamakiTown_RivalIntro_Subscript_Movement_6: @ Dbr-output
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  step_end
+
+_YamakiTown_RivalIntro_Subscript_Movement_7: @ Dbr-output
+  walk_up
+  walk_up
+  step_end
+
+_YamakiTown_RivalIntro_Subscript_Movement_8: @ Dbr-output
+  emote_question_mark
+  step_end
+
+_YamakiTown_RivalIntro_Subscript_Text_9: @ Dbr-output
+  .string "(...)$"
+
+YamakiTown_HealShrine:: @ Dbr-output
+  lock
+  getpartysize
+  compare VAR_RESULT, 1
+  goto_if_eq _YamakiTown_HealShrine_Subscript_Code_1
+  msgbox _YamakiTown_HealShrine_Subscript_Text_2, MSGBOX_YESNO
+  compare VAR_RESULT, TRUE
+  goto_if_eq _YamakiTown_HealShrine_Subscript_Code_4
+  release
+  end
+
+_YamakiTown_HealShrine_Subscript_Text_0: @ Dbr-output
+  .string "(Peaceful...)$"
+
+_YamakiTown_HealShrine_Subscript_Code_1:: @ Dbr-output
+  showplayerportrait PORTRAIT_EYES_CLOSED_GRIN
+  msgbox _YamakiTown_HealShrine_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_YamakiTown_HealShrine_Subscript_Text_2: @ Dbr-output
+  .string "The sound of the waves fills you\n"
+  .string "with determination.\p"
+  .string "Do you want to heal your {COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR}?$"
+
+_YamakiTown_HealShrine_Subscript_Text_3: @ Dbr-output
+  .string "Your {COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR} are looking refreshed!$"
+
+_YamakiTown_HealShrine_Subscript_Code_4:: @ Dbr-output
+  fadescreen 1
+  delay 20
+  fadescreen 0
+  incrementgamestat GAME_STAT_USED_POKECENTER
+  special HealPlayerParty
+  msgbox _YamakiTown_HealShrine_Subscript_Text_3, MSGBOX_DEFAULT
   release
   end

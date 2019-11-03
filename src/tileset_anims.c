@@ -61,6 +61,9 @@ static void QueueAnimTiles_Rustboro_WaterWheel_Row1(u16);
 static void QueueAnimTiles_Rustboro_WaterWheel_Row2(u16);
 static void QueueAnimTiles_Rustboro_WaterWheel_Row3(u16);
 static void QueueAnimTiles_Rustboro_WaterWheel_Water(u16);
+static void QueueAnimTiles_Rustboro_LilyPad(u16);
+static void QueueAnimTiles_Rustboro_LilyPadFlower(u16);
+static void QueueAnimTiles_Rustboro_LeavesWater(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
@@ -470,6 +473,54 @@ const u16 *const gTilesetAnims_Rustboro_WaterWheel_Water[] = {
     gTilesetAnims_Rustboro_WaterWheel_Water_Frame2,
 };
 
+const u16 gTilesetAnims_Rustboro_LilyPad_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/0.4bpp");
+const u16 gTilesetAnims_Rustboro_LilyPad_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/1.4bpp");
+const u16 gTilesetAnims_Rustboro_LilyPad_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/2.4bpp");
+const u16 gTilesetAnims_Rustboro_LilyPad_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/3.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_LilyPad[] = {
+    gTilesetAnims_Rustboro_LilyPad_Frame0,
+    gTilesetAnims_Rustboro_LilyPad_Frame0,
+    gTilesetAnims_Rustboro_LilyPad_Frame1,
+    gTilesetAnims_Rustboro_LilyPad_Frame1,
+    gTilesetAnims_Rustboro_LilyPad_Frame2,
+    gTilesetAnims_Rustboro_LilyPad_Frame2,
+    gTilesetAnims_Rustboro_LilyPad_Frame3,
+    gTilesetAnims_Rustboro_LilyPad_Frame3,
+};
+
+const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/0.4bpp");
+const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/1.4bpp");
+const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/2.4bpp");
+const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/3.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_LilyPadFlower[] = {
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame0,
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame0,
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame1,
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame1,
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame2,
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame2,
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame3,
+    gTilesetAnims_Rustboro_LilyPadFlower_Frame3,
+};
+
+const u16 gTilesetAnims_Rustboro_LeavesWater_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/0.4bpp");
+const u16 gTilesetAnims_Rustboro_LeavesWater_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/1.4bpp");
+const u16 gTilesetAnims_Rustboro_LeavesWater_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/2.4bpp");
+const u16 gTilesetAnims_Rustboro_LeavesWater_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/3.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_LeavesWater[] = {
+    gTilesetAnims_Rustboro_LeavesWater_Frame0,
+    gTilesetAnims_Rustboro_LeavesWater_Frame0,
+    gTilesetAnims_Rustboro_LeavesWater_Frame1,
+    gTilesetAnims_Rustboro_LeavesWater_Frame1,
+    gTilesetAnims_Rustboro_LeavesWater_Frame2,
+    gTilesetAnims_Rustboro_LeavesWater_Frame2,
+    gTilesetAnims_Rustboro_LeavesWater_Frame3,
+    gTilesetAnims_Rustboro_LeavesWater_Frame3,
+};
+
 const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame0[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/0.4bpp");
 const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame1[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/1.4bpp");
 const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame2[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/2.4bpp");
@@ -766,14 +817,14 @@ static void _InitSecondaryTilesetAnimation(void)
 void InitTilesetAnim_General(void)
 {
     sPrimaryTilesetAnimCounter = 0;
-    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCounterMax = 65535;
     sPrimaryTilesetAnimCallback = TilesetAnim_General;
 }
 
 void InitTilesetAnim_Snowy(void)
 {
     sPrimaryTilesetAnimCounter = 0;
-    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCounterMax = 65535;
     sPrimaryTilesetAnimCallback = TilesetAnim_Snowy;
 }
 
@@ -1030,11 +1081,18 @@ static void TilesetAnim_Rustboro(u16 timer)
     if (timer % 8 == 0)
         QueueAnimTiles_Rustboro_WaterWheel_Water(timer >> 4);
     if (timer % 8 == 1)
-        QueueAnimTiles_Rustboro_WaterWheel_Row0(timer >> 4);
-        QueueAnimTiles_Rustboro_WaterWheel_Row1(timer >> 4);
-        QueueAnimTiles_Rustboro_WaterWheel_Row2(timer >> 4);
-        QueueAnimTiles_Rustboro_WaterWheel_Row3(timer >> 4);
-    // if (timer % 8 == 2)
+    {
+        QueueAnimTiles_Rustboro_WaterWheel_Row0(timer >> 3);
+        QueueAnimTiles_Rustboro_WaterWheel_Row1(timer >> 3);
+        QueueAnimTiles_Rustboro_WaterWheel_Row2(timer >> 3);
+        QueueAnimTiles_Rustboro_WaterWheel_Row3(timer >> 3);
+    }
+    if (timer % 8 == 2)
+        QueueAnimTiles_Rustboro_LilyPad(timer >> 3);
+    if (timer % 8 == 3)
+        QueueAnimTiles_Rustboro_LilyPadFlower(timer >> 3);
+    if (timer % 8 == 4)
+        QueueAnimTiles_Rustboro_LeavesWater(timer >> 3);
     // if (timer % 8 == 3)
     // if (timer % 8 == 4)
 //     if (timer % 8 == 0)
@@ -1248,6 +1306,24 @@ static void QueueAnimTiles_Rustboro_WaterWheel_Water(u16 timer)
 {
     u16 i = timer % 3;
     AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(825)), 0x80);
+}
+
+static void QueueAnimTiles_Rustboro_LilyPad(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_LilyPad[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(793)), 0x80);
+}
+
+static void QueueAnimTiles_Rustboro_LilyPadFlower(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_LilyPadFlower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(777)), 0x80);
+}
+
+static void QueueAnimTiles_Rustboro_LeavesWater(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_LeavesWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(809)), 0x80);
 }
 
 static void QueueAnimTiles_Lavaridge_Lava(u16 timer)

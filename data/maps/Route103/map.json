@@ -161,12 +161,12 @@
             "graphics_id": "EVENT_OBJ_GFX_BOY_1",
             "movement_range_x": 1,
             "movement_range_y": 2,
-            "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+            "movement_type": "MOVEMENT_TYPE_NONE",
             "script": "Route103_EventScript_1EC5D9",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 20,
-            "y": 10
+            "x": 17,
+            "y": 2
         },
         {
             "elevation": 3,

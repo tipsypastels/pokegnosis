@@ -34,5 +34,7 @@
 // Characters
 
 #define PORTRAIT_MEILI 0
+#define PORTRAIT_KAI 1
+#define PORTRAIT_ZHENG 2
 
 #endif

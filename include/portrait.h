@@ -2,7 +2,7 @@
 #define GUARD_PORTAIT_H
 
 #define PORTRAIT_ENTRY_EMOTION(character, emotion) \
-  {.name = gPortrait##character##Name, .pal = gPortrait##character##Pal, .gfx = gPortrait##character##emotion##Gfx},
+  {.name = gPortrait##character##Name, .pal = gPortrait##character##Pal, .gfx = gPortrait##character##emotion##Gfx, .textboxWidth = &gPortrait##character##TextboxWidth},
 
 #define PORTRAIT_ENTRY(character)                     \
   PORTRAIT_ENTRY_EMOTION(character, Smile)            \
@@ -35,6 +35,7 @@ struct Portrait
   const u8 *name;
   const u32 *pal;
   const u32 *gfx;
+  const u8 *textboxWidth;
 };
 
 void ShowPortrait(u8 character, u8 emotion);

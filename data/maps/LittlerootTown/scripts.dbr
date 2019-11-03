@@ -1,5 +1,7 @@
 script YamakiTown_Sign
-  say "Yamaki Town$", MSGBOX_SIGN
+  using_msgbox MSGBOX_SIGN
+    say "LOCATION_COLOR(YAMAKI TOWN)\n"
+    say "{UP_ARROW} LOCATION_COLOR(Yamaki Lake) {RIGHT_ARROW} LOCATION_COLOR(Downey Ranch)$"
 
 script YamakiTown_Fisherman
   lock
@@ -37,7 +39,54 @@ script YamakiTown_FatMan
         option
           say "Me neither!$"
 
-script YamakiTown_TestWeather
+script YamakiTown_RivalIntro
   lock
-    setflag FLAG_SYS_POKEMON_GET
-    givemon SPECIES_BULBASAUR, 25, ITEM_NONE
+    spawncamera
+      move camera
+        walk_down 2
+      move_and_wait rival: 5
+        walk_left 6
+      move_and_wait player
+        walk_down
+        face_right
+        emote_exclamation_mark
+      showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+        say "CHARACTER_COLOR({PLAYER})! Hey!\l"
+        say "What are you looking like that for?\n"
+        say "Don't you know what's going on?$"
+      showplayerportrait PORTRAIT_QUESTION
+        say "(...)$"
+      showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+        say "You really don't!\l"
+        say "Come on! I'll explain on the way!\n"
+        say "We're going to LOCATION_COLOR(Downy Ranch)! I'm sure\l"
+        say "we'll find it there!$"
+      closemessage
+      move_and_wait rival: 5
+        walk_fast_right 6
+      move_and_wait camera
+        walk_up 2
+      move player
+        emote_question_mark
+      showplayerportrait PORTRAIT_QUESTION
+        say "(...)$"
+      addvar VAR_LITTLEROOT_TOWN_STATE, 1
+
+script YamakiTown_HealShrine
+  lock
+    getpartysize
+    when 1
+      showplayerportrait PORTRAIT_EYES_CLOSED_GRIN
+        say "(Peaceful...)$"
+    else
+      using_msgbox MSGBOX_YESNO
+        say "The sound of the waves fills you\n"
+        say "with determination.\p"
+        say "Do you want to heal your POKEMON_COLOR(Pokémon)?$"
+      when TRUE
+        fadescreen 1
+        delay 20
+        fadescreen 0
+        incrementgamestat GAME_STAT_USED_POKECENTER
+        special HealPlayerParty
+        say "Your POKEMON_COLOR(Pokémon) are looking refreshed!$"
