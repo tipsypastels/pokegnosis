@@ -46,6 +46,15 @@ static const u16 sBookPalettes[][16] =
 
 static const u32 sBookTilemap[] = INCBIN_U32("graphics/misc/book_map.bin.lz");
 static const u32 sBookTiles[] = INCBIN_U32("graphics/misc/book.4bpp.lz");
+static const u8 sBookColor[] = { 0, 2, 3 };
+
+static const struct BookStyle sBookStyleList[] = {
+  {
+    .tilemap = sBookTilemap,
+    .tiles = sBookTiles,
+    .color = sBookColor,
+  },
+};
 
 void CB2_ShowBook(void)
 {
