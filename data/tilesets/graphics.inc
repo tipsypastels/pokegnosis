@@ -1749,3 +1749,23 @@ gTilesetPalettes_SnowyForest::
 	.align 2
 gTilesetTiles_SnowyForest::
 	.incbin "data/tilesets/secondary/snowyforest/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_DuckTemple::
+	.incbin "data/tilesets/secondary/ducktemple/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/ducktemple/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_DuckTemple::
+	.incbin "data/tilesets/secondary/ducktemple/tiles.4bpp.lz"

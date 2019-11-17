@@ -573,3 +573,10 @@ gMetatiles_SnowyForest::
 	.align 1
 gMetatileAttributes_SnowyForest::
 	.incbin "data/tilesets/secondary/snowyforest/metatile_attributes.bin"
+	.align 1
+gMetatiles_DuckTemple::
+	.incbin "data/tilesets/secondary/ducktemple/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_DuckTemple::
+	.incbin "data/tilesets/secondary/ducktemple/metatile_attributes.bin"

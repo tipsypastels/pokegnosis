@@ -1085,7 +1085,7 @@
 #define FLAG_ITEM_NEW_MAUVILLE_PARALYZE_HEAL                        0x463
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_MASTER_BALL                      0x464
 
-#define FLAG_UNUSED_0x465                                           0x465 // Unused Flag
+#define FLAG_DISABLE_WILD_ENCOUNTERS                                0x465
 #define FLAG_UNUSED_0x466                                           0x466 // Unused Flag
 #define FLAG_UNUSED_0x467                                           0x467 // Unused Flag
 #define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
@@ -1095,7 +1095,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_NUGGET                           0x46C
 
-#define FLAG_UNUSED_0x46D                                           0x46D // Unused Flag
+#define FLAG_CINEMATIC_CAMERA_ENABLED                               0x46D // Unused Flag
 
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F

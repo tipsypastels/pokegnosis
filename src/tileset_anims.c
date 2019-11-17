@@ -48,6 +48,11 @@ static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_CeladonFlower(u16);
 static void QueueAnimTiles_General_Shrub(u16);
 static void QueueAnimTiles_General_Buds(u16);
+static void QueueAnimTiles_General_Sunflower(u16);
+static void QueueAnimTiles_General_SunflowerAlt(u16);
+static void QueueAnimTiles_General_LilyPad(u16);
+static void QueueAnimTiles_General_LilyPadFlower(u16);
+static void QueueAnimTiles_General_LeavesWater(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
@@ -61,9 +66,6 @@ static void QueueAnimTiles_Rustboro_WaterWheel_Row1(u16);
 static void QueueAnimTiles_Rustboro_WaterWheel_Row2(u16);
 static void QueueAnimTiles_Rustboro_WaterWheel_Row3(u16);
 static void QueueAnimTiles_Rustboro_WaterWheel_Water(u16);
-static void QueueAnimTiles_Rustboro_LilyPad(u16);
-static void QueueAnimTiles_Rustboro_LilyPadFlower(u16);
-static void QueueAnimTiles_Rustboro_LeavesWater(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
@@ -144,6 +146,73 @@ const u16 *const gTilesetAnims_General_Buds[] = {
     gTilesetAnims_General_Buds_Frame2,
     gTilesetAnims_General_Buds_Frame2,
     gTilesetAnims_General_Buds_Frame0,
+};
+
+const u16 gTilesetAnims_General_Sunflower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/0.4bpp");
+const u16 gTilesetAnims_General_Sunflower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/1.4bpp");
+const u16 gTilesetAnims_General_Sunflower_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/2.4bpp");
+const u16 gTilesetAnims_General_Sunflower_Frame3[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/3.4bpp");
+const u16 gTilesetAnims_General_Sunflower_Frame4[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/4.4bpp");
+const u16 gTilesetAnims_General_Sunflower_Frame5[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/5.4bpp");
+const u16 gTilesetAnims_General_Sunflower_Frame6[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/6.4bpp");
+const u16 gTilesetAnims_General_Sunflower_Frame7[] = INCBIN_U16("data/tilesets/primary/general/anim/sunflower/7.4bpp");
+
+const u16 *const gTilesetAnims_General_Sunflower[] = {
+    gTilesetAnims_General_Sunflower_Frame0,
+    gTilesetAnims_General_Sunflower_Frame1,
+    gTilesetAnims_General_Sunflower_Frame2,
+    gTilesetAnims_General_Sunflower_Frame3,
+    gTilesetAnims_General_Sunflower_Frame4,
+    gTilesetAnims_General_Sunflower_Frame5,
+    gTilesetAnims_General_Sunflower_Frame6,
+    gTilesetAnims_General_Sunflower_Frame7,
+};
+
+const u16 *const gTilesetAnims_General_SunflowerAlt[] = {
+    gTilesetAnims_General_Sunflower_Frame2,
+    gTilesetAnims_General_Sunflower_Frame3,
+    gTilesetAnims_General_Sunflower_Frame4,
+    gTilesetAnims_General_Sunflower_Frame5,
+    gTilesetAnims_General_Sunflower_Frame6,
+    gTilesetAnims_General_Sunflower_Frame7,
+    gTilesetAnims_General_Sunflower_Frame0,
+    gTilesetAnims_General_Sunflower_Frame1,
+};
+
+const u16 gTilesetAnims_General_LilyPad_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad/0.4bpp");
+const u16 gTilesetAnims_General_LilyPad_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad/1.4bpp");
+const u16 gTilesetAnims_General_LilyPad_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad/2.4bpp");
+const u16 gTilesetAnims_General_LilyPad_Frame3[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad/3.4bpp");
+
+const u16 *const gTilesetAnims_General_LilyPad[] = {
+    gTilesetAnims_General_LilyPad_Frame0,
+    gTilesetAnims_General_LilyPad_Frame1,
+    gTilesetAnims_General_LilyPad_Frame2,
+    gTilesetAnims_General_LilyPad_Frame3,
+};
+
+const u16 gTilesetAnims_General_LilyPadFlower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad_flower/0.4bpp");
+const u16 gTilesetAnims_General_LilyPadFlower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad_flower/1.4bpp");
+const u16 gTilesetAnims_General_LilyPadFlower_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad_flower/2.4bpp");
+const u16 gTilesetAnims_General_LilyPadFlower_Frame3[] = INCBIN_U16("data/tilesets/primary/general/anim/lilypad_flower/3.4bpp");
+
+const u16 *const gTilesetAnims_General_LilyPadFlower[] = {
+    gTilesetAnims_General_LilyPadFlower_Frame0,
+    gTilesetAnims_General_LilyPadFlower_Frame1,
+    gTilesetAnims_General_LilyPadFlower_Frame2,
+    gTilesetAnims_General_LilyPadFlower_Frame3,
+};
+
+const u16 gTilesetAnims_General_LeavesWater_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/leaves_water/0.4bpp");
+const u16 gTilesetAnims_General_LeavesWater_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/leaves_water/1.4bpp");
+const u16 gTilesetAnims_General_LeavesWater_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/leaves_water/2.4bpp");
+const u16 gTilesetAnims_General_LeavesWater_Frame3[] = INCBIN_U16("data/tilesets/primary/general/anim/leaves_water/3.4bpp");
+
+const u16 *const gTilesetAnims_General_LeavesWater[] = {
+    gTilesetAnims_General_LeavesWater_Frame0,
+    gTilesetAnims_General_LeavesWater_Frame1,
+    gTilesetAnims_General_LeavesWater_Frame2,
+    gTilesetAnims_General_LeavesWater_Frame3,
 };
 
 const u16 gTilesetAnims_General_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/water/0.4bpp");
@@ -471,54 +540,6 @@ const u16 *const gTilesetAnims_Rustboro_WaterWheel_Water[] = {
     gTilesetAnims_Rustboro_WaterWheel_Water_Frame0,
     gTilesetAnims_Rustboro_WaterWheel_Water_Frame1,
     gTilesetAnims_Rustboro_WaterWheel_Water_Frame2,
-};
-
-const u16 gTilesetAnims_Rustboro_LilyPad_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/0.4bpp");
-const u16 gTilesetAnims_Rustboro_LilyPad_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/1.4bpp");
-const u16 gTilesetAnims_Rustboro_LilyPad_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/2.4bpp");
-const u16 gTilesetAnims_Rustboro_LilyPad_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad/3.4bpp");
-
-const u16 *const gTilesetAnims_Rustboro_LilyPad[] = {
-    gTilesetAnims_Rustboro_LilyPad_Frame0,
-    gTilesetAnims_Rustboro_LilyPad_Frame0,
-    gTilesetAnims_Rustboro_LilyPad_Frame1,
-    gTilesetAnims_Rustboro_LilyPad_Frame1,
-    gTilesetAnims_Rustboro_LilyPad_Frame2,
-    gTilesetAnims_Rustboro_LilyPad_Frame2,
-    gTilesetAnims_Rustboro_LilyPad_Frame3,
-    gTilesetAnims_Rustboro_LilyPad_Frame3,
-};
-
-const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/0.4bpp");
-const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/1.4bpp");
-const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/2.4bpp");
-const u16 gTilesetAnims_Rustboro_LilyPadFlower_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/lilypad_flower/3.4bpp");
-
-const u16 *const gTilesetAnims_Rustboro_LilyPadFlower[] = {
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame0,
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame0,
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame1,
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame1,
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame2,
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame2,
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame3,
-    gTilesetAnims_Rustboro_LilyPadFlower_Frame3,
-};
-
-const u16 gTilesetAnims_Rustboro_LeavesWater_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/0.4bpp");
-const u16 gTilesetAnims_Rustboro_LeavesWater_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/1.4bpp");
-const u16 gTilesetAnims_Rustboro_LeavesWater_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/2.4bpp");
-const u16 gTilesetAnims_Rustboro_LeavesWater_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/leaves_water/3.4bpp");
-
-const u16 *const gTilesetAnims_Rustboro_LeavesWater[] = {
-    gTilesetAnims_Rustboro_LeavesWater_Frame0,
-    gTilesetAnims_Rustboro_LeavesWater_Frame0,
-    gTilesetAnims_Rustboro_LeavesWater_Frame1,
-    gTilesetAnims_Rustboro_LeavesWater_Frame1,
-    gTilesetAnims_Rustboro_LeavesWater_Frame2,
-    gTilesetAnims_Rustboro_LeavesWater_Frame2,
-    gTilesetAnims_Rustboro_LeavesWater_Frame3,
-    gTilesetAnims_Rustboro_LeavesWater_Frame3,
 };
 
 const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame0[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/0.4bpp");
@@ -853,6 +874,16 @@ static void TilesetAnim_General(u16 timer)
         QueueAnimTiles_General_Shrub(timer >> 4);
     if (timer % 16 == 7)
         QueueAnimTiles_General_Buds(timer >> 4);
+    if (timer % 16 == 8)
+        QueueAnimTiles_General_Sunflower(timer >> 4);
+    if (timer % 16 == 9)
+        QueueAnimTiles_General_SunflowerAlt(timer >> 4);
+    if (timer % 16 == 10)
+        QueueAnimTiles_General_LilyPad(timer >> 4);
+    if (timer % 16 == 11)
+        QueueAnimTiles_General_LilyPadFlower(timer >> 4);
+    if (timer % 16 == 12)
+        QueueAnimTiles_General_LeavesWater(timer >> 4);
 }
 
 static void TilesetAnim_Snowy(u16 timer)
@@ -889,6 +920,36 @@ static void QueueAnimTiles_General_Buds(u16 timer)
 {
     u16 i = timer % 10;
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Buds[i], (u16 *) (BG_VRAM + TILE_OFFSET_4BPP(7)), 0x20);
+}
+
+static void QueueAnimTiles_General_Sunflower(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Sunflower[i], (u16 *) (BG_VRAM + TILE_OFFSET_4BPP(407)), 0x100);
+}
+
+static void QueueAnimTiles_General_SunflowerAlt(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_SunflowerAlt[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(423)), 0x100);
+}
+
+static void QueueAnimTiles_General_LilyPad(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_LilyPad[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(204)), 0x80);
+}
+
+static void QueueAnimTiles_General_LilyPadFlower(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_LilyPadFlower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(220)), 0x80);
+}
+
+static void QueueAnimTiles_General_LeavesWater(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_LeavesWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(236)), 0x80);
 }
 
 static void QueueAnimTiles_General_Water(u16 timer)
@@ -1087,12 +1148,6 @@ static void TilesetAnim_Rustboro(u16 timer)
         QueueAnimTiles_Rustboro_WaterWheel_Row2(timer >> 3);
         QueueAnimTiles_Rustboro_WaterWheel_Row3(timer >> 3);
     }
-    if (timer % 8 == 2)
-        QueueAnimTiles_Rustboro_LilyPad(timer >> 3);
-    if (timer % 8 == 3)
-        QueueAnimTiles_Rustboro_LilyPadFlower(timer >> 3);
-    if (timer % 8 == 4)
-        QueueAnimTiles_Rustboro_LeavesWater(timer >> 3);
     // if (timer % 8 == 3)
     // if (timer % 8 == 4)
 //     if (timer % 8 == 0)
@@ -1306,24 +1361,6 @@ static void QueueAnimTiles_Rustboro_WaterWheel_Water(u16 timer)
 {
     u16 i = timer % 3;
     AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(825)), 0x80);
-}
-
-static void QueueAnimTiles_Rustboro_LilyPad(u16 timer)
-{
-    u16 i = timer % 8;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_LilyPad[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(793)), 0x80);
-}
-
-static void QueueAnimTiles_Rustboro_LilyPadFlower(u16 timer)
-{
-    u16 i = timer % 8;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_LilyPadFlower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(777)), 0x80);
-}
-
-static void QueueAnimTiles_Rustboro_LeavesWater(u16 timer)
-{
-    u16 i = timer % 8;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_LeavesWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(809)), 0x80);
 }
 
 static void QueueAnimTiles_Lavaridge_Lava(u16 timer)

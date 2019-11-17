@@ -852,3 +852,14 @@ gTileset_SnowyForest::
 	.4byte gMetatiles_SnowyForest
 	.4byte gMetatileAttributes_SnowyForest
 	.4byte NULL
+
+	.align 2
+gTileset_DuckTemple::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_DuckTemple
+	.4byte gTilesetPalettes_DuckTemple
+	.4byte gMetatiles_DuckTemple
+	.4byte gMetatileAttributes_DuckTemple
+	.4byte NULL
