@@ -29,24 +29,24 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "$"
 
 gText_Birch_AndYouAre:: @ 82C8BD0
-	.string "And you are?$"
+	.string "But that's enough about me.$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
-	.string "Are you a girl?\n"
-	.string "Or are you a boy?$"
+	.string "Are you a {COLOR CHARACTER_COLOR}girl{COLOR NO_COLOR}?\n"
+	.string "Or are you a {COLOR CHARACTER_COLOR}boy{COLOR NO_COLOR}?$"
 
 gText_Birch_WhatsYourName:: @ 82C8BFF
-	.string "All right.\n"
-	.string "What's your name?$"
+	.string "Sounds good.\n"
+	.string "What's your {COLOR CHARACTER_COLOR}name{COLOR NO_COLOR}?$"
 
 gText_Birch_SoItsPlayer:: @ 82C8C1C
-	.string "So it's {PLAYER}{KUN}?$"
+	.string "So, {COLOR CHARACTER_COLOR}{PLAYER}{COLOR NO_COLOR} is it?$"
 
 gText_Birch_YourePlayer:: @ 82C8C2A
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
+	.string "Cool, cool.\p"
+	.string "You're {COLOR CHARACTER_COLOR}{PLAYER}{COLOR NO_COLOR} who lives in the\n"
+	.string "charming {COLOR LOCATION_COLOR}Yamaki Town{COLOR NO_COLOR}.\l"
+	.string "I hear it's beautiful there!\p"
 	.string "$"
 
 gText_Birch_AreYouReady:: @ 82C8C7A

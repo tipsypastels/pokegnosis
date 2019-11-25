@@ -243,12 +243,12 @@
         {
             "blockdata_filepath": "data/layouts/Route109/map.bin",
             "border_filepath": "data/layouts/Route109/border.bin",
-            "height": 63,
+            "height": 30,
             "id": "LAYOUT_ROUTE109",
             "name": "Route109_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Slateport",
-            "width": 40
+            "primary_tileset": "gTileset_Snowy",
+            "secondary_tileset": "gTileset_SnowyForest",
+            "width": 70
         },
         {
             "blockdata_filepath": "data/layouts/Route110/map.bin",

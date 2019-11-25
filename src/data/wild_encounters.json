@@ -2065,6 +2065,75 @@
                     }
                 },
                 {
+                    "base_label": "gLittlerootTown0",
+                    "land_mons": {
+                        "encounter_rate": 0,
+                        "mons": [
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            },
+                            {
+                                "max_level": 5,
+                                "min_level": 5,
+                                "species": "SPECIES_NONE"
+                            }
+                        ]
+                    },
+                    "map": "MAP_LITTLEROOT_TOWN"
+                },
+                {
                     "base_label": "gMagmaHideout_1F",
                     "land_mons": {
                         "encounter_rate": 10,
