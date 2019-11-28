@@ -31,6 +31,7 @@ LittlerootTown_MaysHouse_2F_EventScript_1F92E6:: @ 81F92E6
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_1F9309:: @ 81F9309
+
 LittlerootTown_MaysHouse_2F_EventScript_1F9309:: @ 81F9309
 	return
 
@@ -247,6 +248,7 @@ LittlerootTown_MaysHouse_2F_Movement_1F94BB: @ 81F94BB
 	step_end
 
 LittlerootTown_BrendansHouse_2F_EventScript_1F94C1:: @ 81F94C1
+
 LittlerootTown_MaysHouse_2F_EventScript_1F94C1:: @ 81F94C1
 	lockall
 	goto_if_set FLAG_MET_RIVAL_LILYCOVE, LittlerootTown_BrendansHouse_2F_EventScript_1F94F7
@@ -381,6 +383,7 @@ LittlerootTown_BrendansHouse_2F_Text_1F9962: @ 81F9962
 	.string "Items all packed, and…$"
 
 LittlerootTown_BrendansHouse_2F_Text_1F9991: @ 81F9991
+
 LittlerootTown_MaysHouse_2F_Text_1F9991: @ 81F9991
 	.string "It's {RIVAL}'s POKé BALL!\p"
 	.string "Better leave it right where it is.$"
@@ -416,3 +419,26 @@ LittlerootTown_BrendansHouse_2F_Text_1F9BE7: @ 81F9BE7
 	.string "Hey, {PLAYER}, if I see you while I'm out\n"
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
+
+MeilisHouse_1F_RippedMap:: @ Dbr-output
+  lock
+  msgbox _MeilisHouse_1F_RippedMap_Subscript_Text_0, MSGBOX_DEFAULT
+  showplayerportrait PORTRAIT_SWEAT
+  msgbox _MeilisHouse_1F_RippedMap_Subscript_Text_1, MSGBOX_DEFAULT
+  hideportrait
+  showplayerportrait PORTRAIT_DRUNK_GRIN
+  msgbox _MeilisHouse_1F_RippedMap_Subscript_Text_2, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_MeilisHouse_1F_RippedMap_Subscript_Text_0: @ Dbr-output
+  .string "It's a torn up map of the {COLOR LOCATION_COLOR}Tenso Region{COLOR NO_COLOR}...$"
+
+_MeilisHouse_1F_RippedMap_Subscript_Text_1: @ Dbr-output
+  .string "({COLOR CHARACTER_COLOR}Rui{COLOR NO_COLOR} tore this up when she was mad at\n"
+  .string "me yesterday...)$"
+
+_MeilisHouse_1F_RippedMap_Subscript_Text_2: @ Dbr-output
+  .string "(Guess I'll just have to discover {COLOR LOCATION_COLOR}the{COLOR NO_COLOR}\n"
+  .string "{COLOR LOCATION_COLOR}world{COLOR NO_COLOR} by myself!)$"

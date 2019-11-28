@@ -1,0 +1,9 @@
+script MeilisHouse_1F_RippedMap
+  lock
+    say "It's a torn up map of the LOCATION_COLOR(Tenso Region)...$"
+    showplayerportrait PORTRAIT_SWEAT
+      say "(CHARACTER_COLOR(Rui) tore this up when she was mad at\n"
+      say "me yesterday...)$"
+    showplayerportrait PORTRAIT_DRUNK_GRIN
+      say "(Guess I'll just have to discover LOCATION_COLOR(the)\n"
+      say "LOCATION_COLOR(world) by myself!)$"

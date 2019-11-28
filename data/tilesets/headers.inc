@@ -480,7 +480,7 @@ gTileset_BrendansMaysHouse:: @ 83DFAF4
 	.4byte gTilesetPalettes_BrendansMaysHouse
 	.4byte gMetatiles_BrendansMaysHouse
 	.4byte gMetatileAttributes_BrendansMaysHouse
-	.4byte NULL @ animation callback
+	.4byte InitTilesetAnim_BrendansMaysHouse
 
 	.align 2
 gTileset_Lab:: @ 83DFB0C

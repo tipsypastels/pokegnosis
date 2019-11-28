@@ -44,6 +44,8 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_BrendansMaysHouse(u16);
+static void QueueAnimTiles_BrendansMaysHouse_Furnace(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_CeladonFlower(u16);
 static void QueueAnimTiles_General_Shrub(u16);
@@ -764,6 +766,14 @@ static const u16 *const gTilesetAnims_BattleDomeFloorLightPals[] = {
     gTilesetAnims_BattleDomePals0_3,
 };
 
+const u16 gTilesetAnims_BrendansMaysHouse_Furnace_Frame0[] = INCBIN_U16("data/tilesets/secondary/brendans_mays_house/anim/furnace/0.4bpp");
+const u16 gTilesetAnims_BrendansMaysHouse_Furnace_Frame1[] = INCBIN_U16("data/tilesets/secondary/brendans_mays_house/anim/furnace/1.4bpp");
+
+const u16 *const gTilesetAnims_BrendansMaysHouse_Furnace[] = {
+    gTilesetAnims_BrendansMaysHouse_Furnace_Frame0,
+    gTilesetAnims_BrendansMaysHouse_Furnace_Frame1,
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -1137,6 +1147,19 @@ void InitTilesetAnim_BattleDome(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleDome;
 }
 
+void InitTilesetAnim_BrendansMaysHouse(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_BrendansMaysHouse;
+}
+
+static void TilesetAnim_BrendansMaysHouse(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_BrendansMaysHouse_Furnace(timer >> 4);
+}
+
 static void TilesetAnim_Rustboro(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1361,6 +1384,12 @@ static void QueueAnimTiles_Rustboro_WaterWheel_Water(u16 timer)
 {
     u16 i = timer % 3;
     AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WaterWheel_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(825)), 0x80);
+}
+
+static void QueueAnimTiles_BrendansMaysHouse_Furnace(u16 timer)
+{
+    u16 i = timer % 2;
+    AppendTilesetAnimToBuffer(gTilesetAnims_BrendansMaysHouse_Furnace[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(924)), 0x40);
 }
 
 static void QueueAnimTiles_Lavaridge_Lava(u16 timer)
