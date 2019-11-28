@@ -1256,3 +1256,316 @@ _YamakiTown_HealShrine_Subscript_Code_4:: @ Dbr-output
   msgbox _YamakiTown_HealShrine_Subscript_Text_3, MSGBOX_DEFAULT
   release
   end
+
+YamakiTown_OldLady:: @ Dbr-output
+  lock
+  special SpawnCameraObject
+  msgbox _YamakiTown_OldLady_Subscript_Text_0, MSGBOX_DEFAULT
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_1
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_2, MSGBOX_DEFAULT
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_3
+  waitmovement 7
+  faceplayer
+  msgbox _YamakiTown_OldLady_Subscript_Text_4, MSGBOX_DEFAULT
+  closemessage
+  getplayerxy VAR_TEMP_2, VAR_TEMP_3
+  compare VAR_TEMP_3, 14
+  call_if_eq _TODOAdjustPlayerPosition
+  applymovement EVENT_OBJ_ID_PLAYER, _YamakiTown_OldLady_Subscript_Movement_5
+  waitmovement EVENT_OBJ_ID_PLAYER
+  applymovement EVENT_OBJ_ID_CAMERA, _YamakiTown_OldLady_Subscript_Movement_6
+  waitmovement EVENT_OBJ_ID_CAMERA
+  multichoice 0, 0, MULTI_YAMAKI_TOWN_OLD_LADY, 0
+  compare VAR_RESULT, 0
+  goto_if_eq _YamakiTown_OldLady_Subscript_Code_14
+  compare VAR_RESULT, 1
+  goto_if_eq _YamakiTown_OldLady_Subscript_Code_18
+  compare VAR_RESULT, 2
+  goto_if_eq _YamakiTown_OldLady_Subscript_Code_26
+  compare VAR_RESULT, 3
+  goto_if_eq _YamakiTown_OldLady_Subscript_Code_34
+  goto _TODOCleanupCamera
+  special RemoveCameraObject
+  release
+  end
+
+_YamakiTown_OldLady_Subscript_Text_0: @ Dbr-output
+  .string "...\p"
+  .string "Sometimes it's hard to belive that\n"
+  .string "{COLOR LOCATION_COLOR}Yamaki Lake{COLOR NO_COLOR} isn't something straight\l"
+  .string "out of a painting or something...$"
+
+_YamakiTown_OldLady_Subscript_Text_2: @ Dbr-output
+  .string "This serene feeling...$"
+
+_YamakiTown_OldLady_Subscript_Text_4: @ Dbr-output
+  .string "Tell me, youngster...\n"
+  .string "What do you see in the water?$"
+
+YamakiTown_Boy:: @ Dbr-output
+  lock
+  end
+_YamakiTown_OldLady_Subscript_Movement_1: @ Dbr-output
+  delay_16
+  delay_16
+  delay_16
+  step_end
+
+_YamakiTown_OldLady_Subscript_Movement_3: @ Dbr-output
+  delay_16
+  delay_16
+  delay_16
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_11: @ Dbr-output
+  .string "Oh!\l"
+  .string "There is a boat out there after all!$"
+
+_YamakiTown_OldLady_Subscript_Movement_5: @ Dbr-output
+  face_up
+  step_end
+
+_TODOAdjustPlayerPosition:: @ Dbr-output
+  applymovement EVENT_OBJ_ID_CAMERA, __TODOAdjustPlayerPosition_Subscript_Movement_0
+  applymovement EVENT_OBJ_ID_PLAYER, __TODOAdjustPlayerPosition_Subscript_Movement_1
+  waitmovement EVENT_OBJ_ID_PLAYER
+  applymovement 7, __TODOAdjustPlayerPosition_Subscript_Movement_2
+  waitmovement 7
+  return
+
+__TODOAdjustPlayerPosition_Subscript_Movement_0: @ Dbr-output
+  walk_right
+  walk_up
+  step_end
+
+__TODOAdjustPlayerPosition_Subscript_Movement_1: @ Dbr-output
+  walk_right
+  walk_up
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_21: @ Dbr-output
+  .string "I suppose you're right.\p"
+  .string "You know, I once heard a story\n"
+  .string "of a {COLOR LOCATION_COLOR}sacred cave{COLOR NO_COLOR} far from here.\p"
+  .string "People from far and wide journeyed there\n"
+  .string "to gaze into its waters...\l"
+  .string "And in the end...$"
+
+_YamakiTown_OldLady_Subscript_Movement_6: @ Dbr-output
+  walk_up
+  walk_up
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_7: @ Dbr-output
+  .string "Is it a boat?$"
+
+_YamakiTown_OldLady_Subscript_Movement_8: @ Dbr-output
+  face_up
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_9: @ Dbr-output
+  .string "A boat you say?\p"
+  .string "...$"
+
+_YamakiTown_OldLady_Subscript_Movement_10: @ Dbr-output
+  delay_16
+  delay_16
+  delay_16
+  emote_exclamation_mark
+  delay_16
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_13: @ Dbr-output
+  .string "You must forgive these old eyes, dear.\l"
+  .string "But there doesn't seem to be anyone in\n"
+  .string "it... What could have happened?\p"
+  .string "I hope whatever youngster took that\n"
+  .string "out fishing is alright.$"
+
+_YamakiTown_OldLady_Subscript_Movement_12: @ Dbr-output
+  face_player
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_17: @ Dbr-output
+  .string "Oh! So it is!\n"
+  .string "I haven't seen a good duck around\l"
+  .string "here in a while!\p"
+  .string "When I was young the town was\n"
+  .string "postitively swarming with them...\l"
+  .string "I wonder where they all went?$"
+
+_YamakiTown_OldLady_Subscript_Text_19: @ Dbr-output
+  .string "Fog... or a mirage?$"
+
+_YamakiTown_OldLady_Subscript_Movement_20: @ Dbr-output
+  face_up
+  delay_16
+  delay_16
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_23: @ Dbr-output
+  .string "Each of them learned something about\n"
+  .string "themselves, and came back changed.$"
+
+_YamakiTown_OldLady_Subscript_Movement_22: @ Dbr-output
+  delay_16
+  delay_16
+  delay_16
+  step_end
+
+_YamakiTown_OldLady_Subscript_Movement_32: @ Dbr-output
+  delay_16
+  step_end
+
+__TODOAdjustPlayerPosition_Subscript_Movement_2: @ Dbr-output
+  face_player
+  step_end
+
+_YamakiTown_OldLady_Subscript_Code_14:: @ Dbr-output
+  showplayerportrait PORTRAIT_QUESTION
+  msgbox _YamakiTown_OldLady_Subscript_Text_7, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_8
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_9, MSGBOX_DEFAULT
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_10
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_11, MSGBOX_DEFAULT
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_12
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_13, MSGBOX_DEFAULT
+  goto _TODOCleanupCamera
+  release
+  end
+
+_YamakiTown_OldLady_Subscript_Text_15: @ Dbr-output
+  .string "A duck!$"
+
+_YamakiTown_OldLady_Subscript_Movement_16: @ Dbr-output
+  face_up
+  delay_16
+  delay_16
+  delay_16
+  emote_exclamation_mark
+  delay_16
+  face_player
+  step_end
+
+_YamakiTown_OldLady_Subscript_Code_18:: @ Dbr-output
+  showplayerportrait PORTRAIT_WINK
+  msgbox _YamakiTown_OldLady_Subscript_Text_15, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_16
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_17, MSGBOX_DEFAULT
+  goto _TODOCleanupCamera
+  release
+  end
+
+_YamakiTown_OldLady_Subscript_Movement_24: @ Dbr-output
+  face_player
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_25: @ Dbr-output
+  .string "Should you ever come across a place\n"
+  .string "like that, I hope you'll take advantage\l"
+  .string "of the opportunity.$"
+
+_YamakiTown_OldLady_Subscript_Code_26:: @ Dbr-output
+  showplayerportrait PORTRAIT_EYES_CLOSED
+  msgbox _YamakiTown_OldLady_Subscript_Text_19, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_20
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_21, MSGBOX_DEFAULT
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_22
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_23, MSGBOX_DEFAULT
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_24
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_25, MSGBOX_DEFAULT
+  goto _TODOCleanupCamera
+  release
+  end
+
+_YamakiTown_OldLady_Subscript_Text_27: @ Dbr-output
+  .string "A shadow underneath the waves.$"
+
+_YamakiTown_OldLady_Subscript_Movement_28: @ Dbr-output
+  face_up
+  delay_16
+  delay_16
+  delay_16
+  emote_question_mark
+  delay_16
+  face_player
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_29: @ Dbr-output
+  .string "What? My eyes must be worse than\n"
+  .string "I thought...$"
+
+_YamakiTown_OldLady_Subscript_Movement_30: @ Dbr-output
+  delay_16
+  step_end
+
+_YamakiTown_OldLady_Subscript_Text_31: @ Dbr-output
+  .string "I once heard of {COLOR LOCATION_COLOR}an ancient lake{COLOR NO_COLOR} not so\n"
+  .string "different from this one.\p"
+  .string "Not so different, except...\p"
+  .string "That beneath it slept {COLOR POKEMON_COLOR}the Pokémon{COLOR NO_COLOR}\n"
+  .string "{COLOR POKEMON_COLOR}that ended the war{COLOR NO_COLOR}.\p"
+  .string "Waiting for a worthy trainer to beseech\n"
+  .string "its friendship as {COLOR CHARACTER_COLOR}Sun Xia{COLOR NO_COLOR} did.$"
+
+_YamakiTown_OldLady_Subscript_Text_33: @ Dbr-output
+  .string "It is said that only those destined\n"
+  .string "for greatness can see such things.\p"
+  .string "I think you have a bright future,\n"
+  .string "youngster.$"
+
+_YamakiTown_OldLady_Subscript_Code_34:: @ Dbr-output
+  showplayerportrait PORTRAIT_SWEAT
+  msgbox _YamakiTown_OldLady_Subscript_Text_27, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_28
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_29, MSGBOX_DEFAULT
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_30
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_31, MSGBOX_DEFAULT
+  closemessage
+  applymovement 7, _YamakiTown_OldLady_Subscript_Movement_32
+  waitmovement 7
+  msgbox _YamakiTown_OldLady_Subscript_Text_33, MSGBOX_DEFAULT
+  goto _TODOCleanupCamera
+  release
+  end
+
+_TODOCleanupCamera:: @ Dbr-output
+  closemessage
+  applymovement EVENT_OBJ_ID_CAMERA, __TODOCleanupCamera_Subscript_Movement_0
+  waitmovement EVENT_OBJ_ID_CAMERA
+  special RemoveCameraObject
+  applymovement 7, __TODOCleanupCamera_Subscript_Movement_1
+  waitmovement 7
+  end
+
+__TODOCleanupCamera_Subscript_Movement_0: @ Dbr-output
+  walk_down
+  walk_down
+  step_end
+
+__TODOCleanupCamera_Subscript_Movement_1: @ Dbr-output
+  face_up
+  step_end

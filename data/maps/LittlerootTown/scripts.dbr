@@ -39,6 +39,148 @@ script YamakiTown_FatMan
         option
           say "Me neither!$"
 
+script YamakiTown_OldLady
+  lock
+    spawncamera
+      say "...\p"
+      say "Sometimes it's hard to belive that\n"
+      say "LOCATION_COLOR(Yamaki Lake) isn't something straight\l"
+      say "out of a painting or something...$"
+      closemessage
+      move_and_wait 7
+        delay_16 3
+      say "This serene feeling...$"
+      closemessage
+      move_and_wait 7
+        delay_16 3
+      faceplayer
+      say "Tell me, youngster...\n"
+      say "What do you see in the water?$"
+      closemessage
+      getplayerxy VAR_TEMP_2, VAR_TEMP_3
+      compare VAR_TEMP_3, 14
+      call_if_eq _TODOAdjustPlayerPosition
+      move_and_wait player
+        face_up
+      move_and_wait camera
+        walk_up 2
+      multichoice 0, 0, MULTI_YAMAKI_TOWN_OLD_LADY, 0
+      when 0
+        showplayerportrait PORTRAIT_QUESTION
+          say "Is it a boat?$"
+        closemessage
+        move_and_wait 7
+          face_up
+        say "A boat you say?\p"
+        say "...$"
+        closemessage
+        move_and_wait 7
+          delay_16 3
+          emote_exclamation_mark
+          delay_16
+        say "Oh!\l"
+        say "There is a boat out there after all!$"
+        move_and_wait 7
+          face_player
+        say "You must forgive these old eyes, dear.\l"
+        say "But there doesn't seem to be anyone in\n"
+        say "it... What could have happened?\p"
+        say "I hope whatever youngster took that\n"
+        say "out fishing is alright.$"
+        goto _TODOCleanupCamera
+      when 1
+        showplayerportrait PORTRAIT_WINK
+          say "A duck!$"
+        closemessage
+        move_and_wait 7
+          face_up
+          delay_16 3
+          emote_exclamation_mark
+          delay_16
+          face_player
+        say "Oh! So it is!\n"
+        say "I haven't seen a good duck around\l"
+        say "here in a while!\p"
+        say "When I was young the town was\n"
+        say "postitively swarming with them...\l"
+        say "I wonder where they all went?$"
+        goto _TODOCleanupCamera
+      when 2
+        showplayerportrait PORTRAIT_EYES_CLOSED
+          say "Fog... or a mirage?$"
+        closemessage
+        move_and_wait 7
+          face_up
+          delay_16 2
+        say "I suppose you're right.\p"
+        say "You know, I once heard a story\n"
+        say "of a LOCATION_COLOR(sacred cave) far from here.\p"
+        say "People from far and wide journeyed there\n"
+        say "to gaze into its waters...\l"
+        say "And in the end...$"
+        closemessage
+        move_and_wait 7
+          delay_16 3
+        say "Each of them learned something about\n"
+        say "themselves, and came back changed.$"
+        move_and_wait 7
+          face_player
+        say "Should you ever come across a place\n"
+        say "like that, I hope you'll take advantage\l"
+        say "of the opportunity.$"
+        goto _TODOCleanupCamera
+      when 3
+        showplayerportrait PORTRAIT_SWEAT
+          say "A shadow underneath the waves.$"
+        closemessage
+        move_and_wait 7
+          face_up
+          delay_16 3
+          emote_question_mark
+          delay_16
+          face_player
+        say "What? My eyes must be worse than\n"
+        say "I thought...$"
+        closemessage
+        move_and_wait 7
+          delay_16
+        say "I once heard of LOCATION_COLOR(an ancient lake) not so\n"
+        say "different from this one.\p"
+        say "Not so different, except...\p"
+        say "That beneath it slept POKEMON_COLOR(the Pokémon)\n"
+        say "POKEMON_COLOR(that ended the war).\p"
+        say "Waiting for a worthy trainer to beseech\n"
+        say "its friendship as CHARACTER_COLOR(Sun Xia) did.$"
+        closemessage
+        move_and_wait 7
+          delay_16
+        say "It is said that only those destined\n"
+        say "for greatness can see such things.\p"
+        say "I think you have a bright future,\n"
+        say "youngster.$"
+        goto _TODOCleanupCamera
+      else
+        goto _TODOCleanupCamera
+
+script _TODOAdjustPlayerPosition
+  move camera
+    walk_right
+    walk_up
+  move_and_wait player
+    walk_right
+    walk_up
+  move_and_wait 7
+    face_player
+  return
+
+script _TODOCleanupCamera
+  closemessage
+  move_and_wait camera
+    walk_down 2
+  special RemoveCameraObject
+  move_and_wait 7
+    face_up
+
 script YamakiTown_RivalIntro
   lock
     spawncamera
@@ -90,3 +232,6 @@ script YamakiTown_HealShrine
         incrementgamestat GAME_STAT_USED_POKECENTER
         special HealPlayerParty
         say "Your POKEMON_COLOR(Pokémon) are looking refreshed!$"
+
+script YamakiTown_Boy
+  lock
