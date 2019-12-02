@@ -25,12 +25,17 @@
         {
             "direction": "left",
             "map": "MAP_LITTLEROOT_TOWN",
-            "offset": -18
+            "offset": -12
         },
         {
             "direction": "right",
             "map": "MAP_OLDALE_TOWN",
-            "offset": -6
+            "offset": 0
+        },
+        {
+            "direction": "up",
+            "map": "MAP_ROUTE114",
+            "offset": 8
         }
     ],
     "coord_events": [

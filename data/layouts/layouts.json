@@ -173,7 +173,7 @@
         {
             "blockdata_filepath": "data/layouts/Route102/map.bin",
             "border_filepath": "data/layouts/Route102/border.bin",
-            "height": 24,
+            "height": 30,
             "id": "LAYOUT_ROUTE102",
             "name": "Route102_Layout",
             "primary_tileset": "gTileset_General",
@@ -293,22 +293,22 @@
         {
             "blockdata_filepath": "data/layouts/Route114/map.bin",
             "border_filepath": "data/layouts/Route114/border.bin",
-            "height": 80,
+            "height": 32,
             "id": "LAYOUT_ROUTE114",
             "name": "Route114_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Fallarbor",
-            "width": 40
+            "secondary_tileset": "gTileset_DuckTemple",
+            "width": 42
         },
         {
             "blockdata_filepath": "data/layouts/Route115/map.bin",
             "border_filepath": "data/layouts/Route115/border.bin",
-            "height": 80,
+            "height": 30,
             "id": "LAYOUT_ROUTE115",
             "name": "Route115_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Fallarbor",
-            "width": 40
+            "secondary_tileset": "gTileset_DuckTemple",
+            "width": 36
         },
         {
             "blockdata_filepath": "data/layouts/Route116/map.bin",
