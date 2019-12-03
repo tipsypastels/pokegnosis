@@ -7,7 +7,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "Route101_EventScript_1EBE0D",
+            "script": "Route101_EventScript_RouteSign",
             "type": "sign",
             "x": 5,
             "y": 9
@@ -15,20 +15,20 @@
     ],
     "connections": [
         {
-            "direction": "right",
-            "map": "MAP_ROUTE106",
-            "offset": -4
-        },
-        {
             "direction": "down",
             "map": "MAP_LITTLEROOT_TOWN",
             "offset": 0
+        },
+        {
+            "direction": "right",
+            "map": "MAP_ROUTE106",
+            "offset": -4
         }
     ],
     "coord_events": [
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBCDE",
+            "script": "Route101_EventScript_StartBirchRescue",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "1",
@@ -37,7 +37,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBCDE",
+            "script": "Route101_EventScript_StartBirchRescue",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "1",
@@ -46,7 +46,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBD4E",
+            "script": "Route101_EventScript_PreventExitSouth",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "2",
@@ -55,7 +55,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBD4E",
+            "script": "Route101_EventScript_PreventExitSouth",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "2",
@@ -64,7 +64,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBD64",
+            "script": "Route101_EventScript_PreventExitWest",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "2",
@@ -73,7 +73,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBD64",
+            "script": "Route101_EventScript_PreventExitWest",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "2",
@@ -82,7 +82,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBD64",
+            "script": "Route101_EventScript_PreventExitWest",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "2",
@@ -91,7 +91,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBD64",
+            "script": "Route101_EventScript_PreventExitWest",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "2",
@@ -100,7 +100,7 @@
         },
         {
             "elevation": 3,
-            "script": "Route101_EventScript_1EBD7A",
+            "script": "Route101_EventScript_PreventExitNorth",
             "type": "trigger",
             "var": "VAR_ROUTE101_STATE",
             "var_value": "2",
@@ -121,7 +121,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-            "script": "Route101_EventScript_1EBDFB",
+            "script": "Route101_EventScript_Youngster",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 16,
@@ -147,7 +147,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-            "script": "Route101_EventScript_1EBE16",
+            "script": "Route101_EventScript_BirchsBag",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 7,
@@ -186,7 +186,7 @@
             "movement_range_x": 1,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-            "script": "Route101_EventScript_1EBE04",
+            "script": "Route101_EventScript_Boy",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 2,

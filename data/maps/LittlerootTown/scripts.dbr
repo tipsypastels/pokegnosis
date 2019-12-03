@@ -186,7 +186,7 @@ script YamakiTown_RivalIntro
     spawncamera
       move camera
         walk_down 2
-      move_and_wait rival: 5
+      move_and_wait rival: 4
         walk_left 6
       move_and_wait player
         walk_down
@@ -204,7 +204,7 @@ script YamakiTown_RivalIntro
         say "We're going to LOCATION_COLOR(Downy Ranch)! I'm sure\l"
         say "we'll find it there!$"
       closemessage
-      move_and_wait rival: 5
+      move_and_wait rival: 4
         walk_fast_right 6
       move_and_wait camera
         walk_up 2

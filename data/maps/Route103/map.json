@@ -7,7 +7,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "Route103_EventScript_1EC5EB",
+            "script": "Route103_EventScript_RouteSign",
             "type": "sign",
             "x": 11,
             "y": 9
@@ -23,11 +23,6 @@
             "direction": "up",
             "map": "MAP_ROUTE108",
             "offset": 44
-        },
-        {
-            "direction": "down",
-            "map": "MAP_ROUTE107",
-            "offset": -4
         }
     ],
     "coord_events": [
@@ -45,7 +40,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-            "script": "Route103_EventScript_1EC5E2",
+            "script": "Route103_EventScript_Man",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 49,
@@ -58,7 +53,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-            "script": "Route103_EventScript_1EC3C1",
+            "script": "Route103_EventScript_Rival",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 10,
@@ -71,7 +66,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
-            "script": "Route103_EventScript_1EC5F4",
+            "script": "Route103_EventScript_Daisy",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
             "x": 71,
@@ -84,7 +79,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-            "script": "Route103_EventScript_1EC66E",
+            "script": "Route103_EventScript_Liv",
             "trainer_sight_or_berry_tree_id": "1",
             "trainer_type": "1",
             "x": 65,
@@ -97,7 +92,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-            "script": "Route103_EventScript_1EC60B",
+            "script": "Route103_EventScript_Amy",
             "trainer_sight_or_berry_tree_id": "1",
             "trainer_type": "1",
             "x": 64,
@@ -110,7 +105,7 @@
             "movement_range_x": 0,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
-            "script": "Route103_EventScript_1EC6D1",
+            "script": "Route103_EventScript_Andrew",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
             "x": 50,
@@ -161,12 +156,12 @@
             "graphics_id": "EVENT_OBJ_GFX_BOY_1",
             "movement_range_x": 1,
             "movement_range_y": 2,
-            "movement_type": "MOVEMENT_TYPE_NONE",
-            "script": "Route103_EventScript_1EC5D9",
+            "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+            "script": "Route103_EventScript_Boy",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 17,
-            "y": 2
+            "x": 20,
+            "y": 10
         },
         {
             "elevation": 3,
@@ -188,7 +183,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-            "script": "Route103_EventScript_1EC6E8",
+            "script": "Route103_EventScript_Miguel",
             "trainer_sight_or_berry_tree_id": "5",
             "trainer_type": "1",
             "x": 56,
@@ -240,7 +235,7 @@
             "movement_range_x": 1,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-            "script": "Route103_EventScript_1EC761",
+            "script": "Route103_EventScript_Rhett",
             "trainer_sight_or_berry_tree_id": "2",
             "trainer_type": "1",
             "x": 67,
@@ -253,7 +248,7 @@
             "movement_range_x": 1,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_FACE_UP",
-            "script": "Route103_EventScript_1EC74A",
+            "script": "Route103_EventScript_Marcos",
             "trainer_sight_or_berry_tree_id": "2",
             "trainer_type": "1",
             "x": 67,
@@ -266,11 +261,11 @@
             "movement_range_x": 1,
             "movement_range_y": 3,
             "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
-            "script": "Route103_EventScript_1EC78F",
+            "script": "Route103_EventScript_Isabelle",
             "trainer_sight_or_berry_tree_id": "5",
             "trainer_type": "1",
-            "x": 24,
-            "y": 0
+            "x": 36,
+            "y": 6
         },
         {
             "elevation": 1,
@@ -279,11 +274,11 @@
             "movement_range_x": 1,
             "movement_range_y": 3,
             "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
-            "script": "Route103_EventScript_1EC778",
+            "script": "Route103_EventScript_Pete",
             "trainer_sight_or_berry_tree_id": "5",
             "trainer_type": "1",
-            "x": 23,
-            "y": 0
+            "x": 36,
+            "y": 13
         },
         {
             "elevation": 0,

@@ -5,22 +5,6 @@
     "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
     "bg_events": [
         {
-            "elevation": 0,
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "LittlerootTown_EventScript_1E815A",
-            "type": "sign",
-            "x": 14,
-            "y": 29
-        },
-        {
-            "elevation": 3,
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "LittlerootTown_EventScript_1E8163",
-            "type": "sign",
-            "x": 12,
-            "y": 18
-        },
-        {
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "YamakiTown_Sign",
@@ -49,7 +33,7 @@
         {
             "direction": "right",
             "map": "MAP_ROUTE102",
-            "offset": 18
+            "offset": 12
         },
         {
             "direction": "up",
@@ -92,19 +76,6 @@
     "music": "MUS_MISHIRO",
     "name": "LittlerootTown",
     "object_events": [
-        {
-            "elevation": 3,
-            "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN",
-            "graphics_id": "EVENT_OBJ_GFX_FAT_MAN",
-            "movement_range_x": 2,
-            "movement_range_y": 1,
-            "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-            "script": "LittlerootTown_EventScript_1E8022",
-            "trainer_sight_or_berry_tree_id": "0",
-            "trainer_type": "0",
-            "x": 24,
-            "y": 0
-        },
         {
             "elevation": 3,
             "flag": "0",

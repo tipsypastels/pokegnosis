@@ -7,7 +7,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "DewfordTown_EventScript_1E95BA",
+            "script": "DewfordTown_EventScript_TownSign",
             "type": "sign",
             "x": 10,
             "y": 10
@@ -15,7 +15,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "DewfordTown_EventScript_1E95C3",
+            "script": "DewfordTown_EventScript_GymSign",
             "type": "sign",
             "x": 11,
             "y": 16
@@ -39,7 +39,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "DewfordTown_EventScript_1E95CC",
+            "script": "DewfordTown_EventScript_HallSign",
             "type": "sign",
             "x": 2,
             "y": 4
@@ -47,14 +47,14 @@
     ],
     "connections": [
         {
-            "direction": "left",
-            "map": "MAP_ROUTE106",
-            "offset": 14
-        },
-        {
             "direction": "right",
             "map": "MAP_ROUTE104",
             "offset": 0
+        },
+        {
+            "direction": "left",
+            "map": "MAP_ROUTE106",
+            "offset": 14
         }
     ],
     "coord_events": [
@@ -71,8 +71,8 @@
             "graphics_id": "EVENT_OBJ_GFX_WOMAN_2",
             "movement_range_x": 1,
             "movement_range_y": 0,
-            "movement_type": "MOVEMENT_TYPE_NONE",
-            "script": "DewfordTown_EventScript_1E95B1",
+            "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+            "script": "DewfordTown_EventScript_Woman",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 7,
@@ -85,7 +85,7 @@
             "movement_range_x": 0,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-            "script": "DewfordTown_EventScript_1E9511",
+            "script": "DewfordTown_EventScript_Briney",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "0",
             "x": 12,
@@ -98,7 +98,7 @@
             "movement_range_x": 1,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-            "script": "DewfordTown_EventScript_1E95D5",
+            "script": "DewfordTown_EventScript_OldRodFisherman",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 12,
@@ -124,7 +124,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-            "script": "DewfordTown_EventScript_1E9922",
+            "script": "DewfordTown_EventScript_TrendyPhraseBoy",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 1,
