@@ -1561,19 +1561,21 @@
 	.2byte \quantity
 	.endm
 
-	.macro showportrait character:req, emotion:req
+	.macro showportrait character:req, emotion:req, right=FALSE
 	.byte 0xe3
 	.byte \character
 	.byte \emotion
+	.byte \right
 	.endm
 
 	.macro hideportrait
 	.byte 0xe4
 	.endm
 
-	.macro showplayerportrait emotion:req
+	.macro showplayerportrait emotion:req, right=FALSE
 	.byte 0xe5
 	.byte \emotion
+	.byte \right
 	.endm 
 
 @ Supplementary

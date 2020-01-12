@@ -38,8 +38,8 @@ struct Portrait
   const u8 *textboxWidth;
 };
 
-void ShowPortrait(u8 character, u8 emotion);
-void ShowPlayerPortrait(u8 emotion);
+void ShowPortrait(u8 character, u8 emotion, u8 right);
+void ShowPlayerPortrait(u8 emotion, u8 right);
 void HidePortrait(void);
 
 #endif

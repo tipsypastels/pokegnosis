@@ -1,0 +1,8 @@
+script FantasyTest_Unreal
+  lock
+    showplayerportrait PORTRAIT_DAZED
+      say "(This place is unreal!)$"
+    showplayerportrait PORTRAIT_ANNOYED, right: TRUE
+      say "(ok now to the right!)$"
+    showplayerportrait PORTRAIT_ANNOYED
+      say "(some memes!)$"

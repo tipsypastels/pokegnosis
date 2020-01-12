@@ -216,7 +216,7 @@ PetalburgCity_Gym_EventScript_BeginWallyTutorial:: @ 8204AAC
 	compare VAR_0x8008, 3
 	call_if_eq PetalburgCity_Gym_EventScript_ExitGymWithWallyEast
 	removeobject 10
-	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT
+	setflag FLAG_HIDE_YAMAKI_TOWN_ZHENG
 	setvar VAR_PETALBURG_GYM_STATE, 1
 	setvar VAR_PETALBURG_CITY_STATE, 2
 	clearflag FLAG_HIDE_PETALBURG_CITY_WALLY

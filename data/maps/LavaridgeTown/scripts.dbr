@@ -1,0 +1,9 @@
+script ShiaxiaCity_GoldenMask
+  lock
+    showplayerportrait PORTRAIT_QUESTION
+      say "(A CHARACTER_COLOR(golden mask?))$"
+
+script ShiaxiaCity_KumihoSaves
+  lock
+    showplayerportrait PORTRAIT_FROWN
+      say "(Who or what is CHARACTER_COLOR(Kumiho)?)$"

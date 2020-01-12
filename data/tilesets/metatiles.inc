@@ -580,3 +580,10 @@ gMetatiles_DuckTemple::
 	.align 1
 gMetatileAttributes_DuckTemple::
 	.incbin "data/tilesets/secondary/ducktemple/metatile_attributes.bin"
+	.align 1
+gMetatiles_Fantasy::
+	.incbin "data/tilesets/primary/fantasy/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Fantasy::
+	.incbin "data/tilesets/primary/fantasy/metatile_attributes.bin"

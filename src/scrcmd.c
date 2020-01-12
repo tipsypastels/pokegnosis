@@ -2304,7 +2304,8 @@ bool8 ScrCmd_showportrait(struct ScriptContext *ctx)
 {
     u8 character = ScriptReadByte(ctx);
     u8 emotion = ScriptReadByte(ctx);
-    ShowPortrait(character, emotion);
+    u8 right = ScriptReadByte(ctx);
+    ShowPortrait(character, emotion, right);
 }
 
 bool8 ScrCmd_hideportrait(struct ScriptContext *ctx)
@@ -2315,5 +2316,6 @@ bool8 ScrCmd_hideportrait(struct ScriptContext *ctx)
 bool8 ScrCmd_showplayerportrait(struct ScriptContext *ctx)
 {
     u8 emotion = ScriptReadByte(ctx);
-    ShowPlayerPortrait(emotion);
+    u8 right = ScriptReadByte(ctx);
+    ShowPlayerPortrait(emotion, right);
 }

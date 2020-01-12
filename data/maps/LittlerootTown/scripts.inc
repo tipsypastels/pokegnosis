@@ -1163,19 +1163,21 @@ _YamakiTown_FatMan_Subscript_Code_12:: @ Dbr-output
 
 YamakiTown_RivalIntro:: @ Dbr-output
   lock
+  setobjectxy 4, 24, 22
+  setobjectmovementtype 4, MOVEMENT_TYPE_NONE
   special SpawnCameraObject
   applymovement EVENT_OBJ_ID_CAMERA, _YamakiTown_RivalIntro_Subscript_Movement_0
   applymovement 4, _YamakiTown_RivalIntro_Subscript_Movement_1
   waitmovement 4
   applymovement EVENT_OBJ_ID_PLAYER, _YamakiTown_RivalIntro_Subscript_Movement_2
   waitmovement EVENT_OBJ_ID_PLAYER
-  showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+  showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED, TRUE
   msgbox _YamakiTown_RivalIntro_Subscript_Text_3, MSGBOX_DEFAULT
   hideportrait
   showplayerportrait PORTRAIT_QUESTION
   msgbox _YamakiTown_RivalIntro_Subscript_Text_4, MSGBOX_DEFAULT
   hideportrait
-  showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+  showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN, TRUE
   msgbox _YamakiTown_RivalIntro_Subscript_Text_5, MSGBOX_DEFAULT
   hideportrait
   closemessage
@@ -1187,6 +1189,8 @@ YamakiTown_RivalIntro:: @ Dbr-output
   showplayerportrait PORTRAIT_QUESTION
   msgbox _YamakiTown_RivalIntro_Subscript_Text_9, MSGBOX_DEFAULT
   hideportrait
+  setobjectxy 4, 22, 31
+  setobjectmovementtype 4, MOVEMENT_TYPE_LOOK_AROUND
   addvar VAR_LITTLEROOT_TOWN_STATE, 1
   special RemoveCameraObject
   release
@@ -1223,7 +1227,7 @@ _YamakiTown_RivalIntro_Subscript_Text_4: @ Dbr-output
 _YamakiTown_RivalIntro_Subscript_Text_5: @ Dbr-output
   .string "You really don't!\l"
   .string "Come on! I'll explain on the way!\n"
-  .string "We're going to {COLOR LOCATION_COLOR}Downy Ranch{COLOR NO_COLOR}! I'm sure\l"
+  .string "We're going to {COLOR LOCATION_COLOR}Dense Jungle{COLOR NO_COLOR}! I'm sure\l"
   .string "we'll find it there!$"
 
 _YamakiTown_RivalIntro_Subscript_Movement_6: @ Dbr-output
@@ -1231,12 +1235,16 @@ _YamakiTown_RivalIntro_Subscript_Movement_6: @ Dbr-output
   walk_fast_right
   walk_fast_right
   walk_fast_right
-  walk_fast_right
-  walk_fast_right
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
   step_end
 
 _YamakiTown_RivalIntro_Subscript_Movement_7: @ Dbr-output
-  walk_up
   walk_up
   step_end
 
@@ -1250,7 +1258,7 @@ _YamakiTown_RivalIntro_Subscript_Text_9: @ Dbr-output
 YamakiTown_HealShrine:: @ Dbr-output
   lock
   getpartysize
-  compare VAR_RESULT, 1
+  compare VAR_RESULT, 0
   goto_if_eq _YamakiTown_HealShrine_Subscript_Code_1
   msgbox _YamakiTown_HealShrine_Subscript_Text_2, MSGBOX_YESNO
   compare VAR_RESULT, TRUE
@@ -1598,3 +1606,124 @@ __TODOCleanupCamera_Subscript_Movement_0: @ Dbr-output
 __TODOCleanupCamera_Subscript_Movement_1: @ Dbr-output
   face_up
   step_end
+
+YamakiTown_RivalIntro2:: @ Dbr-output
+  lock
+  special SpawnCameraObject
+  applymovement 4, _YamakiTown_RivalIntro2_Subscript_Movement_0
+  applymovement EVENT_OBJ_ID_CAMERA, _YamakiTown_RivalIntro2_Subscript_Movement_1
+  waitmovement EVENT_OBJ_ID_CAMERA
+  showportrait PORTRAIT_ZHENG, PORTRAIT_BLUSH, TRUE
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_2, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_DAZED, TRUE
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_3, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_PLAYER, _YamakiTown_RivalIntro2_Subscript_Movement_4
+  waitmovement EVENT_OBJ_ID_PLAYER
+  applymovement EVENT_OBJ_ID_PLAYER, _YamakiTown_RivalIntro2_Subscript_Movement_5
+  playse SE_DANSA
+  applymovement EVENT_OBJ_ID_PLAYER, _YamakiTown_RivalIntro2_Subscript_Movement_6
+  waitmovement EVENT_OBJ_ID_PLAYER
+  showplayerportrait PORTRAIT_ALARMED
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_7, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_WIPED_OUT_GRIN, TRUE
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_8, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_SNEAKY, TRUE
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_9, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_WINK, TRUE
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_10, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN, TRUE
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_11, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_CAMERA, _YamakiTown_RivalIntro2_Subscript_Movement_12
+  applymovement 4, _YamakiTown_RivalIntro2_Subscript_Movement_13
+  waitmovement 4
+  showplayerportrait PORTRAIT_SWEAT
+  msgbox _YamakiTown_RivalIntro2_Subscript_Text_14, MSGBOX_DEFAULT
+  hideportrait
+  removeobject 4
+  setflag FLAG_HIDE_YAMAKI_TOWN_ZHENG
+  addvar VAR_LITTLEROOT_TOWN_STATE, 1
+  special RemoveCameraObject
+  release
+  end
+
+_YamakiTown_RivalIntro2_Subscript_Movement_0: @ Dbr-output
+  face_up
+  step_end
+
+_YamakiTown_RivalIntro2_Subscript_Movement_1: @ Dbr-output
+  walk_down
+  walk_down
+  step_end
+
+_YamakiTown_RivalIntro2_Subscript_Text_2: @ Dbr-output
+  .string "Okay! Quickest summary ever.\p"
+  .string "A bunch of people saw a {COLOR POKEMON_COLOR}Dragon Pokémon{COLOR NO_COLOR}\n"
+  .string "flying over the {COLOR LOCATION_COLOR}town{COLOR NO_COLOR} this morning!$"
+
+_YamakiTown_RivalIntro2_Subscript_Movement_4: @ Dbr-output
+  emote_exclamation_mark
+  step_end
+
+_YamakiTown_RivalIntro2_Subscript_Movement_5: @ Dbr-output
+  jump_in_place_down
+  step_end
+
+_YamakiTown_RivalIntro2_Subscript_Text_7: @ Dbr-output
+  .string "(Woah...)$"
+
+_YamakiTown_RivalIntro2_Subscript_Text_8: @ Dbr-output
+  .string "Hah, that look on your face!\p"
+  .string "Everyone's been abuzz since the sighting...\n"
+  .string "Nobody's seen a {COLOR POKEMON_COLOR}Dragon Pokémon{COLOR NO_COLOR} in years!$"
+
+_YamakiTown_RivalIntro2_Subscript_Text_3: @ Dbr-output
+  .string "It even looked like it landed just over\n"
+  .string "the trees nearby!$"
+
+_YamakiTown_RivalIntro2_Subscript_Movement_6: @ Dbr-output
+  delay_16
+  step_end
+
+_YamakiTown_RivalIntro2_Subscript_Text_9: @ Dbr-output
+  .string "So I figured...\p"
+  .string "There's only one spot in the {COLOR LOCATION_COLOR}province{COLOR NO_COLOR} big\n"
+  .string "enough for a {COLOR POKEMON_COLOR}Dragon Pokémon{COLOR NO_COLOR} to be\l"
+  .string "landing without causing a panic.\p"
+  .string "That's... {PAUSE_UNTIL_PRESS}drumroll...$"
+
+_YamakiTown_RivalIntro2_Subscript_Text_10: @ Dbr-output
+  .string "{COLOR LOCATION_COLOR}Dense Jungle{COLOR NO_COLOR}!\n"
+  .string "It's not far from here!$"
+
+_YamakiTown_RivalIntro2_Subscript_Text_11: @ Dbr-output
+  .string "Imagine, starting our {COLOR CHARACTER_COLOR}Pokémon{COLOR NO_COLOR} journey\n"
+  .string "with a {COLOR POKEMON_COLOR}super-rare Dragon{COLOR NO_COLOR}...\l"
+  .string "We've got to find it before anyone else!$"
+
+_YamakiTown_RivalIntro2_Subscript_Movement_12: @ Dbr-output
+  walk_up
+  walk_up
+  step_end
+
+_YamakiTown_RivalIntro2_Subscript_Movement_13: @ Dbr-output
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  walk_fast_right
+  step_end
+
+_YamakiTown_RivalIntro2_Subscript_Text_14: @ Dbr-output
+  .string "A {COLOR POKEMON_COLOR}super-rare Dragon{COLOR NO_COLOR}...$"

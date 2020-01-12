@@ -158,7 +158,7 @@ EWRAM_DATA static u8 sPortraitSpriteId = 0;
 static void HidePortraitSpeakerName(void);
 static void HidePortraitGraphic(void);
 
-void ShowPortrait(u8 character, u8 emotion) {
+void ShowPortrait(u8 character, u8 emotion, u8 right) {
   struct WindowTemplate template;
   u8 currentPortraitIndex = (character * PORTRAIT_EMOTIONS_COUNT) + emotion;
   // u8 currentPortraitIndex = (u8) VarGet(VAR_CURRENT_PORTRAIT);
@@ -175,7 +175,7 @@ void ShowPortrait(u8 character, u8 emotion) {
     .tag = PORTRAIT_TAG,
   };
 
-  SetWindowTemplateFields(&template, 0, 6, 203, *portrait.textboxWidth, 2, 15, 8);
+  SetWindowTemplateFields(&template, 0, right ? (21 - (*portrait.textboxWidth - 3)) : 6, 203, *portrait.textboxWidth, 2, 15, 8);
   sTalkingBoxWindowId = AddWindow(&template);
   FillWindowPixelBuffer(sTalkingBoxWindowId, PIXEL_FILL(0));
   PutWindowTilemap(sTalkingBoxWindowId);
@@ -187,14 +187,14 @@ void ShowPortrait(u8 character, u8 emotion) {
 
   LoadCompressedSpriteSheet(&sprites);
   LoadCompressedSpritePalette(&palette);
-  sPortraitSpriteId = CreateSprite(&sSpriteTemplate_TestPortrait, 22, 94, 0);
+  sPortraitSpriteId = CreateSprite(&sSpriteTemplate_TestPortrait, right ? (240 - 22) : 22, 94, 0);
 }
 
-void ShowPlayerPortrait(u8 emotion) {
+void ShowPlayerPortrait(u8 emotion, u8 right) {
   if (gSaveBlock2Ptr->playerGender == MALE) {
-    ShowPortrait(PORTRAIT_KAI, emotion);
+    ShowPortrait(PORTRAIT_KAI, emotion, right);
   } else {
-    ShowPortrait(PORTRAIT_MEILI, emotion);
+    ShowPortrait(PORTRAIT_MEILI, emotion, right);
   }
 }
 

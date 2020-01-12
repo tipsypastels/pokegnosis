@@ -209,3 +209,409 @@ Route114_Text_FossilManiacsHouseSign: @ 81F28DB
 Route114_Text_LanettesHouse: @ 81F2910
 	.string "LANETTE'S HOUSE$"
 
+DenseJungle_Sign:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_FROWN
+  msgbox _DenseJungle_Sign_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_DenseJungle_Sign_Subscript_Text_0: @ Dbr-output
+  .string "(Wow, it's too faded to read.)$"
+
+DenseJungle_Starter_Egg:: @ Dbr-output
+  lock
+  call _DenseJungle_Starter_Egg_CenterPlayer
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_0
+  waitmovement EVENT_OBJ_ID_PLAYER
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_1
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_2, MSGBOX_DEFAULT
+  hideportrait
+  showplayerportrait PORTRAIT_DRUNK_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_3, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_4
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_5, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_6
+  playse SE_DANSA
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_7
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_WIPED_OUT_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_8, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_9
+  waitmovement 2
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_10
+  waitmovement EVENT_OBJ_ID_PLAYER
+  showportrait PORTRAIT_ZHENG, PORTRAIT_EYES_CLOSED_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_11, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_12
+  waitmovement EVENT_OBJ_ID_PLAYER
+  showplayerportrait PORTRAIT_DEVILISH
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_13, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_14
+  waitmovement EVENT_OBJ_ID_PLAYER
+  special ChooseStarter
+  waitstate
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_15
+  waitmovement EVENT_OBJ_ID_PLAYER
+  bufferleadmonspeciesname 0
+  showplayerportrait PORTRAIT_WIPED_OUT_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_16, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_17
+  waitmovement 2
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_18
+  playse SE_DANSA
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_19
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_EYES_CLOSED_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_20, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_21
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_SNEAKY
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_22, MSGBOX_DEFAULT
+  hideportrait
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_23
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_WINK
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_24, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_25
+  waitmovement EVENT_OBJ_ID_PLAYER
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_26
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_SMILE_CLOSED_MOUTH
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_27, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_28
+  waitmovement 2
+  playse MUS_FANFA4
+  showplayerportrait PORTRAIT_DRUNK_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_29, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_30, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_31
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_SLIGHT_SMILE
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_32, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_33, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  setweather WEATHER_SHADE
+  doweather
+  playbgm MUS_AQA_0, 0
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_34
+  waitmovement EVENT_OBJ_ID_PLAYER
+  showportrait PORTRAIT_ZHENG, PORTRAIT_SWEAT
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_35, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  setvar VAR_0x8004, 1
+  setvar VAR_0x8005, 1
+  setvar VAR_0x8006, 16
+  setvar VAR_0x8007, 5
+  special ShakeCamera
+  playse SE_W253
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_36, MSGBOX_DEFAULT
+  closemessage
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_37
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_38
+  waitmovement 2
+  showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+  msgbox _DenseJungle_Starter_Egg_Subscript_Text_39, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  special SpawnCameraObject
+  setvar VAR_0x8004, 3
+  setvar VAR_0x8005, 3
+  setvar VAR_0x8006, 32
+  setvar VAR_0x8007, 3
+  special ShakeCamera
+  playse SE_W253
+  applymovement EVENT_OBJ_ID_PLAYER, _DenseJungle_Starter_Egg_Subscript_Movement_40
+  applymovement 2, _DenseJungle_Starter_Egg_Subscript_Movement_41
+  waitmovement 2
+  special RemoveCameraObject
+  fadescreen 1
+  warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 0xFF, 0, 3
+  waitstate
+  release
+  end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_0: @ Dbr-output
+  walk_up
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_2: @ Dbr-output
+  .string "These… these are {COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR} eggs!\n"
+  .string "I'm sure of it!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_6: @ Dbr-output
+  jump_in_place_left
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_9: @ Dbr-output
+  delay_16
+  walk_slow_down
+  face_left
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_14: @ Dbr-output
+  delay_16
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_18: @ Dbr-output
+  jump_in_place_left
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_25: @ Dbr-output
+  face_up
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_17: @ Dbr-output
+  emote_exclamation_mark
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_35: @ Dbr-output
+  .string "I think… we found…$"
+
+_DenseJungle_Starter_Egg_Subscript_Text_29: @ Dbr-output
+  .string "(Yes! I got a {COLOR POKEMON_COLOR}Dragon Egg{COLOR NO_COLOR}!)$"
+
+_DenseJungle_Starter_Egg_Subscript_Text_32: @ Dbr-output
+  .string "…\p"
+  .string "{COLOR CHARACTER_COLOR}{PLAYER}{COLOR NO_COLOR}…$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_37: @ Dbr-output
+  emote_exclamation_mark
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_40: @ Dbr-output
+  walk_fast_down
+  walk_fast_right
+  walk_fast_right
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Movement_1: @ Dbr-output
+  walk_left
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_3: @ Dbr-output
+  .string "(…)$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_4: @ Dbr-output
+  delay_16
+  face_player
+  delay_16
+  emote_exclamation_mark
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_5: @ Dbr-output
+  .string "Wait, you don't think…\l"
+  .string "Could those be eggs from the {COLOR POKEMON_COLOR}Dragon{COLOR NO_COLOR}\n"
+  .string "{COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR} everyone's been searching for?$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_7: @ Dbr-output
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_8: @ Dbr-output
+  .string "Oh man, just imagine what could be in\n"
+  .string "these!\p"
+  .string "{COLOR POKEMON_COLOR}Dragon Pokémon{COLOR NO_COLOR} are like, legendary!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_10: @ Dbr-output
+  face_right
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_11: @ Dbr-output
+  .string "C'mon, {COLOR CHARACTER_COLOR}{PLAYER}{COLOR NO_COLOR}?\l"
+  .string "What do you think is in there?$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_12: @ Dbr-output
+  face_up
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_13: @ Dbr-output
+  .string "(Hmm… what's in there…)$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_15: @ Dbr-output
+  face_right
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_16: @ Dbr-output
+  .string "I think it's a {COLOR POKEMON_COLOR}{STR_VAR_1}{COLOR NO_COLOR}!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_19: @ Dbr-output
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_20: @ Dbr-output
+  .string "Wow! {COLOR POKEMON_COLOR}{STR_VAR_1}{COLOR NO_COLOR}? Really?\p"
+  .string "That's so awesome!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_21: @ Dbr-output
+  delay_16
+  delay_16
+  walk_slow_right
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_22: @ Dbr-output
+  .string "You know…\p"
+  .string "There's nobody around…$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_23: @ Dbr-output
+  face_player
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_24: @ Dbr-output
+  .string "What do you say we each take\n"
+  .string "one of these?\p"
+  .string "We'd have our very own {COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR}!\l"
+  .string "Nothing could stop us then!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_26: @ Dbr-output
+  walk_slow_left
+  walk_slow_up
+  face_left
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_27: @ Dbr-output
+  .string "Come on, I'll take this one.\l"
+  .string "Yoink! Now it's your turn!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_28: @ Dbr-output
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_30: @ Dbr-output
+  .string "With our own {COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR}, we'll be\n"
+  .string "unstoppable!\p"
+  .string "Just think! We could take on…$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_31: @ Dbr-output
+  delay_16
+  face_up
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_33: @ Dbr-output
+  .string "Do you see that {COLOR POKEMON_COLOR}giant shadow{COLOR NO_COLOR} on the\n"
+  .string "horizon or is that just me?$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_34: @ Dbr-output
+  walk_slow_left
+  face_up
+  emote_exclamation_mark
+  delay_16
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_36: @ Dbr-output
+  .string "{COLOR POKEMON_COLOR}???{COLOR NO_COLOR}: Gyaaaaah!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_38: @ Dbr-output
+  emote_exclamation_mark
+  step_end
+
+_DenseJungle_Starter_Egg_Subscript_Text_39: @ Dbr-output
+  .string "I think we found the {COLOR POKEMON_COLOR}Dragon{COLOR NO_COLOR}! Run!$"
+
+_DenseJungle_Starter_Egg_Subscript_Movement_41: @ Dbr-output
+  face_left
+  delay_4
+  face_down
+  delay_4
+  face_right
+  delay_4
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  walk_fast_down
+  step_end
+
+_DenseJungle_Starter_Egg_CenterPlayer:: @ Dbr-output
+  getplayerxy VAR_RESULT, VAR_TEMP_1
+  compare VAR_RESULT, 9
+  goto_if_eq __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_1
+  compare VAR_RESULT, 10
+  goto_if_eq __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_3
+  compare VAR_RESULT, 12
+  goto_if_eq __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_5
+  compare VAR_RESULT, 13
+  goto_if_eq __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_7
+  return
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_0: @ Dbr-output
+  walk_right
+  walk_right
+  step_end
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_1:: @ Dbr-output
+  applymovement EVENT_OBJ_ID_PLAYER, __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_0
+  waitmovement EVENT_OBJ_ID_PLAYER
+  return
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_2: @ Dbr-output
+  walk_right
+  step_end
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_3:: @ Dbr-output
+  applymovement EVENT_OBJ_ID_PLAYER, __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_2
+  waitmovement EVENT_OBJ_ID_PLAYER
+  return
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_4: @ Dbr-output
+  walk_left
+  step_end
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_5:: @ Dbr-output
+  applymovement EVENT_OBJ_ID_PLAYER, __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_4
+  waitmovement EVENT_OBJ_ID_PLAYER
+  return
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_6: @ Dbr-output
+  walk_left
+  walk_left
+  step_end
+
+__DenseJungle_Starter_Egg_CenterPlayer_Subscript_Code_7:: @ Dbr-output
+  applymovement EVENT_OBJ_ID_PLAYER, __DenseJungle_Starter_Egg_CenterPlayer_Subscript_Movement_6
+  waitmovement EVENT_OBJ_ID_PLAYER
+  return

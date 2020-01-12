@@ -863,3 +863,14 @@ gTileset_DuckTemple::
 	.4byte gMetatiles_DuckTemple
 	.4byte gMetatileAttributes_DuckTemple
 	.4byte NULL
+
+	.align 2
+gTileset_Fantasy::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Fantasy
+	.4byte gTilesetPalettes_Fantasy
+	.4byte gMetatiles_Fantasy
+	.4byte gMetatileAttributes_Fantasy
+	.4byte NULL

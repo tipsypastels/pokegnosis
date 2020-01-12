@@ -950,7 +950,15 @@ const struct SpriteFrameImage gEventObjectPicTable_VigorothFacingAway[] = {
 };
 
 const struct SpriteFrameImage gEventObjectPicTable_BirchsBag[] = {
-    obj_frame_tiles(gEventObjectPic_BirchsBag),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 0),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 1),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 2),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 0),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 0),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 1),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 1),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 2),
+    overworld_frame(gEventObjectPic_BirchsBag, 2, 2, 2),
 };
 
 const struct SpriteFrameImage gEventObjectPicTable_EnemyZigzagoon[] = {

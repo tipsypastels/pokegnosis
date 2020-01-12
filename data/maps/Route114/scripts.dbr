@@ -1,0 +1,190 @@
+script DenseJungle_Sign
+  lock
+    showplayerportrait PORTRAIT_FROWN
+      say "(Wow, it's too faded to read.)$"
+
+script DenseJungle_Starter_Egg
+  lock
+    call _DenseJungle_Starter_Egg_CenterPlayer
+    move_and_wait player
+      walk_up
+    move_and_wait zheng: 2
+      walk_left
+    showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+      say "These… these are POKEMON_COLOR(Pokémon) eggs!\n"
+      say "I'm sure of it!$"
+    showplayerportrait PORTRAIT_DRUNK_GRIN
+      say "(…)$"
+    closemessage
+    move_and_wait zheng: 2
+      delay_16
+      face_player
+      delay_16
+      emote_exclamation_mark
+      delay_16
+    showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+      say "Wait, you don't think…\l"
+      say "Could those be eggs from the POKEMON_COLOR(Dragon)\n"
+      say "POKEMON_COLOR(Pokémon) everyone's been searching for?$"
+    closemessage
+    move zheng: 2
+      jump_in_place_left
+    playse SE_DANSA
+    move_and_wait zheng: 2
+      delay_16
+    showportrait PORTRAIT_ZHENG, PORTRAIT_WIPED_OUT_GRIN
+      say "Oh man, just imagine what could be in\n"
+      say "these!\p"
+      say "POKEMON_COLOR(Dragon Pokémon) are like, legendary!$"
+    closemessage
+    move_and_wait zheng: 2
+      delay_16
+      walk_slow_down
+      face_left
+    move_and_wait player
+      face_right
+    showportrait PORTRAIT_ZHENG, PORTRAIT_EYES_CLOSED_GRIN
+      say "C'mon, CHARACTER_COLOR({PLAYER})?\l"
+      say "What do you think is in there?$"
+    closemessage
+    move_and_wait player
+      face_up
+    showplayerportrait PORTRAIT_DEVILISH
+      say "(Hmm… what's in there…)$"
+    closemessage
+    move_and_wait player
+      delay_16 2
+    special ChooseStarter
+    waitstate
+    move_and_wait player
+      face_right
+    bufferleadmonspeciesname 0
+    showplayerportrait PORTRAIT_WIPED_OUT_GRIN
+      say "I think it's a POKEMON_COLOR({STR_VAR_1})!$"
+    closemessage
+    move_and_wait zheng: 2
+      emote_exclamation_mark
+    move zheng: 2
+      jump_in_place_left
+    playse SE_DANSA
+    move_and_wait zheng: 2
+      delay_16
+    showportrait PORTRAIT_ZHENG, PORTRAIT_EYES_CLOSED_GRIN
+      say "Wow! POKEMON_COLOR({STR_VAR_1})? Really?\p"
+      say "That's so awesome!$"
+    closemessage
+    move_and_wait zheng: 2
+      delay_16 2
+      walk_slow_right
+      delay_16
+    showportrait PORTRAIT_ZHENG, PORTRAIT_SNEAKY
+      say "You know…\p"
+      say "There's nobody around…$"
+    move_and_wait zheng: 2
+      face_player
+    showportrait PORTRAIT_ZHENG, PORTRAIT_WINK
+      say "What do you say we each take\n"
+      say "one of these?\p"
+      say "We'd have our very own POKEMON_COLOR(Pokémon)!\l"
+      say "Nothing could stop us then!$"
+    closemessage
+    move_and_wait player
+      face_up
+    move_and_wait zheng: 2
+      walk_slow_left
+      walk_slow_up
+      face_left
+      delay_16
+    showportrait PORTRAIT_ZHENG, PORTRAIT_SMILE_CLOSED_MOUTH
+      say "Come on, I'll take this one.\l"
+      say "Yoink! Now it's your turn!$"
+    closemessage
+    move_and_wait zheng: 2
+      delay_16
+    playse MUS_FANFA4
+    showplayerportrait PORTRAIT_DRUNK_GRIN
+      say "(Yes! I got a POKEMON_COLOR(Dragon Egg)!)$"
+    showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+      say "With our own POKEMON_COLOR(Pokémon), we'll be\n"
+      say "unstoppable!\p"
+      say "Just think! We could take on…$"
+    closemessage
+    move_and_wait zheng: 2
+      delay_16
+      face_up
+      delay_16
+    showportrait PORTRAIT_ZHENG, PORTRAIT_SLIGHT_SMILE
+      say "…\p"
+      say "CHARACTER_COLOR({PLAYER})…$"
+    showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+      say "Do you see that POKEMON_COLOR(giant shadow) on the\n"
+      say "horizon or is that just me?$"
+    closemessage
+    setweather WEATHER_SHADE
+    doweather
+    playbgm MUS_AQA_0, 0
+    move_and_wait player
+      walk_slow_left
+      face_up
+      emote_exclamation_mark
+      delay_16
+    showportrait PORTRAIT_ZHENG, PORTRAIT_SWEAT
+      say "I think… we found…$"
+    closemessage
+    setvar VAR_0x8004, 1
+    setvar VAR_0x8005, 1
+    setvar VAR_0x8006, 16
+    setvar VAR_0x8007, 5
+    special ShakeCamera
+    playse SE_W253
+    say "POKEMON_COLOR(???): Gyaaaaah!$"
+    closemessage
+    move player
+      emote_exclamation_mark
+    move_and_wait zheng: 2
+      emote_exclamation_mark
+    showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+      say "I think we found the POKEMON_COLOR(Dragon)! Run!$"
+    closemessage
+    spawncamera
+      setvar VAR_0x8004, 3
+      setvar VAR_0x8005, 3
+      setvar VAR_0x8006, 32
+      setvar VAR_0x8007, 3
+      special ShakeCamera
+      playse SE_W253
+      move player
+        walk_fast_down
+        walk_fast_right 2
+        walk_fast_down 6
+      move_and_wait zheng: 2
+        face_left
+        delay_4
+        face_down
+        delay_4
+        face_right
+        delay_4
+        walk_fast_down 7
+    fadescreen 1
+    warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 0xFF, 0, 3
+    waitstate
+
+script _DenseJungle_Starter_Egg_CenterPlayer
+  getplayerxy VAR_RESULT, VAR_TEMP_1
+  when 9
+    move_and_wait player
+      walk_right 2
+    return
+  when 10
+    move_and_wait player
+      walk_right
+    return
+  when 12
+    move_and_wait player
+      walk_left
+    return
+  when 13
+    move_and_wait player
+      walk_left 2
+    return
+  return

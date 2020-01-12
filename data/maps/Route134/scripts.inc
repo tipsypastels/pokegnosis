@@ -51,3 +51,25 @@ Route134_EventScript_Kelvin:: @ 81F770B
 	msgbox Route134_Text_KelvinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+FantasyTest_Unreal:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_DAZED
+  msgbox _FantasyTest_Unreal_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  showplayerportrait PORTRAIT_ANNOYED, TRUE
+  msgbox _FantasyTest_Unreal_Subscript_Text_1, MSGBOX_DEFAULT
+  hideportrait
+  showplayerportrait PORTRAIT_ANNOYED
+  msgbox _FantasyTest_Unreal_Subscript_Text_2, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_FantasyTest_Unreal_Subscript_Text_0: @ Dbr-output
+  .string "(This place is unreal!)$"
+
+_FantasyTest_Unreal_Subscript_Text_1: @ Dbr-output
+  .string "(ok now to the right!)$"
+
+_FantasyTest_Unreal_Subscript_Text_2: @ Dbr-output
+  .string "(some memes!)$"

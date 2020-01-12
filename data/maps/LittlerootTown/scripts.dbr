@@ -183,6 +183,8 @@ script _TODOCleanupCamera
 
 script YamakiTown_RivalIntro
   lock
+    setobjectxy rival: 4, 24, 22
+    setobjectmovementtype rival: 4, MOVEMENT_TYPE_NONE
     spawncamera
       move camera
         walk_down 2
@@ -192,32 +194,87 @@ script YamakiTown_RivalIntro
         walk_down
         face_right
         emote_exclamation_mark
-      showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED
+      showportrait PORTRAIT_ZHENG, PORTRAIT_ALARMED, right: TRUE
         say "CHARACTER_COLOR({PLAYER})! Hey!\l"
         say "What are you looking like that for?\n"
         say "Don't you know what's going on?$"
       showplayerportrait PORTRAIT_QUESTION
         say "(...)$"
-      showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN
+      showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN, right: TRUE
         say "You really don't!\l"
         say "Come on! I'll explain on the way!\n"
-        say "We're going to LOCATION_COLOR(Downy Ranch)! I'm sure\l"
+        say "We're going to LOCATION_COLOR(Dense Jungle)! I'm sure\l"
         say "we'll find it there!$"
       closemessage
       move_and_wait rival: 4
-        walk_fast_right 6
+        walk_fast_right 4
+        walk_fast_down 7
       move_and_wait camera
-        walk_up 2
+        walk_up
       move player
         emote_question_mark
       showplayerportrait PORTRAIT_QUESTION
         say "(...)$"
+      setobjectxy rival: 4, 22, 31
+      setobjectmovementtype rival: 4, MOVEMENT_TYPE_LOOK_AROUND
+      addvar VAR_LITTLEROOT_TOWN_STATE, 1
+
+script YamakiTown_RivalIntro2
+  lock
+    spawncamera
+      move rival: 4
+        face_up
+      move_and_wait camera
+        walk_down 2
+      showportrait PORTRAIT_ZHENG, PORTRAIT_BLUSH, right: TRUE
+        say "Okay! Quickest summary ever.\p"
+        say "A bunch of people saw a POKEMON_COLOR(Dragon Pokémon)\n" 
+        say "flying over the LOCATION_COLOR(town) this morning!$"
+      showportrait PORTRAIT_ZHENG, PORTRAIT_DAZED, right: TRUE
+        say "It even looked like it landed just over\n"
+        say "the trees nearby!$"
+      closemessage
+      move_and_wait player
+        emote_exclamation_mark
+      move player
+        jump_in_place_down
+      playse SE_DANSA
+      move_and_wait player
+        delay_16
+      showplayerportrait PORTRAIT_ALARMED
+        say "(Woah...)$"
+      showportrait PORTRAIT_ZHENG, PORTRAIT_WIPED_OUT_GRIN, right: TRUE
+        say "Hah, that look on your face!\p"
+        say "Everyone's been abuzz since the sighting...\n"
+        say "Nobody's seen a POKEMON_COLOR(Dragon Pokémon) in years!$"
+      showportrait PORTRAIT_ZHENG, PORTRAIT_SNEAKY, right: TRUE
+        say "So I figured...\p"
+        say "There's only one spot in the LOCATION_COLOR(province) big\n"
+        say "enough for a POKEMON_COLOR(Dragon Pokémon) to be\l"
+        say "landing without causing a panic.\p"
+        say "That's... {PAUSE_UNTIL_PRESS}drumroll...$"
+      showportrait PORTRAIT_ZHENG, PORTRAIT_WINK, right: TRUE
+        say "LOCATION_COLOR(Dense Jungle)!\n"
+        say "It's not far from here!$"
+      showportrait PORTRAIT_ZHENG, PORTRAIT_DRUNK_GRIN, right: TRUE
+        say "Imagine, starting our CHARACTER_COLOR(Pokémon) journey\n"
+        say "with a POKEMON_COLOR(super-rare Dragon)...\l"
+        say "We've got to find it before anyone else!$"
+      closemessage
+      move camera
+        walk_up 2
+      move_and_wait rival: 4
+        walk_fast_right 8
+      showplayerportrait PORTRAIT_SWEAT
+        say "A POKEMON_COLOR(super-rare Dragon)...$"
+      removeobject rival: 4
+      setflag FLAG_HIDE_YAMAKI_TOWN_ZHENG
       addvar VAR_LITTLEROOT_TOWN_STATE, 1
 
 script YamakiTown_HealShrine
   lock
     getpartysize
-    when 1
+    when 0
       showplayerportrait PORTRAIT_EYES_CLOSED_GRIN
         say "(Peaceful...)$"
     else

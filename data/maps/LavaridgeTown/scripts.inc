@@ -420,3 +420,24 @@ LavaridgeTown_Text_HerbShopSign: @ 81EB1CB
 	.string "POKéMON HERB SHOP\n"
 	.string "“Bitter taste--better cure!”$"
 
+ShiaxiaCity_GoldenMask:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_QUESTION
+  msgbox _ShiaxiaCity_GoldenMask_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_ShiaxiaCity_GoldenMask_Subscript_Text_0: @ Dbr-output
+  .string "(A {COLOR CHARACTER_COLOR}golden mask?{COLOR NO_COLOR})$"
+
+ShiaxiaCity_KumihoSaves:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_FROWN
+  msgbox _ShiaxiaCity_KumihoSaves_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_ShiaxiaCity_KumihoSaves_Subscript_Text_0: @ Dbr-output
+  .string "(Who or what is {COLOR CHARACTER_COLOR}Kumiho{COLOR NO_COLOR}?)$"
