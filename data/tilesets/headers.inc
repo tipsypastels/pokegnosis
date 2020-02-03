@@ -874,3 +874,14 @@ gTileset_Fantasy::
 	.4byte gMetatiles_Fantasy
 	.4byte gMetatileAttributes_Fantasy
 	.4byte NULL
+
+	.align 2
+gTileset_Mine::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Mine
+	.4byte gTilesetPalettes_Mine
+	.4byte gMetatiles_Mine
+	.4byte gMetatileAttributes_Mine
+	.4byte NULL

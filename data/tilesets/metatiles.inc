@@ -587,3 +587,10 @@ gMetatiles_Fantasy::
 	.align 1
 gMetatileAttributes_Fantasy::
 	.incbin "data/tilesets/primary/fantasy/metatile_attributes.bin"
+	.align 1
+gMetatiles_Mine::
+	.incbin "data/tilesets/secondary/mine/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Mine::
+	.incbin "data/tilesets/secondary/mine/metatile_attributes.bin"
