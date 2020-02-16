@@ -36,5 +36,6 @@
 #define PORTRAIT_MEILI 0
 #define PORTRAIT_KAI 1
 #define PORTRAIT_ZHENG 2
+#define PORTRAIT_KUMIHO 3
 
 #endif

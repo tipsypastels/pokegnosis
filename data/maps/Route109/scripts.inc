@@ -563,3 +563,38 @@ Route109_Text_TrainerTipsSign: @ 81EF1D5
 	.string "always have identical stats.\p"
 	.string "POKéMON raised by TRAINERS are said\n"
 	.string "to grow stronger than wild POKéMON.$"
+
+KumihoEncounter:: @ Dbr-output
+  lock
+  fadeoutbgm 1
+  msgbox _KumihoEncounter_Subscript_Text_0, MSGBOX_DEFAULT
+  applymovement 1, _KumihoEncounter_Subscript_Movement_1
+  playse SE_DANSA
+  applymovement EVENT_OBJ_ID_PLAYER, _KumihoEncounter_Subscript_Movement_2
+  waitmovement EVENT_OBJ_ID_PLAYER
+  playbgm MUS_AQA_0, 0
+  showportrait PORTRAIT_KUMIHO, PORTRAIT_SLIGHT_SMILE
+  msgbox _KumihoEncounter_Subscript_Text_3, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_KumihoEncounter_Subscript_Text_0: @ Dbr-output
+  .string "…\p"
+  .string "Hah…\p"
+  .string "If you were going to follow me all this\n"
+  .string "way…$"
+
+_KumihoEncounter_Subscript_Movement_1: @ Dbr-output
+  walk_fastest_down
+  step_end
+
+_KumihoEncounter_Subscript_Movement_2: @ Dbr-output
+  lock_facing_direction
+  emote_exclamation_mark
+  jump_down
+  step_end
+
+_KumihoEncounter_Subscript_Text_3: @ Dbr-output
+  .string "The least you could have done was kept\n"
+  .string "up!$"

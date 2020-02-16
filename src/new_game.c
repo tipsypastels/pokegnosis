@@ -136,7 +136,8 @@ static void WarpToTruck(void)
     // SetWarpDestination(MAP_GROUP(LITTLEROOT_TOWN_MAYS_HOUSE_2F), MAP_NUM(LITTLEROOT_TOWN_MAYS_HOUSE_2F), -1, -1, -1);
     // SetWarpDestination(MAP_GROUP(ROUTE114), MAP_NUM(ROUTE114), -1, -1, -1);
     // SetWarpDestination(MAP_GROUP(ROUTE134), MAP_NUM(ROUTE134), -1, -1, -1);
-    SetWarpDestination(MAP_GROUP(GRANITE_CAVE_1F), MAP_NUM(GRANITE_CAVE_1F), -1, -1, -1);
+    // SetWarpDestination(MAP_GROUP(GRANITE_CAVE_1F), MAP_NUM(GRANITE_CAVE_1F), -1, -1, -1);
+    SetWarpDestination(MAP_GROUP(ROUTE109), MAP_NUM(ROUTE109), -1, 56, 14);
 
 
     WarpIntoMap();

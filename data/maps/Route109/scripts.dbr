@@ -1,0 +1,18 @@
+script KumihoEncounter
+  lock
+    fadeoutbgm 1
+    say "…\p"
+    say "Hah…\p"
+    say "If you were going to follow me all this\n"
+    say "way…$"
+    move kumiho: 1
+      walk_fastest_down
+    playse SE_DANSA
+    move_and_wait player
+      lock_facing_direction
+      emote_exclamation_mark
+      jump_down
+    playbgm MUS_AQA_0, 0
+    showportrait PORTRAIT_KUMIHO, PORTRAIT_SLIGHT_SMILE
+      say "The least you could have done was kept\n"
+      say "up!$"

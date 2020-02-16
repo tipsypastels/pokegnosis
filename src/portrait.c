@@ -101,12 +101,43 @@ static const u32 gPortraitZhengDazedGfx[] = INCBIN_U32("graphics/portraits/zheng
 static const u32 gPortraitZhengSweatGfx[] = INCBIN_U32("graphics/portraits/zheng/sweat.4bpp.lz");
 static const u32 gPortraitZhengAnnoyedGfx[] = INCBIN_U32("graphics/portraits/zheng/annoyed.4bpp.lz");
 
+/* Kumiho Portraits */
+
+static const u8 gPortraitKumihoName[] = _("Kumiho");
+static const u8 gPortraitKumihoTextboxWidth = 5;
+static const u32 gPortraitKumihoPal[] = INCBIN_U32("graphics/portraits/kumiho/_palette.gbapal.lz");
+static const u32 gPortraitKumihoSmileGfx[] = INCBIN_U32("graphics/portraits/kumiho/smile.4bpp.lz");
+static const u32 gPortraitKumihoSmirkGfx[] = INCBIN_U32("graphics/portraits/kumiho/smirk.4bpp.lz");
+static const u32 gPortraitKumihoAngryGfx[] = INCBIN_U32("graphics/portraits/kumiho/angry.4bpp.lz");
+static const u32 gPortraitKumihoFrownGfx[] = INCBIN_U32("graphics/portraits/kumiho/frown.4bpp.lz");
+static const u32 gPortraitKumihoEyesClosedGfx[] = INCBIN_U32("graphics/portraits/kumiho/eyesclosed.4bpp.lz");
+static const u32 gPortraitKumihoEyesClosedGrinGfx[] = INCBIN_U32("graphics/portraits/kumiho/eyesclosedgrin.4bpp.lz");
+static const u32 gPortraitKumihoRantGfx[] = INCBIN_U32("graphics/portraits/kumiho/rant.4bpp.lz");
+static const u32 gPortraitKumihoSlightSmileGfx[] = INCBIN_U32("graphics/portraits/kumiho/slightsmile.4bpp.lz");
+static const u32 gPortraitKumihoSneakyGfx[] = INCBIN_U32("graphics/portraits/kumiho/sneaky.4bpp.lz");
+static const u32 gPortraitKumihoDevilishGfx[] = INCBIN_U32("graphics/portraits/kumiho/devilish.4bpp.lz");
+static const u32 gPortraitKumihoQuestionGfx[] = INCBIN_U32("graphics/portraits/kumiho/question.4bpp.lz");
+static const u32 gPortraitKumihoCryingGfx[] = INCBIN_U32("graphics/portraits/kumiho/crying.4bpp.lz");
+static const u32 gPortraitKumihoSleepingGfx[] = INCBIN_U32("graphics/portraits/kumiho/sleeping.4bpp.lz");
+static const u32 gPortraitKumihoSmileClosedMouthGfx[] = INCBIN_U32("graphics/portraits/kumiho/smileclosedmouth.4bpp.lz");
+static const u32 gPortraitKumihoDrunkGrinGfx[] = INCBIN_U32("graphics/portraits/kumiho/drunkgrin.4bpp.lz");
+static const u32 gPortraitKumihoWipedOutGrinGfx[] = INCBIN_U32("graphics/portraits/kumiho/wipedoutgrin.4bpp.lz");
+static const u32 gPortraitKumihoAlarmedGfx[] = INCBIN_U32("graphics/portraits/kumiho/alarmed.4bpp.lz");
+static const u32 gPortraitKumihoWinkGfx[] = INCBIN_U32("graphics/portraits/kumiho/wink.4bpp.lz");
+static const u32 gPortraitKumihoUnamusedGfx[] = INCBIN_U32("graphics/portraits/kumiho/unamused.4bpp.lz");
+static const u32 gPortraitKumihoBlushGfx[] = INCBIN_U32("graphics/portraits/kumiho/blush.4bpp.lz");
+static const u32 gPortraitKumihoRageGfx[] = INCBIN_U32("graphics/portraits/kumiho/rage.4bpp.lz");
+static const u32 gPortraitKumihoDazedGfx[] = INCBIN_U32("graphics/portraits/kumiho/dazed.4bpp.lz");
+static const u32 gPortraitKumihoSweatGfx[] = INCBIN_U32("graphics/portraits/kumiho/sweat.4bpp.lz");
+static const u32 gPortraitKumihoAnnoyedGfx[] = INCBIN_U32("graphics/portraits/kumiho/annoyed.4bpp.lz");
+
 /* Portraits List */
 
 static const struct Portrait gPortraitList[] = {
     PORTRAIT_ENTRY(Meili)
     PORTRAIT_ENTRY(Kai)
     PORTRAIT_ENTRY(Zheng)
+    PORTRAIT_ENTRY(Kumiho)
 };
 
 /* End Portraits */
