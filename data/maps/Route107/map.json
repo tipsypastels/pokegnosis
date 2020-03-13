@@ -112,7 +112,7 @@
             "y": 5
         }
     ],
-    "region_map_section": "MAPSEC_ROUTE_107",
+    "region_map_section": "MAPSEC_RIVER_HIGHWAY",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [

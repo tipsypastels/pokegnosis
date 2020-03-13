@@ -25,7 +25,7 @@
         {
             "direction": "down",
             "map": "MAP_ROUTE102",
-            "offset": -8
+            "offset": -4
         }
     ],
     "coord_events": [

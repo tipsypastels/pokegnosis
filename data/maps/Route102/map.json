@@ -19,7 +19,12 @@
         {
             "direction": "up",
             "map": "MAP_ROUTE114",
-            "offset": 8
+            "offset": 4
+        },
+        {
+            "direction": "up",
+            "map": "MAP_ROUTE115",
+            "offset": 0
         }
     ],
     "coord_events": [
@@ -31,7 +36,7 @@
     "name": "Route102",
     "object_events": [
     ],
-    "region_map_section": "MAPSEC_ROUTE_102",
+    "region_map_section": "MAPSEC_DOWNY_RANCH",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [

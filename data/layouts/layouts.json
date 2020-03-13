@@ -277,7 +277,7 @@
             "id": "LAYOUT_ROUTE112",
             "name": "Route112_Layout",
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Lavaridge",
+            "secondary_tileset": "gTileset_Rustboro",
             "width": 40
         },
         {
@@ -298,7 +298,7 @@
             "name": "Route114_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_DuckTemple",
-            "width": 34
+            "width": 38
         },
         {
             "blockdata_filepath": "data/layouts/Route115/map.bin",
@@ -308,7 +308,7 @@
             "name": "Route115_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_DuckTemple",
-            "width": 36
+            "width": 44
         },
         {
             "blockdata_filepath": "data/layouts/Route116/map.bin",
@@ -578,7 +578,7 @@
             "name": "LittlerootTown_ProfessorBirchsLab_Layout",
             "primary_tileset": "gTileset_Building",
             "secondary_tileset": "gTileset_Lab",
-            "width": 13
+            "width": 14
         },
         {
             "blockdata_filepath": "data/layouts/House1/map.bin",
@@ -3016,8 +3016,8 @@
             "height": 51,
             "id": "LAYOUT_MT_PYRE_EXTERIOR",
             "name": "MtPyre_Exterior_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Facility",
+            "primary_tileset": "gTileset_Snowy",
+            "secondary_tileset": "gTileset_SnowyForest",
             "width": 38
         },
         {

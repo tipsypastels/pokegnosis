@@ -473,7 +473,7 @@ static bool32 InitStartMenuStep(void)
             sUnknown_02037619[0]++;
         break;
     case 5:
-        BeginNormalPaletteFade(~(1 << (gWindows[GetStartMenuWindowId()].window.paletteNum)), 4, 0, 8, RGB_RED);
+        // BeginNormalPaletteFade(~(1 << (gWindows[GetStartMenuWindowId()].window.paletteNum)), 4, 0, 8, RGB_RED);
         sStartMenuCursorPos = sub_81983AC(GetStartMenuWindowId(), 9, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
         CopyWindowToVram(GetStartMenuWindowId(), TRUE);
         return TRUE;
@@ -573,7 +573,7 @@ static bool8 HandleStartMenuInput(void)
     if (gMain.newKeys & A_BUTTON)
     {
         PlaySE(SE_SELECT);
-        BeginNormalPaletteFade(~0, 4, 8, 0, RGB_BLACK);
+        // BeginNormalPaletteFade(~0, 4, 8, 0, RGB_BLACK);
         if (sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void == StartMenuPokedexCallback)
         {
             if (GetNationalPokedexCount(FLAG_GET_SEEN) == 0)
@@ -1277,7 +1277,7 @@ static void sub_80A0550(u8 taskId)
             }
             break;
         case 3:
-            BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
+            // BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
             *step = 4;
             break;
         case 4:
@@ -1390,7 +1390,7 @@ static void HideStartMenuWindow(void)
     RemoveStartMenuWindow();
     ScriptUnfreezeEventObjects();
     ScriptContext2_Disable();
-    BeginNormalPaletteFade(~0, 4, 8, 0, RGB_BLACK);
+    // BeginNormalPaletteFade(~0, 4, 8, 0, RGB_BLACK);
 }
 
 void HideStartMenu(void) // Called from map_name_popup.s

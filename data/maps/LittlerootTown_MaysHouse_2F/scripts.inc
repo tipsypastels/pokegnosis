@@ -416,25 +416,47 @@ RivalsHouse_2F_Text_BrendanWhereShouldIGoNext: @ 81F9BE7
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
 
-MeilisHouse_1F_RippedMap:: @ Dbr-output
+MeilisHouse_2F_RippedMap:: @ Dbr-output
   lock
-  msgbox _MeilisHouse_1F_RippedMap_Subscript_Text_0, MSGBOX_DEFAULT
+  msgbox _MeilisHouse_2F_RippedMap_Subscript_Text_0, MSGBOX_DEFAULT
   showplayerportrait PORTRAIT_SWEAT
-  msgbox _MeilisHouse_1F_RippedMap_Subscript_Text_1, MSGBOX_DEFAULT
+  msgbox _MeilisHouse_2F_RippedMap_Subscript_Text_1, MSGBOX_DEFAULT
   hideportrait
   showplayerportrait PORTRAIT_DRUNK_GRIN
-  msgbox _MeilisHouse_1F_RippedMap_Subscript_Text_2, MSGBOX_DEFAULT
+  msgbox _MeilisHouse_2F_RippedMap_Subscript_Text_2, MSGBOX_DEFAULT
   hideportrait
   release
   end
 
-_MeilisHouse_1F_RippedMap_Subscript_Text_0: @ Dbr-output
-  .string "It's a torn up map of the {COLOR LOCATION_COLOR}Tenso Region{COLOR NO_COLOR}...$"
+_MeilisHouse_2F_RippedMap_Subscript_Text_0: @ Dbr-output
+  .string "It's a torn up map of the {COLOR LOCATION_COLOR}Tenso Region{COLOR NO_COLOR}…$"
 
-_MeilisHouse_1F_RippedMap_Subscript_Text_1: @ Dbr-output
+_MeilisHouse_2F_RippedMap_Subscript_Text_1: @ Dbr-output
   .string "({COLOR CHARACTER_COLOR}Rui{COLOR NO_COLOR} tore this up when she was mad at\n"
-  .string "me yesterday...)$"
+  .string "me yesterday…)$"
 
-_MeilisHouse_1F_RippedMap_Subscript_Text_2: @ Dbr-output
+_MeilisHouse_2F_RippedMap_Subscript_Text_2: @ Dbr-output
   .string "(Guess I'll just have to discover {COLOR LOCATION_COLOR}the{COLOR NO_COLOR}\n"
   .string "{COLOR LOCATION_COLOR}world{COLOR NO_COLOR} by myself!)$"
+
+MeilisHouse_2F_Bed:: @ Dbr-output
+  lock
+  msgbox _MeilisHouse_2F_Bed_Subscript_Text_0, MSGBOX_DEFAULT
+  closemessage
+  fadescreenspeed 1, 6
+  delay 40
+  special HealPlayerParty
+  showplayerportrait PORTRAIT_SLEEPING
+  msgbox _MeilisHouse_2F_Bed_Subscript_Text_1, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  delay 40
+  fadescreen 0
+  release
+  end
+
+_MeilisHouse_2F_Bed_Subscript_Text_0: @ Dbr-output
+  .string "It's your bed…$"
+
+_MeilisHouse_2F_Bed_Subscript_Text_1: @ Dbr-output
+  .string "(…)$"

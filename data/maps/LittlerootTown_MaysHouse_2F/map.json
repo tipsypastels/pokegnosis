@@ -31,10 +31,18 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "MeilisHouse_1F_RippedMap",
+            "script": "MeilisHouse_2F_RippedMap",
             "type": "sign",
             "x": 4,
             "y": 1
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "MeilisHouse_2F_Bed",
+            "type": "sign",
+            "x": 6,
+            "y": 4
         }
     ],
     "connections": null,
@@ -47,7 +55,7 @@
     "name": "LittlerootTown_MaysHouse_2F",
     "object_events": [
     ],
-    "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+    "region_map_section": "MAPSEC_YAMAKI_TOWN",
     "requires_flash": false,
     "show_map_name": false,
     "warp_events": [

@@ -441,3 +441,156 @@ ShiaxiaCity_KumihoSaves:: @ Dbr-output
 
 _ShiaxiaCity_KumihoSaves_Subscript_Text_0: @ Dbr-output
   .string "(Who or what is {COLOR CHARACTER_COLOR}Kumiho{COLOR NO_COLOR}?)$"
+
+ShiaxiaCity_Yinxing_Encounter:: @ Dbr-output
+  lock
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_0, MSGBOX_DEFAULT
+  closemessage
+  special SpawnCameraObject
+  applymovement EVENT_OBJ_ID_CAMERA, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_1
+  applymovement 1, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_2
+  waitmovement 1
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_3, MSGBOX_DEFAULT
+  showplayerportrait PORTRAIT_QUESTION
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_4, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  playse SE_DANSA
+  applymovement 1, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_5
+  waitmovement 1
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_6, MSGBOX_DEFAULT
+  showportrait PORTRAIT_KAI, PORTRAIT_EYES_CLOSED_GRIN
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_7, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_CAMERA, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_8
+  applymovement 1, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_9
+  waitmovement 1
+  showportrait PORTRAIT_KAI, PORTRAIT_SMILE
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_10, MSGBOX_DEFAULT
+  hideportrait
+  showportrait PORTRAIT_KAI, PORTRAIT_DRUNK_GRIN
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_11, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_CAMERA, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_12
+  applymovement 1, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_13
+  waitmovement 1
+  opendoor 26, 5
+  waitdooranim
+  applymovement 1, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_14
+  waitmovement 1
+  removeobject 1
+  closedoor 26, 5
+  waitdooranim
+  setflag FLAG_MET_YINXING
+  showplayerportrait PORTRAIT_DAZED
+  msgbox _ShiaxiaCity_Yinxing_Encounter_Subscript_Text_15, MSGBOX_DEFAULT
+  hideportrait
+  closemessage
+  applymovement EVENT_OBJ_ID_CAMERA, _ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_16
+  waitmovement EVENT_OBJ_ID_CAMERA
+  special RemoveCameraObject
+  release
+  end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_0: @ Dbr-output
+  .string "Oh my gosh! It's you!$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_1: @ Dbr-output
+  walk_down
+  walk_down
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_2: @ Dbr-output
+  walk_up
+  walk_up
+  walk_up
+  walk_up
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_3: @ Dbr-output
+  .string "It's so good to finally meet you!\p"
+  .string "I heard you defeated {COLOR CHARACTER_COLOR}Qian{COLOR NO_COLOR}!\n"
+  .string "Already climbing the ranks, huh?\p"
+  .string "I miss those first days of being a\n"
+  .string "{COLOR POKEMON_COLOR}Pokémon Trainer{COLOR NO_COLOR} sometimes…$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_4: @ Dbr-output
+  .string "(…)$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_5: @ Dbr-output
+  emote_exclamation_mark
+  delay_16
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_6: @ Dbr-output
+  .string "Oh! You don't know who I am. Silly me!\l"
+  .string "My name is…$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_7: @ Dbr-output
+  .string "{COLOR CHARACTER_COLOR}Professor Yinxing{COLOR NO_COLOR}!\l"
+  .string "I met your {COLOR CHARACTER_COLOR}mother{COLOR NO_COLOR} when we were\n"
+  .string "both {COLOR POKEMON_COLOR}Pokémon Trainers{COLOR NO_COLOR}.$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_8: @ Dbr-output
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_9: @ Dbr-output
+  walk_up
+  walk_in_place_left
+  delay_16
+  delay_16
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_10: @ Dbr-output
+  .string "That's my lab right there.$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_11: @ Dbr-output
+  .string "If you feel like stopping by, I have\n"
+  .string "something I think you'll like!\p"
+  .string "See you when I see you!$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_12: @ Dbr-output
+  walk_right
+  walk_right
+  walk_right
+  walk_right
+  walk_right
+  walk_right
+  walk_right
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_13: @ Dbr-output
+  walk_down
+  walk_down
+  walk_down
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_left
+  walk_up
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_14: @ Dbr-output
+  walk_up
+  step_end
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Text_15: @ Dbr-output
+  .string "({COLOR CHARACTER_COLOR}Professor Yinxing{COLOR NO_COLOR}…\n"
+  .string "I feel like I saw them in a dream once.)$"
+
+_ShiaxiaCity_Yinxing_Encounter_Subscript_Movement_16: @ Dbr-output
+  walk_up
+  walk_up
+  step_end

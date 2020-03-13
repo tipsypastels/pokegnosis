@@ -2,7 +2,7 @@ script KumihoEncounter
   lock
     fadeoutbgm 1
     say "…\p"
-    say "Hah…\p"
+    say "You know.\p"
     say "If you were going to follow me all this\n"
     say "way…$"
     move kumiho: 1

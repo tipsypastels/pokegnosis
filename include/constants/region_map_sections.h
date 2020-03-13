@@ -1,10 +1,10 @@
 #ifndef GUARD_REGIONMAPSEC_H
 #define GUARD_REGIONMAPSEC_H
 
-#define MAPSEC_LITTLEROOT_TOWN              0x00
-#define MAPSEC_OLDALE_TOWN                  0x01
-#define MAPSEC_DEWFORD_TOWN                 0x02
-#define MAPSEC_LAVARIDGE_TOWN               0x03
+#define MAPSEC_YAMAKI_TOWN              0x00
+#define MAPSEC_KURIBI_TOWN                  0x01
+#define MAPSEC_YUGASA_TOWN                 0x02
+#define MAPSEC_SHIAXIA_CITY               0x03
 #define MAPSEC_FALLARBOR_TOWN               0x04
 #define MAPSEC_VERDANTURF_TOWN              0x05
 #define MAPSEC_PACIFIDLOG_TOWN              0x06
@@ -17,15 +17,15 @@
 #define MAPSEC_MOSSDEEP_CITY                0x0D
 #define MAPSEC_SOOTOPOLIS_CITY              0x0E
 #define MAPSEC_EVER_GRANDE_CITY             0x0F
-#define MAPSEC_ROUTE_101                    0x10
-#define MAPSEC_ROUTE_102                    0x11
-#define MAPSEC_ROUTE_103                    0x12
-#define MAPSEC_ROUTE_104                    0x13
-#define MAPSEC_ROUTE_105                    0x14
+#define MAPSEC_YAMAKI_LAKE                    0x10
+#define MAPSEC_DOWNY_RANCH                    0x11
+#define MAPSEC_JUNGLE_HIGHWAY                    0x12
+#define MAPSEC_WOODLAND_ESTATE                    0x13
+#define MAPSEC_DUCK_TEMPLE                    0x14
 #define MAPSEC_ROUTE_106                    0x15
-#define MAPSEC_ROUTE_107                    0x16
+#define MAPSEC_RIVER_HIGHWAY                    0x16
 #define MAPSEC_ROUTE_108                    0x17
-#define MAPSEC_ROUTE_109                    0x18
+#define MAPSEC_JINXHOU_SNOWDOWN                    0x18
 #define MAPSEC_ROUTE_110                    0x19
 #define MAPSEC_ROUTE_111                    0x1A
 #define MAPSEC_ROUTE_112                    0x1B

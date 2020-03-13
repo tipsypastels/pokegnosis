@@ -89,7 +89,7 @@
 // Scripts
 #define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50
 #define FLAG_SET_WALL_CLOCK                  0x51
-#define FLAG_RESCUED_BIRCH                   0x52
+#define FLAG_MET_YINXING                     0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53
 
 #define FLAG_UNUSED_0x054                    0x54  // Unused Flag
@@ -765,7 +765,7 @@
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
 #define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
-#define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
+#define FLAG_HIDE_PYROMANCER_MEETING   0x2D7
 #define FLAG_HIDE_YAMAKI_TOWN_ZHENG                                 0x2D8
 
 #define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag

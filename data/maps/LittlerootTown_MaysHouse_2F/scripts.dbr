@@ -1,9 +1,22 @@
-script MeilisHouse_1F_RippedMap
+script MeilisHouse_2F_RippedMap
   lock
-    say "It's a torn up map of the LOCATION_COLOR(Tenso Region)...$"
+    say "It's a torn up map of the LOCATION_COLOR(Tenso Region)…$"
     showplayerportrait PORTRAIT_SWEAT
       say "(CHARACTER_COLOR(Rui) tore this up when she was mad at\n"
-      say "me yesterday...)$"
+      say "me yesterday…)$"
     showplayerportrait PORTRAIT_DRUNK_GRIN
       say "(Guess I'll just have to discover LOCATION_COLOR(the)\n"
       say "LOCATION_COLOR(world) by myself!)$"
+
+script MeilisHouse_2F_Bed
+  lock
+    say "It's your bed…$"
+    closemessage
+    fadescreenspeed 1, 6
+    delay 40
+    special HealPlayerParty
+    showplayerportrait PORTRAIT_SLEEPING
+      say "(…)$"
+    closemessage
+    delay 40
+    fadescreen 0

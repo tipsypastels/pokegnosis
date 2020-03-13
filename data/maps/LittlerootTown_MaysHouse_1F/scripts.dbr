@@ -12,3 +12,9 @@ script MeilisHouse_1F_WhereIsEveryone
       face_left
     move_and_wait camera
       walk_slow_diag_northeast
+  setvar VAR_LITTLEROOT_INTRO_STATE, 1
+
+script MeilisHouse_1F_Food
+  lock
+    showplayerportrait PORTRAIT_DAZED
+      say "(Wow! I can't wait to eat this…)$"

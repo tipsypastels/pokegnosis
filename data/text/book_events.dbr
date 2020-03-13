@@ -5,6 +5,6 @@ script Book_FishingJoke_1
   special Special_ShowBook
 
 script Book_Poster_MeilisHouse
-  say "It's an ancient saying...$"
+  say "It's an ancient saying…$"
   setvar VAR_CURRENT_BOOK, BOOK_POSTER_MEILISHOUSE
   special Special_ShowBook

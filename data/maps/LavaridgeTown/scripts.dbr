@@ -7,3 +7,65 @@ script ShiaxiaCity_KumihoSaves
   lock
     showplayerportrait PORTRAIT_FROWN
       say "(Who or what is CHARACTER_COLOR(Kumiho)?)$"
+
+script ShiaxiaCity_Yinxing_Encounter
+  lock
+    say "Oh my gosh! It's you!$"
+    closemessage
+    spawncamera
+      move camera
+        walk_down 2
+      move_and_wait yinxing: 1
+        walk_up 4
+      say "It's so good to finally meet you!\p"
+      say "I heard you defeated CHARACTER_COLOR(Qian)!\n"
+      say "Already climbing the ranks, huh?\p"
+      say "I miss those first days of being a\n"
+      say "POKEMON_COLOR(Pokémon Trainer) sometimes…$"
+      showplayerportrait PORTRAIT_QUESTION
+        say "(…)$"
+      closemessage
+      playse SE_DANSA
+      move_and_wait yinxing: 1
+        emote_exclamation_mark
+        delay_16
+      say "Oh! You don't know who I am. Silly me!\l"
+      say "My name is…$"
+      showportrait PORTRAIT_KAI, PORTRAIT_EYES_CLOSED_GRIN
+        say "CHARACTER_COLOR(Professor Yinxing)!\l"
+        say "I met your CHARACTER_COLOR(mother) when we were\n"
+        say "both POKEMON_COLOR(Pokémon Trainers).$"
+      closemessage
+      move camera
+        walk_left 7
+      move_and_wait yinxing: 1
+        walk_up
+        walk_in_place_left
+        delay_16 2
+      showportrait PORTRAIT_KAI, PORTRAIT_SMILE
+        say "That's my lab right there.$"
+      showportrait PORTRAIT_KAI, PORTRAIT_DRUNK_GRIN
+        say "If you feel like stopping by, I have\n"
+        say "something I think you'll like!\p"
+        say "See you when I see you!$"
+      closemessage
+      move camera
+        walk_right 7
+      move_and_wait yinxing: 1
+        walk_down 3
+        walk_left 7
+        walk_up 1
+      opendoor 26, 5
+      waitdooranim
+      move_and_wait yinxing: 1
+        walk_up
+      removeobject yinxing: 1
+      closedoor 26, 5
+      waitdooranim
+      setflag FLAG_MET_YINXING
+      showplayerportrait PORTRAIT_DAZED
+        say "(CHARACTER_COLOR(Professor Yinxing)…\n"
+        say "I feel like I saw them in a dream once.)$"
+      closemessage
+      move_and_wait camera
+        walk_up 2

@@ -378,7 +378,7 @@ static const match_call_text_data_t sMomTextScripts[] = {
 static const struct MatchCallStruct0 sMomMatchCallHeader =
 {
     .type = 0,
-    .mapSec = MAPSEC_LITTLEROOT_TOWN,
+    .mapSec = MAPSEC_YAMAKI_TOWN,
     .flag = FLAG_ENABLE_MOM_MATCH_CALL,
     .desc = gMomMatchCallDesc,
     .name = gMomMatchCallName,
@@ -545,7 +545,7 @@ static const match_call_text_data_t sBrawlyTextScripts[] = {
 static const struct MatchCallStruct5 sBrawlyMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_DEWFORD_TOWN,
+    .mapSec = MAPSEC_YUGASA_TOWN,
     .flag = FLAG_ENABLE_BRAWLY_MATCH_CALL,
     .rematchTableIdx = REMATCH_BRAWLY,
     .desc = gBrawlyMatchCallDesc,
@@ -583,7 +583,7 @@ static const match_call_text_data_t sFlanneryTextScripts[] = {
 static const struct MatchCallStruct5 sFlanneryMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_LAVARIDGE_TOWN,
+    .mapSec = MAPSEC_SHIAXIA_CITY,
     .flag = FLAG_ENABLE_FLANNERY_MATCH_CALL,
     .rematchTableIdx = REMATCH_FLANNERY,
     .desc = gFlanneryMatchCallDesc,

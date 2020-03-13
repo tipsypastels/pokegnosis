@@ -117,7 +117,7 @@ static const u8 sRegionMap_MapSectionLayout[] = INCBIN_U8("graphics/pokenav/regi
 
 static const u16 sRegionMap_SpecialPlaceLocations[][2] =
 {
-    {MAPSEC_UNDERWATER_TERRA_CAVE,     MAPSEC_ROUTE_105},
+    {MAPSEC_UNDERWATER_TERRA_CAVE,     MAPSEC_DUCK_TEMPLE},
     {MAPSEC_UNDERWATER_124,            MAPSEC_ROUTE_124},
     {MAPSEC_UNDERWATER_UNK1,           MAPSEC_ROUTE_129},
     {MAPSEC_UNDERWATER_125,            MAPSEC_ROUTE_126},
@@ -130,15 +130,15 @@ static const u16 sRegionMap_SpecialPlaceLocations[][2] =
     {MAPSEC_AQUA_HIDEOUT_OLD,          MAPSEC_LILYCOVE_CITY},
     {MAPSEC_MAGMA_HIDEOUT,             MAPSEC_ROUTE_112},
     {MAPSEC_UNDERWATER_SEALED_CHAMBER, MAPSEC_ROUTE_134},
-    {MAPSEC_PETALBURG_WOODS,           MAPSEC_ROUTE_104},
+    {MAPSEC_PETALBURG_WOODS,           MAPSEC_WOODLAND_ESTATE},
     {MAPSEC_JAGGED_PASS,               MAPSEC_ROUTE_112},
     {MAPSEC_MT_PYRE,                   MAPSEC_ROUTE_122},
     {MAPSEC_SKY_PILLAR,                MAPSEC_ROUTE_131},
     {MAPSEC_MIRAGE_TOWER,              MAPSEC_ROUTE_111},
     {MAPSEC_TRAINER_HILL,              MAPSEC_ROUTE_111},
     {MAPSEC_DESERT_UNDERPASS,          MAPSEC_ROUTE_114},
-    {MAPSEC_ALTERING_CAVE_2,           MAPSEC_ROUTE_103},
-    {MAPSEC_ARTISAN_CAVE,              MAPSEC_ROUTE_103},
+    {MAPSEC_ALTERING_CAVE_2,           MAPSEC_JUNGLE_HIGHWAY},
+    {MAPSEC_ARTISAN_CAVE,              MAPSEC_JUNGLE_HIGHWAY},
     {MAPSEC_ABANDONED_SHIP,            MAPSEC_ROUTE_108},
     {MAPSEC_NONE,                      MAPSEC_NONE}
 };
@@ -160,8 +160,8 @@ static const u16 sTerraCaveMapSectionIds[] =
     MAPSEC_ROUTE_116,
     MAPSEC_ROUTE_118,
     MAPSEC_ROUTE_118,
-    MAPSEC_ROUTE_105,
-    MAPSEC_ROUTE_105,
+    MAPSEC_DUCK_TEMPLE,
+    MAPSEC_DUCK_TEMPLE,
     MAPSEC_ROUTE_125,
     MAPSEC_ROUTE_125,
     MAPSEC_ROUTE_127,
@@ -1188,13 +1188,13 @@ static u8 get_flagnr_blue_points(u16 mapSecId)
     {
         case MAPSEC_NONE:
             return MAPSECTYPE_NONE;
-        case MAPSEC_LITTLEROOT_TOWN:
+        case MAPSEC_YAMAKI_TOWN:
             return FlagGet(FLAG_VISITED_LITTLEROOT_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
-        case MAPSEC_OLDALE_TOWN:
+        case MAPSEC_KURIBI_TOWN:
             return FlagGet(FLAG_VISITED_OLDALE_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
-        case MAPSEC_DEWFORD_TOWN:
+        case MAPSEC_YUGASA_TOWN:
             return FlagGet(FLAG_VISITED_DEWFORD_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
-        case MAPSEC_LAVARIDGE_TOWN:
+        case MAPSEC_SHIAXIA_CITY:
             return FlagGet(FLAG_VISITED_LAVARIDGE_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
         case MAPSEC_FALLARBOR_TOWN:
             return FlagGet(FLAG_VISITED_FALLARBOR_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
@@ -2008,7 +2008,7 @@ static void sub_8124E0C(void)
                         case MAPSEC_BATTLE_FRONTIER:
                             SetWarpDestinationToHealLocation(HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST);
                             break;
-                        case MAPSEC_LITTLEROOT_TOWN:
+                        case MAPSEC_YAMAKI_TOWN:
                             SetWarpDestinationToHealLocation(gSaveBlock2Ptr->playerGender == MALE ? HEAL_LOCATION_LITTLEROOT_TOWN_1 : HEAL_LOCATION_LITTLEROOT_TOWN_2);
                             break;
                         case MAPSEC_EVER_GRANDE_CITY:

@@ -1,0 +1,84 @@
+script ProfsLab_Yinxing_Casual
+  lock
+    choose_randomly
+      option
+        using_msgbox MSGBOX_YESNO
+          say "Did you know hugging a POKEMON_COLOR(Torchic) has\n"
+          say "therapeutic effects?\p"
+          say "I'm serious! Want to try it?$"
+        when YES
+          move player
+            face_right
+          move_and_wait torchic: 1
+            walk_down
+            face_left
+          playse SE_DANSA
+          move_and_wait torchic: 1
+            lock_facing_direction
+            jump_left
+          move player
+            emote_heart
+          move_and_wait torchic: 1
+            walk_right
+            unlock_facing_direction
+          playmoncry SPECIES_TORCHIC, 0
+          move_and_wait torchic: 1
+            delay_16
+            walk_up
+            face_down
+          say "See, wasn't that nice?$"
+          move player
+            face_up
+          showplayerportrait PORTRAIT_DAZED
+            say "(Fuzzy…)$"
+        else
+          say "That's fine too!$"
+
+script ProfsLab_Torchic
+  lock
+    faceplayer
+    playmoncry SPECIES_TORCHIC, 0
+    say "POKEMON_COLOR(Torchic): Chi-hi!$"
+
+script ProfsLab_Scientist_Id3
+  lock
+    faceplayer
+    say "CHARACTER_COLOR(Professor Yinxing) is a world renowned\n"
+    say "expert on POKEMON_COLOR(Pokémon abilities)!\p"
+    say "I'm so thrilled to be working for them!$"
+
+script ProfsLab_Scientist_Id4
+  lock
+    faceplayer
+    say "Wooo, science! Everything's excited about this place.\n"
+    say "Watch out, we might blow something up soon!$"
+
+script ProfsLab_Scientist_Id5
+  lock
+    faceplayer
+    say "We've just moved into this lab recently!\p"
+    say "Only a few months ago, we were working\n"
+    say "out of CHARACTER_COLOR(Professor Yinxing)'s garage.\p"
+    say "Before that, we had another lab… but…\l"
+    say "It… blew up.$"
+
+script ProfsLab_Scientist_Id6
+  lock
+    faceplayer
+
+script ProfsLab_Machines_1
+  lock
+    showplayerportrait PORTRAIT_DAZED
+      say "(Beep boop.)$"
+    showplayerportrait PORTRAIT_SMIRK
+      say "(Wonder what it's doing…)$"
+
+script ProfsLab_UnpluggedComputer
+  lock
+    showplayerportrait PORTRAIT_QUESTION
+      say "(Doesn't seem to be plugged in.)$"
+
+script ProfsLab_Drawers_1
+  lock
+    showplayerportrait PORTRAIT_DEVILISH
+      say "(What could be inside?)$"

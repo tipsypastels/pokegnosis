@@ -11,6 +11,14 @@
             "type": "sign",
             "x": 4,
             "y": 1
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "MeilisHouse_1F_Food",
+            "type": "sign",
+            "x": 1,
+            "y": 3
         }
     ],
     "connections": null,
@@ -23,7 +31,7 @@
     "name": "LittlerootTown_MaysHouse_1F",
     "object_events": [
     ],
-    "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+    "region_map_section": "MAPSEC_YAMAKI_TOWN",
     "requires_flash": false,
     "show_map_name": false,
     "warp_events": [

@@ -6,12 +6,13 @@ gText_Birch_Welcome:: @ 82C897B
 	.string "{COLOR CHARACTER_COLOR}Pokémon Professor{COLOR NO_COLOR}.\p"
 	.string "$"
 
-gText_Birch_Pokemon:: @ 82C89FB
-	.string "This is what we call a “{COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR}.”\p"
-	.string "\n"
-	.string "$"
+@ gText_ThisIsAPokemon is in strings.c
 
 gText_Birch_MainSpeech:: @ 82C8A1F
+	.string "This is my {COLOR POKEMON_COLOR}Torchic{COLOR NO_COLOR}.\n"
+	.string "Cute, right?\p"
+	.string "He's just one of the many {COLOR POKEMON_COLOR}Pokémon{COLOR NO_COLOR} living\n"
+	.string "far and wide in this world.\p"
 	.string "This world is widely inhabited by\n"
 	.string "creatures known as POKéMON.\p"
 	.string "We humans live alongside POKéMON,\n"
@@ -32,8 +33,8 @@ gText_Birch_AndYouAre:: @ 82C8BD0
 	.string "But that's enough about me.$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
-	.string "Are you a {COLOR CHARACTER_COLOR}girl{COLOR NO_COLOR}?\n"
-	.string "Or are you a {COLOR CHARACTER_COLOR}boy{COLOR NO_COLOR}?$"
+	.string "Do you want to play as a {COLOR CHARACTER_COLOR}girl{COLOR NO_COLOR}?\n"
+	.string "Or perhaps a {COLOR CHARACTER_COLOR}boy{COLOR NO_COLOR}?$"
 
 gText_Birch_WhatsYourName:: @ 82C8BFF
 	.string "Sounds good.\n"

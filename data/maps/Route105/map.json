@@ -141,7 +141,7 @@
             "y": 58
         }
     ],
-    "region_map_section": "MAPSEC_ROUTE_105",
+    "region_map_section": "MAPSEC_DUCK_TEMPLE",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [

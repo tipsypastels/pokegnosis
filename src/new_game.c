@@ -130,14 +130,16 @@ static void WarpToTruck(void)
 {
     // TODO remove this later or add it to debug mode
     FlagSet(FLAG_DISABLE_WILD_ENCOUNTERS);
+    FlagSet(FLAG_SYS_B_DASH);
 
     // SetWarpDestination(MAP_GROUP(PETALBURG_WOODS), MAP_NUM(PETALBURG_WOODS), -1, -1, -1);
     // SetWarpDestination(MAP_GROUP(ROUTE103), MAP_NUM(ROUTE103), -1, -1, -1);
-    // SetWarpDestination(MAP_GROUP(LITTLEROOT_TOWN_MAYS_HOUSE_2F), MAP_NUM(LITTLEROOT_TOWN_MAYS_HOUSE_2F), -1, -1, -1);
+    SetWarpDestination(MAP_GROUP(LITTLEROOT_TOWN_MAYS_HOUSE_2F), MAP_NUM(LITTLEROOT_TOWN_MAYS_HOUSE_2F), -1, 2, 3);
     // SetWarpDestination(MAP_GROUP(ROUTE114), MAP_NUM(ROUTE114), -1, -1, -1);
     // SetWarpDestination(MAP_GROUP(ROUTE134), MAP_NUM(ROUTE134), -1, -1, -1);
     // SetWarpDestination(MAP_GROUP(GRANITE_CAVE_1F), MAP_NUM(GRANITE_CAVE_1F), -1, -1, -1);
-    SetWarpDestination(MAP_GROUP(ROUTE109), MAP_NUM(ROUTE109), -1, 56, 14);
+    // SetWarpDestination(MAP_GROUP(ROUTE109), MAP_NUM(ROUTE109), -1, 45, 19);
+    // SetWarpDestination(MAP_GROUP(LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB), MAP_NUM(LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB), -1, 7, 3);
 
 
     WarpIntoMap();

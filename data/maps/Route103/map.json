@@ -23,6 +23,11 @@
             "direction": "up",
             "map": "MAP_ROUTE108",
             "offset": 44
+        },
+        {
+            "direction": "down",
+            "map": "MAP_ROUTE107",
+            "offset": -4
         }
     ],
     "coord_events": [
@@ -294,7 +299,7 @@
             "y": 7
         }
     ],
-    "region_map_section": "MAPSEC_ROUTE_103",
+    "region_map_section": "MAPSEC_JUNGLE_HIGHWAY",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [

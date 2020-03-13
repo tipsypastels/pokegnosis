@@ -57,10 +57,55 @@
         {
             "direction": "right",
             "map": "MAP_ROUTE109",
-            "offset": 10
+            "offset": 8
         }
     ],
     "coord_events": [
+        {
+            "elevation": 0,
+            "script": "ShiaxiaCity_Yinxing_Encounter",
+            "type": "trigger",
+            "var": "VAR_TEMP_0",
+            "var_value": "0",
+            "x": 31,
+            "y": 3
+        },
+        {
+            "elevation": 0,
+            "script": "ShiaxiaCity_Yinxing_Encounter",
+            "type": "trigger",
+            "var": "VAR_TEMP_0",
+            "var_value": "0",
+            "x": 32,
+            "y": 3
+        },
+        {
+            "elevation": 0,
+            "script": "ShiaxiaCity_Yinxing_Encounter",
+            "type": "trigger",
+            "var": "VAR_TEMP_0",
+            "var_value": "0",
+            "x": 33,
+            "y": 3
+        },
+        {
+            "elevation": 0,
+            "script": "ShiaxiaCity_Yinxing_Encounter",
+            "type": "trigger",
+            "var": "VAR_TEMP_0",
+            "var_value": "0",
+            "x": 34,
+            "y": 3
+        },
+        {
+            "elevation": 0,
+            "script": "ShiaxiaCity_Yinxing_Encounter",
+            "type": "trigger",
+            "var": "VAR_TEMP_0",
+            "var_value": "0",
+            "x": 35,
+            "y": 3
+        }
     ],
     "id": "MAP_LAVARIDGE_TOWN",
     "layout": "LAYOUT_LAVARIDGE_TOWN",
@@ -68,11 +113,31 @@
     "music": "MUS_MACHI_S4",
     "name": "LavaridgeTown",
     "object_events": [
+        {
+            "elevation": 3,
+            "flag": "FLAG_MET_YINXING",
+            "graphics_id": "EVENT_OBJ_GFX_PROF_BIRCH",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "script": "NULL",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 33,
+            "y": 9
+        }
     ],
-    "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
+    "region_map_section": "MAPSEC_SHIAXIA_CITY",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [
+        {
+            "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
+            "dest_warp_id": 0,
+            "elevation": 0,
+            "x": 26,
+            "y": 5
+        }
     ],
     "weather": "WEATHER_SUNNY"
 }

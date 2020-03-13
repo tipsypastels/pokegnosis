@@ -131,7 +131,7 @@
             "y": 6
         }
     ],
-    "region_map_section": "MAPSEC_DEWFORD_TOWN",
+    "region_map_section": "MAPSEC_YUGASA_TOWN",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [

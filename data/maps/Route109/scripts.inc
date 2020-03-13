@@ -581,7 +581,7 @@ KumihoEncounter:: @ Dbr-output
 
 _KumihoEncounter_Subscript_Text_0: @ Dbr-output
   .string "…\p"
-  .string "Hah…\p"
+  .string "You know.\p"
   .string "If you were going to follow me all this\n"
   .string "way…$"
 

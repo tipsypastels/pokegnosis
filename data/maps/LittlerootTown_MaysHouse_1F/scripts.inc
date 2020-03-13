@@ -2,7 +2,8 @@ LittlerootTown_MaysHouse_1F_MapScripts:: @ 81F88A5
 	.byte 0
 
 MeilisHouse_1F_MapScript1:
-  call MeilisHouse_1F_WhereIsEveryone
+  compare VAR_LITTLEROOT_INTRO_STATE, 1
+	call_if_lt MeilisHouse_1F_WhereIsEveryone
 	end
 
 LittlerootTown_MaysHouse_1F_MapScript1_1F88B5: @ 81F88B5
@@ -432,6 +433,7 @@ MeilisHouse_1F_WhereIsEveryone:: @ Dbr-output
   applymovement EVENT_OBJ_ID_CAMERA, _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_4
   waitmovement EVENT_OBJ_ID_CAMERA
   special RemoveCameraObject
+  setvar VAR_LITTLEROOT_INTRO_STATE, 1
   end
 
 _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_0: @ Dbr-output
@@ -453,3 +455,14 @@ _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_3: @ Dbr-output
 _MeilisHouse_1F_WhereIsEveryone_Subscript_Movement_4: @ Dbr-output
   walk_slow_diag_northeast
   step_end
+
+MeilisHouse_1F_Food:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_DAZED
+  msgbox _MeilisHouse_1F_Food_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_MeilisHouse_1F_Food_Subscript_Text_0: @ Dbr-output
+  .string "(Wow! I can't wait to eat this…)$"

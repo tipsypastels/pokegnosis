@@ -37,4 +37,4 @@ Book_Poster_MeilisHouse:: @ Dbr-output
   end
 
 _Book_Poster_MeilisHouse_Subscript_Text_0: @ Dbr-output
-  .string "It's an ancient saying...$"
+  .string "It's an ancient saying…$"

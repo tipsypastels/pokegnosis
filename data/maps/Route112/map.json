@@ -29,23 +29,7 @@
             "y": 49
         }
     ],
-    "connections": [
-        {
-            "direction": "up",
-            "map": "MAP_ROUTE113",
-            "offset": -60
-        },
-        {
-            "direction": "left",
-            "map": "MAP_LAVARIDGE_TOWN",
-            "offset": 40
-        },
-        {
-            "direction": "right",
-            "map": "MAP_ROUTE111",
-            "offset": -20
-        }
-    ],
+    "connections": null,
     "coord_events": [
     ],
     "id": "MAP_ROUTE112",

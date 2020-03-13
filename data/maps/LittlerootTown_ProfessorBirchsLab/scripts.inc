@@ -108,6 +108,7 @@ LittlerootTown_ProfessorBirchsLab_OnFrame: @ 81F9DB9
 
 @ The starter is technically given prior to this on Route 101 by special ChooseStarter
 @ This is just where the game tells you its yours and lets you nickname it
+
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent:: @ 81F9DDB
 	lockall
 	bufferleadmonspeciesname 0
@@ -972,6 +973,7 @@ LittlerootTown_ProfessorBirchsLab_Text_TakeYourTimeAllInvaluable: @ 81FB959
 	.string "They're all invaluable POKéMON.$"
 
 @ Unused
+
 LittlerootTown_ProfessorBirchsLab_Text_PickedFinePokemon: @ 81FB9A8
 	.string "PROF. BIRCH: I see!\n"
 	.string "You picked a fine POKéMON!$"
@@ -981,6 +983,7 @@ LittlerootTown_ProfessorBirchsLab_Text_ReceivedJohtoStarter: @ 81FB9D7
 	.string "from PROF. BIRCH!$"
 
 @ Unused
+
 LittlerootTown_ProfessorBirchsLab_Text_NicknameJohtoStarter: @ 81FB9FC
 	.string "Want to give a nickname to\n"
 	.string "the {STR_VAR_1} you received?$"
@@ -999,6 +1002,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BetterLeaveOthersAlone: @ 81FBAF8
 	.string "Better leave the others alone.$"
 
 @ Unused
+
 LittlerootTown_ProfessorBirchsLab_Text_DontHaveAnyRoomForPokemon: @ 81FBB3A
 	.string "Oh, you don't have any room for\n"
 	.string "this POKéMON.$"
@@ -1043,3 +1047,179 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall: @ 81FBD1A
 	.string "we meet. I'll be waiting!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
+
+ProfsLab_Yinxing_Casual:: @ Dbr-output
+  lock
+  random 1
+  switch VAR_RESULT
+  case 0, _ProfsLab_Yinxing_Casual_Subscript_Code_12
+  release
+  end
+
+_ProfsLab_Yinxing_Casual_Subscript_Text_0: @ Dbr-output
+  .string "Did you know hugging a {COLOR POKEMON_COLOR}Torchic{COLOR NO_COLOR} has\n"
+  .string "therapeutic effects?\p"
+  .string "I'm serious! Want to try it?$"
+
+_ProfsLab_Yinxing_Casual_Subscript_Movement_1: @ Dbr-output
+  face_right
+  step_end
+
+_ProfsLab_Yinxing_Casual_Subscript_Movement_2: @ Dbr-output
+  walk_down
+  face_left
+  step_end
+
+_ProfsLab_Yinxing_Casual_Subscript_Movement_3: @ Dbr-output
+  lock_facing_direction
+  jump_left
+  step_end
+
+_ProfsLab_Yinxing_Casual_Subscript_Movement_4: @ Dbr-output
+  emote_heart
+  step_end
+
+_ProfsLab_Yinxing_Casual_Subscript_Movement_5: @ Dbr-output
+  walk_right
+  unlock_facing_direction
+  step_end
+
+_ProfsLab_Yinxing_Casual_Subscript_Movement_6: @ Dbr-output
+  delay_16
+  walk_up
+  face_down
+  step_end
+
+_ProfsLab_Yinxing_Casual_Subscript_Text_7: @ Dbr-output
+  .string "See, wasn't that nice?$"
+
+_ProfsLab_Yinxing_Casual_Subscript_Movement_8: @ Dbr-output
+  face_up
+  step_end
+
+_ProfsLab_Yinxing_Casual_Subscript_Text_9: @ Dbr-output
+  .string "(Fuzzy…)$"
+
+_ProfsLab_Yinxing_Casual_Subscript_Code_10:: @ Dbr-output
+  applymovement EVENT_OBJ_ID_PLAYER, _ProfsLab_Yinxing_Casual_Subscript_Movement_1
+  applymovement 1, _ProfsLab_Yinxing_Casual_Subscript_Movement_2
+  waitmovement 1
+  playse SE_DANSA
+  applymovement 1, _ProfsLab_Yinxing_Casual_Subscript_Movement_3
+  waitmovement 1
+  applymovement EVENT_OBJ_ID_PLAYER, _ProfsLab_Yinxing_Casual_Subscript_Movement_4
+  applymovement 1, _ProfsLab_Yinxing_Casual_Subscript_Movement_5
+  waitmovement 1
+  playmoncry SPECIES_TORCHIC, 0
+  applymovement 1, _ProfsLab_Yinxing_Casual_Subscript_Movement_6
+  waitmovement 1
+  msgbox _ProfsLab_Yinxing_Casual_Subscript_Text_7, MSGBOX_DEFAULT
+  applymovement EVENT_OBJ_ID_PLAYER, _ProfsLab_Yinxing_Casual_Subscript_Movement_8
+  showplayerportrait PORTRAIT_DAZED
+  msgbox _ProfsLab_Yinxing_Casual_Subscript_Text_9, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_ProfsLab_Yinxing_Casual_Subscript_Text_11: @ Dbr-output
+  .string "That's fine too!$"
+
+_ProfsLab_Yinxing_Casual_Subscript_Code_12:: @ Dbr-output
+  msgbox _ProfsLab_Yinxing_Casual_Subscript_Text_0, MSGBOX_YESNO
+  compare VAR_RESULT, YES
+  goto_if_eq _ProfsLab_Yinxing_Casual_Subscript_Code_10
+  msgbox _ProfsLab_Yinxing_Casual_Subscript_Text_11, MSGBOX_DEFAULT
+  release
+  end
+
+ProfsLab_Scientist_Id3:: @ Dbr-output
+  lock
+  faceplayer
+  msgbox _ProfsLab_Scientist_Id3_Subscript_Text_0, MSGBOX_DEFAULT
+  release
+  end
+
+_ProfsLab_Scientist_Id3_Subscript_Text_0: @ Dbr-output
+  .string "{COLOR CHARACTER_COLOR}Professor Yinxing{COLOR NO_COLOR} is a world renowned\n"
+  .string "expert on {COLOR POKEMON_COLOR}Pokémon abilities{COLOR NO_COLOR}!\p"
+  .string "I'm so thrilled to be working for them!$"
+
+ProfsLab_Scientist_Id4:: @ Dbr-output
+  lock
+  faceplayer
+  msgbox _ProfsLab_Scientist_Id4_Subscript_Text_0, MSGBOX_DEFAULT
+  release
+  end
+
+ProfsLab_Scientist_Id5:: @ Dbr-output
+  lock
+  faceplayer
+  msgbox _ProfsLab_Scientist_Id5_Subscript_Text_0, MSGBOX_DEFAULT
+  release
+  end
+
+ProfsLab_Scientist_Id6:: @ Dbr-output
+  lock
+  faceplayer
+  release
+  end
+
+ProfsLab_Machines_1:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_DAZED
+  msgbox _ProfsLab_Machines_1_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  showplayerportrait PORTRAIT_SMIRK
+  msgbox _ProfsLab_Machines_1_Subscript_Text_1, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_ProfsLab_Machines_1_Subscript_Text_0: @ Dbr-output
+  .string "(Beep boop.)$"
+
+_ProfsLab_Machines_1_Subscript_Text_1: @ Dbr-output
+  .string "(Wonder what it's doing…)$"
+
+ProfsLab_Torchic:: @ Dbr-output
+  lock
+  faceplayer
+  playmoncry SPECIES_TORCHIC, 0
+  msgbox _ProfsLab_Torchic_Subscript_Text_0, MSGBOX_DEFAULT
+  release
+  end
+
+_ProfsLab_Torchic_Subscript_Text_0: @ Dbr-output
+  .string "{COLOR POKEMON_COLOR}Torchic{COLOR NO_COLOR}: Chi-hi!$"
+
+ProfsLab_Drawers_1:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_DEVILISH
+  msgbox _ProfsLab_Drawers_1_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_ProfsLab_Drawers_1_Subscript_Text_0: @ Dbr-output
+  .string "(What could be inside?)$"
+_ProfsLab_Scientist_Id5_Subscript_Text_0: @ Dbr-output
+  .string "We've just moved into this lab recently!\p"
+  .string "Only a few months ago, we were working\n"
+  .string "out of {COLOR CHARACTER_COLOR}Professor Yinxing{COLOR NO_COLOR}'s garage.\p"
+  .string "Before that, we had another lab… but…\l"
+  .string "It… blew up.$"
+
+ProfsLab_UnpluggedComputer:: @ Dbr-output
+  lock
+  showplayerportrait PORTRAIT_QUESTION
+  msgbox _ProfsLab_UnpluggedComputer_Subscript_Text_0, MSGBOX_DEFAULT
+  hideportrait
+  release
+  end
+
+_ProfsLab_UnpluggedComputer_Subscript_Text_0: @ Dbr-output
+  .string "(Doesn't seem to be plugged in.)$"
+
+_ProfsLab_Scientist_Id4_Subscript_Text_0: @ Dbr-output
+  .string "Wooo, science! Everything's excited about this place.\n"
+  .string "Watch out, we might blow something up soon!$"
